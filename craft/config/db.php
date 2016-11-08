@@ -8,6 +8,8 @@
  */
 
 return array(
+    '*' => array(),
+    'dev.fmquizzing.net' => array(
 
 	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
 	'server' => 'localhost',
@@ -23,5 +25,5 @@ return array(
 
 	// The prefix to use when naming tables. This can be no more than 5 characters.
 	'tablePrefix' => 'craft',
-
+    )
 );
