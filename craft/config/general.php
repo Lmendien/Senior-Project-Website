@@ -8,5 +8,8 @@
  */
 
 return array(
-    '*' => array()
+    '*' => array(),
+    'dev.fmquizzing.net' => array(
+        'devMode' => true
+    )
 );
