@@ -15,7 +15,7 @@
 	<meta charset="utf-8" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-	<link rel="stylesheet" href="../public/resources/foundation-6/css/foundation.css" />
+  {% includeCssFile siteUrl~"public/resources/foundation-6/css/foundation.min.css" %}
 </head>
 
 <body>
