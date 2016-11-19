@@ -1,0 +1,27 @@
+footer {
+  background-color: #0D47A1;
+  padding: 100px 50px 20px 50px;
+  color: #FFFFFF;
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer .links {
+  padding-top: 100px
+}
+
+footer .row {
+  display: none;
+}
+
+@media only screen and (min-width: 64.063em) {
+  footer .row {
+    display: inherit;
+  }
+} /* min-width 1025px, large screens */
