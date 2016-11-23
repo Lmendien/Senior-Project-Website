@@ -15,7 +15,7 @@
 	<meta charset="utf-8" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-  {% includeCssFile siteUrl~"/resources/foundation-6/css/foundation.min.css" %}
+  {% includeCssFile siteUrl~"/resources/bootstrap/css/bootstrap.min.css" %}
   {% includeCssFile siteUrl~"/resources/css/custom.css" %}
 </head>
 
@@ -37,8 +37,9 @@
 				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 			{% endblock %}
 		</main>
-
-		{% include "footer.html" %}
 	</div>
+	{% include "footer.html" %}
+	{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
+	{% includeJsFile siteUrl~"/resources/bootstrap/js/bootstrap.min.js" %}
 </body>
 </html>
