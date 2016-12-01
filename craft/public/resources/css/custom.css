@@ -2,12 +2,7 @@
 
 footer {
   background-color: #0D47A1;
-<<<<<<< Updated upstream
-  padding-top: 100px;
-  padding-bottom: 20px;
-=======
   padding: 20px;
->>>>>>> Stashed changes
   color: #FFFFFF;
 }
 
@@ -19,15 +14,10 @@ footer li {
   list-style-type: none;
 }
 
-<<<<<<< Updated upstream
 footer ul {
   padding: 0px;
 }
 
-footer .links {
-  padding-top: 100px
-}
-=======
 footer .row {
   margin: 50px;
   display: none;
@@ -48,4 +38,3 @@ footer .links {
     display: block;
   }
 }
->>>>>>> Stashed changes
