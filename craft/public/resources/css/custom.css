@@ -25,3 +25,36 @@ footer .row {
     display: inherit;
   }
 } /* min-width 1025px, large screens */
+
+.navbar {
+  background-color: #03A9FA;
+  color: #000000;
+}
+
+.navbar-words {
+  color: white;
+}
+
+.menu-bar {
+  background-color: white;
+  width: 20px;
+  height: 5px;
+  margin:5px;
+  display: inline-block;
+}
+
+.menu-line {
+  display: block;
+}
+
+.navbar-toggle {
+  border: none;
+}
+
+.menu-toggle {
+  float: right;
+  margin: 8px;
+  background-color: transparent;
+  border: none;
+
+}
