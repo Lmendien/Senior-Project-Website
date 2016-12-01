@@ -1,7 +1,13 @@
+/* Footer Styles */
+
 footer {
   background-color: #0D47A1;
+<<<<<<< Updated upstream
   padding-top: 100px;
   padding-bottom: 20px;
+=======
+  padding: 20px;
+>>>>>>> Stashed changes
   color: #FFFFFF;
 }
 
@@ -13,6 +19,7 @@ footer li {
   list-style-type: none;
 }
 
+<<<<<<< Updated upstream
 footer ul {
   padding: 0px;
 }
@@ -20,3 +27,25 @@ footer ul {
 footer .links {
   padding-top: 100px
 }
+=======
+footer .row {
+  margin: 50px;
+  display: none;
+}
+
+footer .links {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.logo-footer {
+  display: inline-block;
+  height: 30px;
+}
+
+@media (min-width: 992px) {
+  footer .row {
+    display: block;
+  }
+}
+>>>>>>> Stashed changes
