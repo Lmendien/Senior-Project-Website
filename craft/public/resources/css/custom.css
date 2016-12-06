@@ -1,3 +1,4 @@
+/* Style for Footer*/
 footer {
   background-color: #0D47A1;
   padding: 100px 50px 20px 50px;
@@ -20,19 +21,35 @@ footer .row {
   display: none;
 }
 
-@media only screen and (min-width: 64.063em) {
-  footer .row {
-    display: inherit;
-  }
-} /* min-width 1025px, large screens */
-
 .navbar {
   background-color: #03A9FA;
   color: #000000;
+  border: none;
+  margin: 0px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav {
+  background-color: grey;
+  padding-top: 30px;
+  margin: 0px;
+}
+
+.nav .navbar-nav {
+  width: 100%;
+  margin: 0px 0px;
+}
+
+.navbar-brand {
+  padding: 0px;
 }
 
 .navbar-words {
   color: white;
+  background-color: blue;
+  margin-bottom: 30px;
+  padding:50px 0px;
+  text-align: center;
 }
 
 .menu-bar {
@@ -53,8 +70,28 @@ footer .row {
 
 .menu-toggle {
   float: right;
-  margin: 8px;
+  margin-top: 8px;
   background-color: transparent;
   border: none;
-
 }
+
+.custom-navbar {
+  float: right;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .row {
+    display: inherit;
+  }
+  .navbar-nav {
+      width: 50%;
+      position: fixed;
+      right: 0px;
+  }
+  .navbar-nav .container {
+    margin:0px;
+  }
+  /*.custom-menu {
+    width: 75%;
+  }*/
+} /* min-width 1025px, large screens */
