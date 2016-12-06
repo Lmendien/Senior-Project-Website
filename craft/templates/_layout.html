@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-{#
- # Layout template
- # ---------------
- #
- # This template defines your site’s global layout. It can be
- # “extended” by other templates to fill in the gaps.
- #
- # See Twig’s Template Inheritance documentation for more details:
- # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
- #}
-
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
-	<meta charset="utf-8" />
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-	<link rel="home" href="{{ siteUrl }}" />
-  {% includeCssFile siteUrl~"/resources/foundation-6/css/foundation.min.css" %}
-  {% includeCssFile siteUrl~"/resources/css/custom.css" %}
-</head>
-
-<body>
-	<div id="container">
-		<header id="header">
-			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-
-			<nav>
-				<ul class="menu align-right">
-					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main id="content" role="main">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
-
-		{% include "footer.html" %}
-	</div>
-</body>
-</html>
-=======
 {#
  # Layout template
  # ---------------
@@ -67,6 +21,7 @@
 
 <body>
 	<div id="container">
+    {% include "standard_navigation_header.html" %}
 		<header id="header">
 			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
 
@@ -85,8 +40,8 @@
 		</main>
 	</div>
 	{% include "footer.html" %}
+  {% includeJsFile siteUrl~"/resources/js/custom.js" %}
 	{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
 	{% includeJsFile siteUrl~"/resources/bootstrap/js/bootstrap.min.js" %}
 </body>
 </html>
->>>>>>> 4d0a0011c26df495fc21d093fbe0d7b48cad5b4d
