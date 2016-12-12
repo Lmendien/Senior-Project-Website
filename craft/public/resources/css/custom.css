@@ -96,11 +96,50 @@ footer .row {
   z-index: -5;
 }
 
+/*Banner Image CSS*/
+.banner {
+  text-align: left;
+  position: relative;
+}
+
+.banner-small {
+  height: 200px;
+  max-height: 25vh;
+}
+
+.banner-full {
+  height: 300px;
+  max-height: 50vh;
+}
+
+.banner-small h1{
+  position: absolute;
+  bottom: 0px;
+  padding: 25px;
+}
+
+/*Index "Homepage" Styles*/
+#banner-index {
+  background: url("../images/banner-images/banner-index.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* Standard syntax */
+  background-size: cover;
+}
+
+#title-index {
+  position: absolute;
+  bottom: 0px;
+  padding: 75px 25px;
+  color: white;
+}
+
 /***************************************/
 /********** DESKTOP STLYES *************/
 /***************************************/
 @media only screen and (min-width: 992px) {
-  
+
   /* Styles for Footer*/
   footer .row {
     display: inherit;
@@ -127,5 +166,27 @@ footer .row {
 
   .menu-active {
     background-color: #0D47A1;
+  }
+
+  /*Banner Image CSS*/
+  .banner {
+    background-attachment: fixed;
+  }
+
+  .banner-small {
+    height: 400px;
+    max-height: 30vh;
+
+  }
+
+  .banner-full {
+    height: 800px;
+    max-height: 80vh
+  }
+
+  /*Index "Homepage" Styles*/
+  #title-index {
+    padding: 250px 75px;
+    font-size: 48px;
   }
 }
