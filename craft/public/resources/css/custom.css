@@ -1,9 +1,4 @@
-/* Style for Footer*/
-
-body {
-  background-color: grey;
-}
-
+/* Styles for Footer*/
 footer {
   background-color: #0D47A1;
   padding: 100px 50px 20px 50px;
@@ -22,10 +17,17 @@ footer .links {
   padding-top: 100px
 }
 
+footer .links img {
+  max-height: 75px;
+}
+
 footer .row {
   display: none;
 }
 
+
+
+/* Styles for Header Bar and  Navigation Menu */
 .navbar {
   background-color: #03A9FA;
   color: #000000;
@@ -94,11 +96,17 @@ footer .row {
   z-index: -5;
 }
 
-
+/***************************************/
+/********** DESKTOP STLYES *************/
+/***************************************/
 @media only screen and (min-width: 992px) {
+  
+  /* Styles for Footer*/
   footer .row {
     display: inherit;
   }
+
+  /* Styles for Header Bar and  Navigation Menu */
   .navbar-nav {
       width: 50%;
       position: fixed;
@@ -120,7 +128,4 @@ footer .row {
   .menu-active {
     background-color: #0D47A1;
   }
-  /*.custom-menu {
-    width: 75%;
-  }*/
-} /* min-width 1025px, large screens */
+}
