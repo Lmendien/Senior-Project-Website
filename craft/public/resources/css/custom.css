@@ -1,7 +1,56 @@
 /* Style for Footer*/
 
 body {
-  background-color: grey;
+  background-color: white;
+}
+
+.register-form{
+    font-size: 16px;
+   left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.logbutton{
+    height: 100px;
+    width: 560px;
+    background-color:#0d47a1;
+    border-radius: 0px;
+    font-size: 54px;
+    color:white;
+    border: none !important;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+
+}
+.logbutton:hover{
+
+}
+.logbutton:active{
+
+}
+
+.register-form label{
+    color: black;
+
+}
+.register-form input{
+    margin-bottom: 40px;
+    width: 600px;
+    height: 100px;
+    border-radius: 2px;
+    border-color: black;
+    font-size: 36px;
+}
+
+#title {
+  text-align: center;
+  font-size: 64px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -53,6 +102,10 @@ footer .row {
   margin-bottom: 30px;
   padding:50px 0px;
   text-align: center;
+}
+
+#sign-up {
+  width: 90%;
 }
 
 .menu-bar {
