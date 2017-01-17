@@ -13,19 +13,15 @@ footer li {
   list-style-type: none;
 }
 
-footer .links {
-  padding-top: 100px
-}
-
 footer .links img {
-  max-height: 75px;
+  max-height: 40px;
+  padding: 0px 5px;
+  margin-bottom: 20px;
 }
 
 footer .row {
   display: none;
 }
-
-
 
 /* Styles for Header Bar and  Navigation Menu */
 .navbar {
@@ -143,6 +139,11 @@ footer .row {
   /* Styles for Footer*/
   footer .row {
     display: inherit;
+  }
+
+  footer .links img {
+    max-height: 75px;
+    padding: 5px 10px;
   }
 
   /* Styles for Header Bar and  Navigation Menu */
