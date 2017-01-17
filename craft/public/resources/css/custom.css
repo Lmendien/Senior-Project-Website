@@ -125,8 +125,7 @@ footer .row {
 }
 
 #title-index {
-  position: absolute;
-  bottom: 0px;
+  margin: 0px;
   padding: 75px 25px;
   color: white;
 }
@@ -181,13 +180,12 @@ footer .row {
   }
 
   .banner-full {
-    height: 800px;
-    max-height: 80vh
+    height: 80vh;
   }
 
   /*Index "Homepage" Styles*/
   #title-index {
-    padding: 250px 75px;
+    padding: 35vh 75px;
     font-size: 48px;
   }
 }
