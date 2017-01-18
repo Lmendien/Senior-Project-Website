@@ -13,19 +13,15 @@ footer li {
   list-style-type: none;
 }
 
-footer .links {
-  padding-top: 100px
-}
-
 footer .links img {
-  max-height: 75px;
+  max-height: 40px;
+  padding: 0px 5px;
+  margin-bottom: 20px;
 }
 
 footer .row {
   display: none;
 }
-
-
 
 /* Styles for Header Bar and  Navigation Menu */
 .navbar {
@@ -38,6 +34,7 @@ footer .row {
 
 .navbar-nav {
   margin: 0px;
+  z-index: 1001;
 }
 
 .nav .navbar-nav {
@@ -80,7 +77,6 @@ footer .row {
   background-color: transparent;
   border: none;
   outline:none;
-  z-index: 150;
   position: absolute;
 }
 
@@ -90,10 +86,11 @@ footer .row {
 
 .menu-container {
   position: fixed;
+  height: 100%;
   width: 100%;
   background-color: white;
-  padding-top: 30px;
-  z-index: -5;
+  padding-top: 100px;
+  z-index: 1000;
 }
 
 /*Banner Image CSS*/
@@ -129,8 +126,7 @@ footer .row {
 }
 
 #title-index {
-  position: absolute;
-  bottom: 0px;
+  margin: 0px;
   padding: 75px 25px;
   color: white;
 }
@@ -143,6 +139,11 @@ footer .row {
   /* Styles for Footer*/
   footer .row {
     display: inherit;
+  }
+
+  footer .links img {
+    max-height: 75px;
+    padding: 5px 10px;
   }
 
   /* Styles for Header Bar and  Navigation Menu */
@@ -180,13 +181,13 @@ footer .row {
   }
 
   .banner-full {
-    height: 800px;
-    max-height: 80vh
+    height: 80vh;
+    max-height: 80vh;
   }
 
   /*Index "Homepage" Styles*/
   #title-index {
-    padding: 250px 75px;
+    padding: 35vh 75px;
     font-size: 48px;
   }
 }
