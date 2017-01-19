@@ -13,14 +13,14 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.row-home {
-  margin: 50px 0px;
-}
-
 /* Styles for Newsletter Registration form */
 .logbutton{
     width: 100%;
     margin-bottom: 5px;
+}
+
+.newsletter-form {
+  margin: 50px 0px;
 }
 
 .register-form label{
@@ -36,10 +36,16 @@ body {
     font-size: 16px;
 }
 
+.fb-page {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px;
+}
+
 /* Styles for Footer */
 footer {
   background-color: #0D47A1;
-  padding: 100px 50px 20px 50px;
+  padding: 100px 0px 20px 0px;
   color: #FFFFFF;
 }
 
@@ -169,8 +175,11 @@ footer .row {
 }
 
 #title-index {
+  font-size: 32px;
+  position: absolute;
+  bottom: 25px;
   margin: 0px;
-  padding: 75px 25px;
+  padding: 25px;
   color: white;
 }
 
