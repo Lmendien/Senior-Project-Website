@@ -15,20 +15,24 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            {% for entry in craft.entries.section('announcements').limit(5).find() %}
+            {% for announcement in entry.announcementMatrix %}
               {% if loop.first %}
                 <div class="item active">
                     <div class="carousel-caption">
-                        <h3>{{entry.title}}</h3>
-                        <p>{{entry.body}}</p>
+                        <p>{{announcement.body}}</p>
+                        {% if announcement.image is not empty %}
+                            <img src="{{announcement.image}}"/>
+                        {% endif %}
                     </div>
                 </div>
               {% endif %}
               {% if not loop.first %}
                 <div class="item">
                     <div class="carousel-caption">
-                        <h2>{{entry.title}}</h2>
-                        <p>{{entry.body}}</p>
+                        <p>{{announcement.body}}</p>
+                        {% if announcement.image is not empty %}
+                            <img src="{{announcement.image}}"/>
+                        {% endif %}
                     </div>
                 </div>
               {% endif %}
@@ -44,7 +48,7 @@
             <span class="sr-only">Next</span>
         </a>
         <ol class="carousel-indicators">
-          {% for entry in craft.entries.section('announcements').limit(5).find() %}
+          {% for announcement in entry.announcementMatrix %}
                 {% if loop.first %}
                   <li data-target="#myCarousel" data-slide-to="{{ loop.index0 }}" class="active"></li>
                 {% endif %}
