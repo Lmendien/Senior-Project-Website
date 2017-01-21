@@ -13,17 +13,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 	<meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-  {% includeCssFile siteUrl~"/resources/bootstrap/css/bootstrap.min.css" %}
-  {% includeCssFile siteUrl~"/resources/css/custom.css" %}
+
+
+  {% includeCssFile "https://fonts.googleapis.com/icon?family=Material+Icons" %}
+  {% includeCssFile "resources/bootstrap/css/bootstrap.min.css" %}
+  {% includeCssFile "resources/css/custom.css" %}
 </head>
 
 <body>
-	<div id="container">
     {% include "standard_navigation_header.html" %}
-		<header id="header">
+		<!-- <header id="header">
 			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
 
 			<nav>
@@ -31,7 +33,7 @@
 					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
 				</ul>
 			</nav>
-		</header>
+		</header> -->
 
 		<main id="content" role="main">
 			{% block content %}
@@ -39,10 +41,9 @@
 				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 			{% endblock %}
 		</main>
-	</div>
 	{% include "footer.html" %}
-  {% includeJsFile siteUrl~"/resources/js/custom.js" %}
 	{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
-	{% includeJsFile siteUrl~"/resources/bootstrap/js/bootstrap.min.js" %}
+	{% includeJsFile "resources/js/custom.js" %}
+	{% includeJsFile "resources/bootstrap/js/bootstrap.min.js" %}
 </body>
 </html>
