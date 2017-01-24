@@ -5,13 +5,96 @@
 /* Media queries should be used to adjust styles for tablet and desktop sized devices */
 /******************/
 
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 /* GENERAL STYLES */
 /******************/
 body {
   background-color: white;
 }
 
-/* Styles for Header Bar and  Navigation Menu */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'PT Sans', sans-serif;
+  font-color: rgba(0,0,0,0.87);
+}
+
+ul,ol,li {
+  font-family: 'Helvetica', sans-serif;
+  font-color: rgba(0,0,0,0.54);
+}
+
+p {
+  font-family: 'Helvetica', sans-serif;
+  font-color: rgba(0,0,0,0.54);
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+a {
+  font-family: 'Helvetica', sans-serif;
+  font-color: #0D47A1;
+}
+
+h1 {
+  font-size: 2.6em;
+  line-height: 1.6em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.6em;
+  font-weight: 600;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color:#0d47a1;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 0px;
+  border: none;
+  color:white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-centered {
+  /** Style for a div wrapper outside of a btn, will center the btn inside wrapper
+  and provide a margin above and below */
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+
+.content-block {
+  margin-bottom: 50px;
+}
+
+/* Styles for Header Bar and Navigation Menu */
 .navbar {
   background-color: #03A9FA;
   color: #000000;
@@ -127,29 +210,6 @@ footer .links img {
 
 footer .row {
   display: none;
-}
-
-/* Button Styles */
-.btn-primary {
-  background-color:#0d47a1;
-  font-size: 24px;
-  padding: 20px;
-  border-radius: 0px;
-  border: none;
-  color:white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-.btn-centered {
-  /** Style for a div wrapper outside of a btn, will center the btn inside wrapper
-  and provide a margin above and below */
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 75px;
-}
-
-.content-block {
-  margin-bottom: 50px;
 }
 
 /* HOMEPAGE STYLES */

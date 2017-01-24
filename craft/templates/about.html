@@ -64,8 +64,10 @@
 				<p>Quizzing Content</p>
 			</div>
 		</div>
+
+		{% set asset = entry.filePDF.first() %}
 		<div class="text-center btn-centered">
-			<a href="{{ asset.url }}" class="btn btn-primary">Download Rules</a>
+			<a href="{{ asset.url }}" download class="btn btn-primary">Download Rules</a>
 		</div>
 	</div>
 
