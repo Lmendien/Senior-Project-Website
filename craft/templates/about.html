@@ -25,15 +25,69 @@
     </section>
 	
 	<div class="container">
-		<h2>{{ entry.mainHeading }}</h2>
+		<h2 class="text-center">{{ entry.mainHeading }}</h2>
+		<div class="row">
 		{% for contentBlock in entry.contentMatrix %}
-			<div class="col-md-6">
+			<div class="col-md-6 content-block">
 			{{ contentBlock.contentRichText }}
 			</div>
 		{% endfor %}
+		</div>
 
-		<!-- {% set asset = entry.filePDF.first() %} -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="well well-rules">
+					<h3>2 Teams</h3>
+					<span><i class="material-icons">people</i>&nbsp;<i class="material-icons">people</i></span>
+				</div>
+				<p>Quizzing Content</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="well well-rules">
+					<h3>1 Quizmaster</h3>
+					<span><i class="material-icons">person</i></span>
+				</div>
+				<p>Quizzing Content</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="well well-rules">
+					<h3>15 Questions</h3>
+					<span><i class="material-icons">forum</i></span>
+				</div>
+				<p>Quizzing Content</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="well well-rules">
+					<h3>Jumping</h3>
+					<span><i class="material-icons">accessibility</i></span>
+				</div>
+				<p>Quizzing Content</p>
+			</div>
+		</div>
 
-		<a href="{{ asset.url }}"><div class="btn btn-primary">Download Rules</div></a>
+		{% set asset = entry.filePDF.first() %}
+		<div class="text-center btn-centered">
+			<a href="{{ asset.url }}" download class="btn btn-primary">Download Rules</a>
+		</div>
+	</div>
+
+	<div class="world-wide">
+		<div class="container">
+			<div class="about-conferences">
+				<h2 class="text-center">Conferences</h2>
+			</div>
+			<div class="about-international">
+				<h2 class="text-center">International</h2>
+				{% for entry in craft.entries.section('internationl') %}
+					<a href="{{ entry.url }}">
+						<div class="col-xs-6 col-sm-4 col-md-3">
+							<div class="well">
+						    <h1 class="text-center">{{ entry.title }}</h1>
+						    </div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 {% endblock %}

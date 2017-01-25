@@ -1,8 +1,77 @@
+/***************************************/
+/******* MOBILE FIRST STLYES ***********/
+/***************************************/
+/* CSS Should be written so that the default styles are written for mobile */
+/* Media queries should be used to adjust styles for tablet and desktop sized devices */
+/******************/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* GENERAL STYLES */
+/******************/
 body {
   background-color: white;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'PT Sans', sans-serif;
+  font-color: rgba(0,0,0,0.87);
+}
 
+ul,ol,li {
+  font-family: 'Helvetica', sans-serif;
+  font-color: rgba(0,0,0,0.54);
+}
+
+p {
+  font-family: 'Helvetica', sans-serif;
+  font-color: rgba(0,0,0,0.54);
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+a {
+  font-family: 'Helvetica', sans-serif;
+  font-color: #0D47A1;
+}
+
+h1 {
+  font-size: 2.6em;
+  line-height: 1.6em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.6em;
+  font-weight: 600;
+}
+
+/* Button Styles */
 .btn-primary {
   background-color:#0d47a1;
   font-size: 24px;
@@ -13,55 +82,19 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.row-home {
-  margin: 50px 0px;
+.btn-centered {
+  /** Style for a div wrapper outside of a btn, will center the btn inside wrapper
+  and provide a margin above and below */
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 75px;
 }
 
-/* Styles for Newsletter Registration form */
-.logbutton{
-    width: 100%;
-    margin-bottom: 5px;
+.content-block {
+  margin-bottom: 50px;
 }
 
-.register-form label{
-    color: black;
-
-}
-.register-form input{
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 30px 10px;
-    border-radius: 2px;
-    border-color: black;
-    font-size: 16px;
-}
-
-/* Styles for Footer */
-footer {
-  background-color: #0D47A1;
-  padding: 100px 50px 20px 50px;
-  color: #FFFFFF;
-}
-
-footer a {
-  color: #FFFFFF;
-}
-
-footer li {
-  list-style-type: none;
-}
-
-footer .links img {
-  max-height: 40px;
-  padding: 0px 5px;
-  margin-bottom: 20px;
-}
-
-footer .row {
-  display: none;
-}
-
-/* Styles for Header Bar and  Navigation Menu */
+/* Styles for Header Bar and Navigation Menu */
 .navbar {
   background-color: #03A9FA;
   color: #000000;
@@ -90,10 +123,6 @@ footer .row {
   margin-bottom: 30px;
   padding:50px 0px;
   text-align: center;
-}
-
-#sign-up {
-  width: 90%;
 }
 
 .menu-bar {
@@ -158,7 +187,69 @@ footer .row {
   color: white;
 }
 
-/*Index "Homepage" Styles*/
+/* Styles for Footer */
+footer {
+  background-color: #0D47A1;
+  padding: 100px 0px 20px 0px;
+  color: #FFFFFF;
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer .links img {
+  max-height: 40px;
+  padding: 0px 5px;
+  margin-bottom: 20px;
+}
+
+footer .row {
+  display: none;
+}
+
+/* HOMEPAGE STYLES */
+/*******************/
+
+/* Styles for Newsletter Registration form */
+.logbutton{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.newsletter-form {
+  margin: 50px 0px;
+}
+
+.register-form label{
+    color: black;
+
+}
+.register-form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 30px 10px;
+    border-radius: 2px;
+    border-color: black;
+    font-size: 16px;
+}
+
+#sign-up {
+  width: 90%;
+}
+
+/* Styles for Facebook Feed*/
+.fb-page {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+/*Index "Homepage" Banner Styles*/
 #banner-index {
   background: url("../images/banner-images/banner-index.jpg"); /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* For Safari 5.1 to 6.0 */
@@ -166,12 +257,38 @@ footer .row {
   background: -moz-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg"); /* Standard syntax */
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #title-index {
+  font-size: 32px;
+  position: absolute;
+  bottom: 25px;
   margin: 0px;
-  padding: 75px 25px;
+  padding: 25px;
   color: white;
+}
+
+/* About Page Styles */
+.well-rules {
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+}
+
+.well-rules, .material-icons {
+  font-size: 56px;
+}
+
+.world-wide {
+  background: url("../images/background-images/world-pic.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /***************************************/
@@ -179,15 +296,8 @@ footer .row {
 /***************************************/
 @media only screen and (min-width: 992px) {
 
-  /* Styles for Footer*/
-  footer .row {
-    display: inherit;
-  }
-
-  footer .links img {
-    max-height: 75px;
-    padding: 5px 10px;
-  }
+  /* GENERAL STYLES */
+  /******************/
 
   /* Styles for Header Bar and  Navigation Menu */
   .navbar-nav {
@@ -228,7 +338,20 @@ footer .row {
     max-height: 80vh;
   }
 
-  /*Index "Homepage" Styles*/
+  /* Styles for Footer*/
+  footer .row {
+    display: inherit;
+  }
+
+  footer .links img {
+    max-height: 75px;
+    padding: 5px 10px;
+  }
+
+  /* HOMEPAGE STYLES */
+  /*******************/
+
+  /* Index "Homepage" Banner Styles*/
   #title-index {
     padding: 35vh 75px;
     font-size: 48px;

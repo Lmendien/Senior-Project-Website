@@ -1,0 +1,22 @@
+{#
+ # Mission Statement  index template
+ # -------------------
+ #
+ # This template is loaded whenever the mission stament is called
+ # to change. and the file is located in the 
+ # craft/templates/mission folder.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+{% set title = "Mission Statement" %}
+
+{% block content %}
+	<h1>Mission Statment</h1>
+
+	{% for entry in craft.entries.section('missionStatement').find() %}
+		<article>
+			<h3>{{missionStatement}}</h3>
+		</article>
+	{% endfor %}
+{% endblock %}
