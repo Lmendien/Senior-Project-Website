@@ -2,6 +2,10 @@ body {
   background-color: white;
 }
 
+a {
+text-decoration: none;
+}
+
 .register-form{
     font-size: 16px;
    left: 50%;
@@ -98,13 +102,72 @@ footer .row {
   padding: 0px;
 }
 
-.navbar-words {
+.navbar-word-home {
   color: white;
-  background-color: blue;
+  background-image: url("../images/menu-images/home-menu-thumb.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:50px 0px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-word-about {
+  color: white;
+  background-image: url("../images/menu-images/about-menu.jpg");
+  background-repeat: no-repeat;
   margin-bottom: 30px;
   padding:50px 0px;
   text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
+
+.navbar-word-info {
+  color: white;
+  background-image: url("../images/menu-images/info-menu-thumb.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  padding:50px 0px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-word-history {
+  color: white;
+  background-image: url("../images/menu-images/history-menu-thumb.jpg");
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  padding:50px 0px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-word-media {
+  color: white;
+  background-image: url("../images/menu-images/media-menu-thumb.jpg");
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  padding:50px 0px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-word-finals {
+  color: white;
+  background-image: url("../images/menu-images/finals-menu.jpg");
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  padding:50px 0px;
+  text-align: center;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
 
 #sign-up {
   width: 90%;
@@ -219,10 +282,6 @@ footer .row {
     padding-top: 175px;
     top:0;
     right:0;
-  }
-
-  .menu-active {
-    background-color: #0D47A1;
   }
 
   /*Banner Image CSS*/
