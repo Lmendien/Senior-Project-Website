@@ -1,32 +1,35 @@
 {#
- # About Template
+ # Homepage template
  # ---------------
  #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
  #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
  #}
 
 {% extends "_layout" %}
 
 {% block content %}
-	<section id="banner-about" class="banner banner-small">
+	<section id="banner-index" class="banner banner-small">
         <h1>{{ entry.title }}</h1>
     </section>
 	
 	<div class="container">
+		<h2 class="text-center">{{ entry.mainHeading }}</h2>
 		<div class="row">
-		{% set length = entry.basicContentRow|length %}
-		{% for basicContentBlock in entry.basicContentRow %}
-			{% if length == 1 %}
-				{% set columnClass = "col-xs-12" %}
-			{% elseif length == 2 %}
-				{% set columnClass = "col-sm-6" %}
-			{% elseif length == 3 %}
-				{% set columnClass = "col-sm-4" %}
-			{% elseif length == 4 %}
-				{% set columnClass = "col-md-3 col-sm-6" %}
-			{% endif %}	
-			<div class="{{ columnClass }} content-block text-center">
-				{{ basicContentBlock.contentRichText }}
+		{% for contentBlock in entry.contentMatrix %}
+			<div class="col-md-6 content-block">
+			{{ contentBlock.contentRichText }}
 			</div>
 		{% endfor %}
 		</div>
@@ -34,31 +37,31 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="well well-rules">
-					<h6>2 Teams</h6>
+					<h3>2 Teams</h3>
 					<span><i class="material-icons">people</i>&nbsp;<i class="material-icons">people</i></span>
 				</div>
-				<p>{{ entry.highlightOne }}</p>
+				<p>Quizzing Content</p>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="well well-rules">
-					<h6>1 Quizmaster</h6>
+					<h3>1 Quizmaster</h3>
 					<span><i class="material-icons">person</i></span>
 				</div>
-				<p>{{ entry.highlightTwo }}</p>
+				<p>Quizzing Content</p>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="well well-rules">
-					<h6>15 Questions</h6>
+					<h3>15 Questions</h3>
 					<span><i class="material-icons">forum</i></span>
 				</div>
-				<p>{{ entry.highlightThree }}</p>
+				<p>Quizzing Content</p>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3">
 				<div class="well well-rules">
-					<h6>Jumping</h6>
+					<h3>Jumping</h3>
 					<span><i class="material-icons">accessibility</i></span>
 				</div>
-				<p>{{ entry.highlightFour }}</p>
+				<p>Quizzing Content</p>
 			</div>
 		</div>
 
@@ -72,27 +75,15 @@
 		<div class="container">
 			<div class="about-conferences">
 				<h2 class="text-center">Conferences</h2>
-				{% for entry in craft.entries.section('conferences') %}
-					<a href="{{ entry.url }}">
-						<div class="col-xs-6 col-sm-4 col-md-3">
-							<div class="conference">
-								<h4 class="text-center">{{ entry.title }}</h4>
-								<p class="text-center">{{ entry.location }}</p>
-							</div>
-						</div>
-					</a>
-				{% endfor %}
 			</div>
-		</div>
-		<div class="container">
 			<div class="about-international">
 				<h2 class="text-center">International</h2>
-				{% for entry in craft.entries.section('international') %}
+				{% for entry in craft.entries.section('internationl') %}
 					<a href="{{ entry.url }}">
 						<div class="col-xs-6 col-sm-4 col-md-3">
-							{% set image = entry.bannerImage.first() %}
-							<img src="{{ image.getUrl('flagThumbnail') }}"/>
-							<h6 class="text-center">{{ entry.title }}</h6>
+							<div class="well">
+						    <h1 class="text-center">{{ entry.title }}</h1>
+						    </div>
 						</div>
 					</a>
 				{% endfor %}

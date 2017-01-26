@@ -42,26 +42,26 @@ h1 {
 }
 
 h2 {
-  font-size: 2.0em;
-  line-height: 2.0em;
+  font-size: 1.6em;
+  line-height: 1.6em;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 2.0em;
-  line-height: 2.0em;
+  font-size: 1.6em;
+  line-height: 1.6em;
   font-weight: 200;
 }
 
 h4 {
-  font-size: 1.6em;
-  line-height: 1.6em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   font-weight: 400;
 }
 
 h5 {
-  font-size: 1.6em;
-  line-height: 1.6em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   font-weight: 200;
 }
 
@@ -171,8 +171,8 @@ h6 {
 }
 
 .banner-small {
-  height: 40vh;
-  max-height: 500px;
+  height: 200px;
+  max-height: 25vh;
 }
 
 .banner-full {
@@ -183,8 +183,7 @@ h6 {
 .banner-small h1{
   position: absolute;
   bottom: 0px;
-  padding: 0px 10px;
-  margin: 0px;
+  padding: 25px;
   color: white;
 }
 
@@ -261,17 +260,6 @@ footer .row {
   background-attachment: fixed;
 }
 
-#banner-about {
-  background: url("../images/banner-images/banner-about.jpg"); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* Standard syntax */
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: bottom;
-}
-
 #title-index {
   font-size: 32px;
   position: absolute;
@@ -289,11 +277,7 @@ footer .row {
   border-radius: 10px;
 }
 
-.well-rules h6 {
-  font-size: 24px;
-}
-
-.well-rules .material-icons {
+.well-rules, .material-icons {
   font-size: 56px;
 }
 
@@ -305,41 +289,6 @@ footer .row {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* Standard syntax */
   background-size: cover;
   background-attachment: fixed;
-}
-
-.conference {
-  padding: 20px 0px;
-  width: 100%;
-  color: rgba(0,0,0,0.87);
-}
-
-.conference h4 {
-  text-transform: uppercase;
-}
-
-.conference:hover {
-  color: rgba(0,0,0,1);
-  text-decoration: underline;
-}
-
-.about-international img {
-  opacity: 0.8;
-  width: 100%;
-  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
-}
-
-.about-international img:hover {
-  opacity: 1;
-  width: 100%;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
-}
-
-.country {
-  margin: 100px auto;
-}
-
-.banner-country {
-  width: 100%;
 }
 
 /***************************************/
@@ -378,8 +327,10 @@ footer .row {
     background-attachment: fixed;
   }
 
-  .banner-small h1{
-    padding: 0px 50px;
+  .banner-small {
+    height: 400px;
+    max-height: 30vh;
+
   }
 
   .banner-full {
