@@ -1,3 +1,6 @@
+/*
+ * Announcements template
+ */
 .container
 {
     width: 100%;
@@ -72,4 +75,21 @@
 {
     height: 300px;
     width: 100%;
+}
+
+/*
+ * END Announcements section
+ */
+
+.store
+{
+    background-color: #ADD8E6;
+    line-height: 3;
+}
+
+.store .header
+{
+    color: #fff;
+    background-color: #03A9FA;
+    line-height: 2;
 }
