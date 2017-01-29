@@ -8,6 +8,8 @@
     crossorigin="anonymous"></script>
       <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src=”jquery.mobile.custom.min.js”></script>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <div class="container">
@@ -59,3 +61,14 @@
         </ol>
     </div>
 </div>
+
+<script>  
+$(document).ready(function() {  
+   $("#myCarousel").swiperight(function() {  
+      $("#myCarousel").carousel('prev');  
+    });  
+   $("#myCarousel").swipeleft(function() {  
+      $("#myCarousel").carousel('next');  
+   });  
+});  
+</script>
