@@ -1,0 +1,48 @@
+{#
+History Tempalte
+ # ---------------
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+<section id="banner-about" class="banner banner-small">
+        <h1>{{ entry.title }}</h1>
+</section>
+
+<div class="hallOfFame">
+	<div class="container">
+	<h3 class="text-center">{{ entry.mainHeading }}</h3>
+	{{ entry.body }}
+	</div>
+
+	<div class="container">
+	{# Iterates over every year in the section hall of fame #}
+	{% for year in craft.entries.section('hallOfFame').type('year') %}
+		<div class="year">
+
+			{# Display the year #}
+			<h4 class="text-center">{{ year.title }}</h4>
+			<div class="row">
+
+			{# Iterates over every inductee in the current selected year #}
+			{% for inductee in year.descendants %}
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div class="inductee">
+
+							{# Displays the headshot, name, and city of the inductee #}
+							<h6>{{ inductee.title }}</h6>
+							<p>{{ inductee.churchCity }}</p>
+						</div>
+					</div>
+			{% endfor %}
+			</div>	
+		</div>
+	{% endfor %}
+	</div>
+</div>	
+	
+{% endblock %}
