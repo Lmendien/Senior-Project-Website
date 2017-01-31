@@ -13,32 +13,51 @@ History Tempalte
         <h1>{{ entry.title }}</h1>
 </section>
 
-<div class="hallOfFame">
+<div class="hall-of-fame">
 	<div class="container">
 	<h3 class="text-center">{{ entry.mainHeading }}</h3>
 	{{ entry.body }}
 	</div>
 
-	<div class="container">
+	<div class="container inductees">
 	{# Iterates over every year in the section hall of fame #}
+		<h3>Inductees</h3>
 	{% for year in craft.entries.section('hallOfFame').type('year') %}
 		<div class="year">
-
 			{# Display the year #}
-			<h4 class="text-center">{{ year.title }}</h4>
+			<h4>{{ year.title }}</h4>
 			<div class="row">
-
-			{# Iterates over every inductee in the current selected year #}
-			{% for inductee in year.descendants %}
+				{% for inductee in year.descendants %}
 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<div class="inductee">
-
+						<div class="inductee" data-toggle="modal" data-target="#{{inductee.id}}">
+							{% set headshot = inductee.headshot.first() %}
 							{# Displays the headshot, name, and city of the inductee #}
-							<h6>{{ inductee.title }}</h6>
-							<p>{{ inductee.churchCity }}</p>
+							<img class="headshot" src="{{ headshot.url }}">
+							<div class="inductee-info">
+								<h6 class="inductee-name">{{ inductee.title }}</h6>
+								<p class="inductee-city">{{ inductee.churchCity }}</p>
+							</div>
 						</div>
 					</div>
-			{% endfor %}
+
+					<!-- Modal -->
+					<div id="{{inductee.id}}" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">{{ inductee.title }}</h4>
+							</div>
+							<div class="modal-body">
+								<p>Some text in the modal.</p>
+							</div>
+						</div>
+
+						</div>
+					</div>
+				{% endfor %}
 			</div>	
 		</div>
 	{% endfor %}

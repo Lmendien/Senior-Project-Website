@@ -1,0 +1,28 @@
+.hall-of-fame .inductees {
+  margin-top: 50px;
+  text-align: center; }
+  .hall-of-fame .inductees .year .inductee {
+    height: 70px;
+    background-color: #F5F5F5;
+    margin: 10px auto;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    text-align: left; }
+    .hall-of-fame .inductees .year .inductee:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
+    .hall-of-fame .inductees .year .inductee .headshot {
+      display: inline-block;
+      vertical-align: top;
+      height: 70px; }
+    .hall-of-fame .inductees .year .inductee .inductee-info {
+      display: inline-block;
+      height: 70px;
+      margin: 5px; }
+      .hall-of-fame .inductees .year .inductee .inductee-info .inductee-name {
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: bold; }
+      .hall-of-fame .inductees .year .inductee .inductee-info .inductee-city {
+        font-size: 0.8em;
+        line-height: 1em; }
+
+/*# sourceMappingURL=styles.css.map */
