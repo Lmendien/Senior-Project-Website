@@ -86,6 +86,7 @@ footer .row {
   border: none;
   margin: 0px;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+  padding: 0px 50px;
 }
 
 .navbar-nav {
@@ -102,72 +103,90 @@ footer .row {
   padding: 0px;
 }
 
-.navbar-word-home {
+.navbar-brand {
+  display: inline;
+}
+
+#logo {
+  width: 75px;
+}
+
+.navbar-word {
   color: white;
-  background-image: url("../images/menu-images/home-menu-thumb.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   padding:50px 0px;
   text-align: center;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-word-about {
-  color: white;
-  background-image: url("../images/menu-images/about-menu.jpg");
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  padding:50px 0px;
-  text-align: center;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+.navbar-word:hover {
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-word-info {
-  color: white;
-  background-image: url("../images/menu-images/info-menu-thumb.jpg");
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  padding:50px 0px;
-  text-align: center;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+.custom-menu a {
+  text-decoration: none;
 }
 
-.navbar-word-history {
-  color: white;
-  background-image: url("../images/menu-images/history-menu-thumb.jpg");
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  padding:50px 0px;
-  text-align: center;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+#home {
+  background: url("../images/menu-images/home-menu-thumb.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg"); /* Standard syntax */
+  background-size: cover;
+  background-position: top;
 }
 
-.navbar-word-media {
-  color: white;
-  background-image: url("../images/menu-images/media-menu-thumb.jpg");
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  padding:50px 0px;
-  text-align: center;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+#about {
+  background: url("../images/menu-images/about-menu.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg"); /* Standard syntax */
+  background-size: cover;
 }
 
-.navbar-word-finals {
-  color: white;
-  background-image: url("../images/menu-images/finals-menu.jpg");
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  padding:50px 0px;
-  text-align: center;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.3);
+#info {
+  background: url("../images/menu-images/info-menu-thumb.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg"); /* Standard syntax */
+  background-size: cover;
 }
 
+#history {
+  background: url("../images/menu-images/history-menu-thumb.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg"); /* Standard syntax */
+  background-size: cover;
+}
+
+#media {
+  background: url("../images/menu-images/media-menu-thumb.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg"); /* Standard syntax */
+  background-size: cover;
+  background-position: bottom;
+}
+
+#finals {
+  background: url("../images/menu-images/finals-menu.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg"); /* Standard syntax */
+  background-size: cover;
+}
 
 #sign-up {
   width: 90%;
@@ -210,6 +229,7 @@ footer .row {
   background-color: white;
   padding-top: 100px;
   z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /*Banner Image CSS*/
@@ -282,6 +302,10 @@ footer .row {
     padding-top: 175px;
     top:0;
     right:0;
+  }
+
+  .navbar-word {
+    font-size: 32px;
   }
 
   /*Banner Image CSS*/
