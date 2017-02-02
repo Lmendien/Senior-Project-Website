@@ -272,6 +272,19 @@ footer .row {
   background-position: bottom;
 }
 
+#mission-statement {
+  background: url("../images/background-images/world-pic.jpg"); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg"); /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  height: 100%;
+  width: 15%
+}
+
 #title-index {
   font-size: 32px;
   position: absolute;
