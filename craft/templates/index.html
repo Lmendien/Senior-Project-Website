@@ -34,114 +34,30 @@
 	<div id="banner-index" class="banner banner-full">
         <h1 id="title-index">Free Methodist Bible Quizzing</h1>
     </div>
-	
-	<div class="container">
-		<h1>{{ entry.title }}</h1>
-
-		<div class="container">
-    <!-- Indicators -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            {% for announcement in entry.announcementMatrix %}
-              {% if loop.first %}
-                <div class="item active">
-                    <div class="carousel-caption">
-                        {% if announcement.image is not empty %}
-                            <div class="row">
-                              <div class="col-md-4 .hidden-sm-down">
-                                {% set image = announcement.image.first() %}
-                                <img src="{{image.url}}"/>
-                                }
-                              </div>
-                              <div class="col-md-8 col-sm-12">
-                                <p>{{announcement.body}}</p>
-                              </div>
-                            </div>
-                        {% else %}
-                            <div class="row">
-                              <div class="col-md-12">
-                                <p>{{announcement.body}}</p>
-                              </div>
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-              {% endif %}
-              {% if not loop.first %}
-                <div class="item">
-                    <div class="carousel-caption">
-                        {% if announcement.image is not empty %}
-                            <div class="row">
-                              <div class="col-md-4 .hidden-sm-down">
-                                {% set image = announcement.image.first() %}
-                                <img src="{{image.url}}"/>
-                                }
-                              </div>
-                              <div class="col-md-8 col-sm-12">
-                                <p>{{announcement.body}}</p>
-                              </div>
-                            </div>
-                        {% else %}
-                            <div class="row">
-                              <div class="col-md-12">
-                                <p>{{announcement.body}}</p>
-                              </div>
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-              {% endif %}
-            {% endfor %}
+   
+    <div id="mission-statement">
+    	<div contatiner>
+        <h2>Mission Statment</h1>
+        <h6>entry.missionStatement</h6>
         </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="fa fa-angle-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="fa fa-angle-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <ol class="carousel-indicators">
-          {% for announcement in entry.announcementMatrix %}
-                {% if loop.first %}
-                  <li data-target="#myCarousel" data-slide-to="{{ loop.index0 }}" class="active"></li>
-                {% endif %}
-                {% if not loop.first %}
-                  <li data-target="#myCarousel" data-slide-to="{{ loop.index0 }}"></li>
-                {% endif %}
-            {% endfor %}
-        </ol>
     </div>
-</div>
-
-		<h2>Recent News</h2>
-		<ul>
-			{% for entry in craft.entries.section('news').limit(5).find() %}
-				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
-	<div>
-		{% include "mission_template.html" %}
-	</div>
 	<div class="container">
 		<div class="row row-home">
 			<div class="col-sm-6">
 				<div class="container-fluid newsletter-form">
 					<form action="post" action="http://www.ymlp.com/subscribe.php?fmquizzing" class="register-form">
 						<h3 class="text-center">Newsletter Sign Up</h3>
-						<input name="YMLP0" class="form-control" type="text" placeholder="Email">
-						<input name="YMLP1" class="form-control" type="text" placeholder="Church">
-						<input name="YMLP2" class="form-control" type="text" placeholder="Conference">
+						<input name="YMLP0" class="form-control" type="text" placeholder="Email"></input>
+						<input name="YMLP1" class="form-control" type="text" placeholder="Church"></input>
+						<input name="YMLP2" class="form-control" type="text" placeholder="Conference"></input>
 						<input type="submit" class="btn btn-primary logbutton"></input>
 				  	</form>
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<div class="fb-page" data-href="https://www.facebook.com/fmbiblequizzing/" data-tabs="timeline, albums" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/fmbiblequizzing/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/fmbiblequizzing/">Free Methodist Bible Quizzing</a></blockquote></div>		
-			</div>
+				<div class="fb-page" data-href="https://www.facebook.com/fmbiblequizzing/" data-tabs="timeline, albums" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/fmbiblequizzing/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/fmbiblequizzing/">Free Methodist Bible Quizzing</a></blockquote>
+				</div>
+			</div>	
 		</div>
 	</div>
 {% endblock %}
