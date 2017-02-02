@@ -21,9 +21,23 @@
               {% if loop.first %}
                 <div class="item active">
                     <div class="carousel-caption">
-                        <p>{{announcement.body}}</p>
                         {% if announcement.image is not empty %}
-                            <img src="{{announcement.image}}"/>
+                            <div class="row">
+                              <div class="col-md-4 .hidden-sm-down">
+                                {% set image = announcement.image.first() %}
+                                <img src="{{image.url}}"/>
+                                }
+                              </div>
+                              <div class="col-md-8 col-sm-12">
+                                <p>{{announcement.body}}</p>
+                              </div>
+                            </div>
+                        {% else %}
+                            <div class="row">
+                              <div class="col-md-12">
+                                <p>{{announcement.body}}</p>
+                              </div>
+                            </div>
                         {% endif %}
                     </div>
                 </div>
@@ -31,9 +45,23 @@
               {% if not loop.first %}
                 <div class="item">
                     <div class="carousel-caption">
-                        <p>{{announcement.body}}</p>
                         {% if announcement.image is not empty %}
-                            <img src="{{announcement.image}}"/>
+                            <div class="row">
+                              <div class="col-md-4 .hidden-sm-down">
+                                {% set image = announcement.image.first() %}
+                                <img src="{{image.url}}"/>
+                                }
+                              </div>
+                              <div class="col-md-8 col-sm-12">
+                                <p>{{announcement.body}}</p>
+                              </div>
+                            </div>
+                        {% else %}
+                            <div class="row">
+                              <div class="col-md-12">
+                                <p>{{announcement.body}}</p>
+                              </div>
+                            </div>
                         {% endif %}
                     </div>
                 </div>
