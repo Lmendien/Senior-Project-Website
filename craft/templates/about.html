@@ -13,23 +13,7 @@
     </section>
 	
 	<div class="container">
-		<div class="row">
-		{% set length = entry.basicContentRow|length %}
-		{% for basicContentBlock in entry.basicContentRow %}
-			{% if length == 1 %}
-				{% set columnClass = "col-xs-12" %}
-			{% elseif length == 2 %}
-				{% set columnClass = "col-sm-6" %}
-			{% elseif length == 3 %}
-				{% set columnClass = "col-sm-4" %}
-			{% elseif length == 4 %}
-				{% set columnClass = "col-md-3 col-sm-6" %}
-			{% endif %}	
-			<div class="{{ columnClass }} content-block text-center">
-				{{ basicContentBlock.contentRichText }}
-			</div>
-		{% endfor %}
-		</div>
+		{{ entry.body }}
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-3">
@@ -62,9 +46,9 @@
 			</div>
 		</div>
 
-		{% set asset = entry.filePDF.first() %}
+		{% set asset = entry.pdf.first() %}
 		<div class="text-center btn-centered">
-			<a href="{{ asset.url }}" download class="btn btn-primary">Download Rules</a>
+			<a href="{{ asset.url }}" download class="btn btn-primary">{{ entry.buttonLabelOne }}</a>
 		</div>
 	</div>
 
