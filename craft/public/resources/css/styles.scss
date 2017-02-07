@@ -44,3 +44,33 @@
 		}
 	}
 }
+
+/* CSS used here will be applied after bootstrap.css */
+.carousel {
+  text-align: center;
+	.archive {
+		font-size: 24pt;
+		font-weight: bold;
+		margin-bottom: 25px;
+		margin-top: 20px;
+	}
+	.year {
+		font-weight: bold;
+		font-size: 18pt;
+		margin-bottom: 25px;
+	}
+	.carousel-inner {
+
+		.archive-list {
+			font-size: 12pt;
+			background-color: rgb(97,97,97);
+			color: white;
+			margin-bottom: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			padding:25px 0px;
+			text-align: center;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+		}
+	 }
+}
