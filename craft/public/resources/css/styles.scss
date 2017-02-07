@@ -41,6 +41,42 @@
 				}
 			}
 
+			.modal-dialog {
+				width: 100%;
+				margin: 0px;
+				border-radius: 0px;
+
+				.modal-content {
+
+					.modal-body {
+						padding: 20px;
+
+						p {
+							line-height: 1.2em;
+						}
+
+						.general-info {
+							background-color: #F5F5F5;
+							border-radius: 4px;
+
+							img {
+								height: 150px;
+								display: inline-block;
+								margin-right: 10px;
+								border-radius: 4px 0px 0px 4px;
+							}
+
+							.title-info {
+								display: inline-block;
+							}
+						}
+
+						.detailed-info {
+							margin: 10px 0px;
+						}
+					}
+				}
+			}
 		}
 	}
 }

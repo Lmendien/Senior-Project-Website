@@ -24,5 +24,25 @@
       .hall-of-fame .inductees .year .inductee .inductee-info .inductee-city {
         font-size: 0.8em;
         line-height: 1em; }
+  .hall-of-fame .inductees .year .modal-dialog {
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px; }
+    .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body {
+      padding: 20px; }
+      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body p {
+        line-height: 1.2em; }
+      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info {
+        background-color: #F5F5F5;
+        border-radius: 4px; }
+        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info img {
+          height: 150px;
+          display: inline-block;
+          margin-right: 10px;
+          border-radius: 4px 0px 0px 4px; }
+        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info .title-info {
+          display: inline-block; }
+      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .detailed-info {
+        margin: 10px 0px; }
 
 /*# sourceMappingURL=styles.css.map */

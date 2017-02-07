@@ -16,17 +16,17 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'PT Sans', sans-serif;
-  font-color: rgba(0,0,0,0.87);
+  color: rgba(0,0,0,0.87);
 }
 
 ul,ol,li {
   font-family: 'Helvetica', sans-serif;
-  font-color: rgba(0,0,0,0.54);
+  color: rgba(0,0,0,0.54);
 }
 
 p {
   font-family: 'Helvetica', sans-serif;
-  font-color: rgba(0,0,0,0.54);
+  color: rgba(0,0,0,0.54);
   font-size: 16px;
   line-height: 1.6em;
 }
