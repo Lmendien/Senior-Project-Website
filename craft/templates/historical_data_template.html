@@ -1,0 +1,103 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="templates.css">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+      <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<div class="container-fluid historical-data-template">
+	<h1>Historical Data</h1>
+	<div class="col-xs-12 historical-data dropdown keep-open">
+    <a class="btn btn-primary dropdown-toggle" href="#" id="menu1" type="button" data-toggle="dropdown">National Champions
+    <span class="caret"></span></a>
+    <div class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a class="option" data-toggle="tab" href="#nationalChampions">National Champions</a></li>
+        <li><a class="option" data-toggle="tab" href="#multipleChampions">Multiple Champions</a></li>
+        <li><a class="option" data-toggle="tab" href="#individualChampions">Individual Champions</a></li>
+        <li><a class="option" data-toggle="tab" href="#nationalsLocations">Nationals Locations</a></li>
+        <li><a class="option" data-toggle="tab" href="#bookStudies">Books Studies</a></li>
+        <li><a class="option" data-toggle="tab" href="#markellAward">Dave Markell Award</a></li>
+      </ul>
+    </div>
+	</div>
+  <div class="col-xs-12 tab-content">
+    <div class="row tab-pane active" id="nationalChampions">
+      {% for page in entry.nationalChampionsMatrix %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="nationalChampions" class="panel panel-default">
+            <div class="panel-heading">{{page.header}}</div>
+            <div class="panel-body">{{page.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="multipleChampions">
+      {% for page in entry.multipleChampionsMatrix %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="multipleChampions" class="panel panel-default">
+            <div class="panel-heading">{{page.header}}</div>
+            <div class="panel-body">{{page.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="individualChampions">
+      {% for page in entry.individualChampionsMatrix %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="individualChampions" class="panel panel-default">
+            <div class="panel-heading">{{page.header}}</div>
+            <div class="panel-body">{{page.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="nationalsLocations">
+      {% for page in entry.nationalsLocationsMatrix %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="nationalsLocations" class="panel panel-default">
+            <div class="panel-heading">{{page.header}}</div>
+            <div class="panel-body">{{page.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="bookStudies">
+      {% for page in entry.bookStudiesMatrix %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="bookStudies" class="panel panel-default">
+            <div class="panel-heading">{{page.header}}</div>
+            <div class="panel-body">{{page.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="markellAward">
+      {% for page in entry.markellAwardMatrix %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="markellAward" class="panel panel-default">
+            <div class="panel-heading">{{page.header}}</div>
+            <div class="panel-body">{{page.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>  
+$('.dropdown.keep-open').on({
+    "shown.bs.dropdown": function() { this.closable = false; },
+    "click":             function() { this.closable = true; },
+    "hide.bs.dropdown":  function() { return this.closable; }
+});
+
+$('.option').on("click", function(event) {
+  $('a.dropdown-toggle').text($(event.target).text());
+});
+</script>
