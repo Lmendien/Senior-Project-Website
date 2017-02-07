@@ -31,31 +31,33 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<!-- INCLUDING BANNER IMAGE TEMPLATE -->
-	{% include "banner-image.html" %}
-	
-	<div class="container">
-		<h1>{{ entry.title }}</h1>
-
-		{{ entry.body }}
-
-		<h2>Recent News</h2>
-		<ul>
-			{% for entry in craft.entries.section('news').limit(5).find() %}
-				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
-	<div>
-		{% include "mission_template.html" %}
-	</div>
+	<div id="banner-index" class="banner banner-full">
+        <h1 id="title-index">Free Methodist Bible Quizzing</h1>
+    </div>
+   
+    <div id="mission-statement">
+    	<div contatiner>
+        <h2>Mission Statment</h1>
+        <h6>entry.missionStatement</h6>
+        </div>
+    </div>
 	<div class="container">
 		<div class="row row-home">
 			<div class="col-sm-6">
-				{% include "newsletter-sign-up.html" %}
+				<div class="container-fluid newsletter-form">
+					<form action="post" action="http://www.ymlp.com/subscribe.php?fmquizzing" class="register-form">
+						<h3 class="text-center">Newsletter Sign Up</h3>
+						<input name="YMLP0" class="form-control" type="text" placeholder="Email"></input>
+						<input name="YMLP1" class="form-control" type="text" placeholder="Church"></input>
+						<input name="YMLP2" class="form-control" type="text" placeholder="Conference"></input>
+						<input type="submit" class="btn btn-primary logbutton"></input>
+				  	</form>
+				</div>
 			</div>
 			<div class="col-sm-6">
-				{% include "facebook-feed.html" %}		
-			</div>
+				<div class="fb-page" data-href="https://www.facebook.com/fmbiblequizzing/" data-tabs="timeline, albums" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/fmbiblequizzing/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/fmbiblequizzing/">Free Methodist Bible Quizzing</a></blockquote>
+				</div>
+			</div>	
 		</div>
 	</div>
 {% endblock %}
