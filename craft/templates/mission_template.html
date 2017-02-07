@@ -10,13 +10,9 @@
  # http://craftcms.com/docs/routing
  #}
 {% set title = "Mission Statement" %}
-
-{% block content %}
-	<h1>Mission Statment</h1>
-
-	{% for entry in craft.entries.section('missionStatement').find() %}
-		<article>
-			<h3>{{missionStatement}}</h3>
-		</article>
-	{% endfor %}
-{% endblock %}
+<div style="mission-statment: url(../images/background-images/world-pic.jpg)">   
+    <div id=missionstate>
+        <h2>Mission Statment</h1>
+        <h4>entry.missionStatement</h3>
+    </div>
+</div>
