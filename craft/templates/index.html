@@ -34,11 +34,11 @@
 	<div id="banner-index" class="banner banner-full">
         <h1 id="title-index">Free Methodist Bible Quizzing</h1>
     </div>
-   
+   	{% include "announcements.html" %}
     <div id="mission-statement">
-    	<div contatiner>
-        <h2>Mission Statment</h1>
-        <h6>entry.missionStatement</h6>
+    	<div class="container">
+        	<h3>Mission Statment</h3>
+        	<p>{{ entry.missionStatement }}</p>
         </div>
     </div>
 	<div class="container">

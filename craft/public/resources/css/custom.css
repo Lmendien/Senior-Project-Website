@@ -371,6 +371,14 @@ footer .row {
   padding: 30px;
 }
 
+#mission-statement h3 {
+  color: white;
+}
+
+#mission-statement p {
+  color: white;
+}
+
 #title-index {
   font-size: 32px;
   position: absolute;
@@ -378,6 +386,31 @@ footer .row {
   margin: 0px;
   padding: 25px;
   color: white;
+}
+
+.announcements .carousel-control,.announcements .carousel-control:active,.announcements .carousel-control:visited {
+  color: rgba(0,0,0,0.54);
+  background: none;
+  display: none;
+}
+
+.announcements .carousel-control:hover {
+  color: rgba(0,0,0,0.87);
+}
+.announcements .carousel-indicators li {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.32);
+}
+.announcements .carousel-indicators .active {
+    background-color: rgba(0,0,0,0.54);
+}
+
+.announcements .item
+{
+    min-height: 350px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 100%;
 }
 
 /* About Page Styles */
