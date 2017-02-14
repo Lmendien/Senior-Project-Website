@@ -1,9 +1,40 @@
+.history {
+	.nav-tabs {
+		width: 100%;
+		background-color: #03a9FA;
+		box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+
+		li {
+			width: 100%;
+			text-align: center;
+
+			a {
+				padding: 15px;
+				background-color: #03a9FA;
+				color: rgba(256,256,256,0.54);
+			}
+		}
+	}
+
+	.nav-tabs>li>a:hover, .nav-tabs>li>a:hover {
+		border: none;
+		color: #FFFFFF;
+	}
+
+	.nav-tabs>li.active>a, &hover, &focus {
+		background-color: #03a9FA;
+		color: white;
+		border: none;
+		outline: none;
+	}
+}
 .hall-of-fame {
 	.inductees {
-		margin-top: 50px;
+		margin: 50px auto;
 		text-align: center;
 
 		.year {
+			text-align: left;
 
 			.inductee {
 				height: 70px;
@@ -11,6 +42,7 @@
 				margin: 10px auto;
 				box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 				text-align: left;
+				cursor: pointer;
 
 				&:hover {
 					box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
@@ -47,6 +79,20 @@
 				border-radius: 0px;
 
 				.modal-content {
+					min-height: 100vh;
+
+					.modal-header {
+						border: none;
+						padding: 0px 15px;
+
+						.close {
+							margin: 0px;
+							font-size: 54px;
+							font-weight: normal;
+							color: rgba(0,0,0,0.54);
+							opacity: 1;
+						}
+					}
 
 					.modal-body {
 						padding: 20px;
@@ -58,21 +104,44 @@
 						.general-info {
 							background-color: #F5F5F5;
 							border-radius: 4px;
+							width: 100%;
 
 							img {
-								height: 150px;
+								width: 100%;
 								display: inline-block;
-								margin-right: 10px;
-								border-radius: 4px 0px 0px 4px;
+								border-radius: 4px 4px 0px 0px;
 							}
 
 							.title-info {
 								display: inline-block;
+								vertical-align: middle;
+								margin-left: 10px;
+
+								.name {
+									margin-bottom: 0px;
+								}
 							}
 						}
 
 						.detailed-info {
-							margin: 10px 0px;
+							margin: 20px 0px;
+						}
+
+						.questions {
+							.panel-group {
+								.panel {
+									.panel-heading {
+										background-color: #616161;
+										padding: 15px;
+
+										.panel-title {
+											a {
+												color: #FFFFFF;
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -110,4 +179,45 @@
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 		}
 	 }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.hall-of-fame {
+		.inductees {
+			.year {
+				.modal-dialog {
+					width: 96%;
+					margin: 2%;
+
+					.modal-content {
+						.modal-body {
+							padding: 20px 50px 50px 50px;
+							.general-info {
+								img {
+									width: 200px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.history {
+		.nav-tabs {
+			li {
+				width: 33.33%;
+
+				a {
+					font-weight: bold;
+					font-size: 24px;
+				}
+			}
+		}
+		.nav-tabs>li.active>a, &hover, &focus {
+			border-bottom: 4px solid white;
+		}
+	}
 }
