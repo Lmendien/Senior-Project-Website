@@ -75,3 +75,99 @@
 		}
 	 }
 }
+
+.info-page {
+	.tournaments {
+		.archive{
+			margin-bottom: 0px;
+		}
+		.container {
+			h3 {
+			font-weight: bold;
+			display: inline;
+			font-size: 18pt;
+			}
+			.month {
+			margin-top: 5px;
+			margin-bottom: 20px;
+			}
+			.tournament-list {
+				background-color: rgb(245,245,245);
+				border-style: groove;
+				border-width: .5px;
+				margin-bottom: 10px;
+				height: 65px;
+				h4 {
+					font-size: 12pt;
+				}
+			}
+			.schedule-btn {
+				height: 65px;
+				border-radius: 3px;
+				margin-bottom: 35px;
+			}
+		}
+	}
+	.quotes{
+		background-color: #03A9FA;
+		background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(#0288D1, #03A9FA, #0288D1); /* Standard syntax */
+	  background-size: cover;
+		padding-bottom: 25px;
+		.container{
+			h3 {
+				font-size: 32pt;
+				margin-top: 25px;
+				// display: inline;
+				color: white;
+				text-align: center;
+			}
+			.test {
+			 text-align: center;
+		.quotes-btn {
+			height: 65px;
+			border-radius: 3px;
+			margin-top: 40px;
+			margin-bottom: 50px;
+			}
+		}
+		}
+	}
+	.cycle {
+		text-align: center;
+		h3 {
+			margin-bottom: -10px;
+			font-weight: bold;
+			font-size: 24pt;
+		}
+		h4 {
+			margin-bottom: -12px;
+			font-weight: bold;
+		}
+		h5 {
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-bottom: 20px;
+		}
+	}
+	.supplies {
+		background-color: #B3E5FC;
+		text-align: center;
+
+		h3 {
+			margin-top: 30px;
+			padding-top: 50px;
+			font-weight: bold;
+
+		}
+		.supplies-btn {
+			height: 65px;
+			padding-left: 75px;
+			padding-right: 75px;
+			border-radius: 3px;
+			margin-bottom: 50px;
+		}
+	}
+}

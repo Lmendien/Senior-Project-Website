@@ -48,4 +48,76 @@
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
 
+.info-page .tournaments .archive {
+  margin-bottom: 0px; }
+.info-page .tournaments .container h3 {
+  font-weight: bold;
+  display: inline;
+  font-size: 18pt; }
+.info-page .tournaments .container .month {
+  margin-top: 5px;
+  margin-bottom: 20px; }
+.info-page .tournaments .container .tournament-list {
+  background-color: whitesmoke;
+  border-style: groove;
+  border-width: .5px;
+  margin-bottom: 10px;
+  height: 65px; }
+  .info-page .tournaments .container .tournament-list h4 {
+    font-size: 12pt; }
+.info-page .tournaments .container .schedule-btn {
+  height: 65px;
+  border-radius: 3px;
+  margin-bottom: 35px; }
+.info-page .quotes {
+  background-color: #03A9FA;
+  background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* Standard syntax */
+  background-size: cover;
+  padding-bottom: 25px; }
+  .info-page .quotes .container h3 {
+    font-size: 32pt;
+    margin-top: 25px;
+    color: white;
+    text-align: center; }
+  .info-page .quotes .container .test {
+    text-align: center; }
+    .info-page .quotes .container .test .quotes-btn {
+      height: 65px;
+      border-radius: 3px;
+      margin-top: 40px;
+      margin-bottom: 50px; }
+.info-page .cycle {
+  text-align: center; }
+  .info-page .cycle h3 {
+    margin-bottom: -10px;
+    font-weight: bold;
+    font-size: 24pt; }
+  .info-page .cycle h4 {
+    margin-bottom: -12px;
+    font-weight: bold; }
+  .info-page .cycle h5 {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px; }
+.info-page .supplies {
+  background-color: #B3E5FC;
+  text-align: center; }
+  .info-page .supplies h3 {
+    margin-top: 30px;
+    padding-top: 50px;
+    font-weight: bold; }
+  .info-page .supplies .supplies-btn {
+    height: 65px;
+    padding-left: 75px;
+    padding-right: 75px;
+    border-radius: 3px;
+    margin-bottom: 50px; }
+
 /*# sourceMappingURL=styles.css.map */
