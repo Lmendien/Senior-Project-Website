@@ -1,0 +1,79 @@
+<div class="container historical-data">
+	<h3 class="text-center">Historical Data</h3>
+	<div class="dropdown keep-open">
+    <a class="btn btn-primary dropdown-toggle" href="#" id="menu1" type="button" data-toggle="dropdown">National Champions
+    <span class="caret"></span></a>
+    <div class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a class="option" data-toggle="tab" href="#nationalChampions">National Champions</a></li>
+        <li><a class="option" data-toggle="tab" href="#multipleChampions">Multiple Champions</a></li>
+        <li><a class="option" data-toggle="tab" href="#individualChampions">Individual Champions</a></li>
+        <li><a class="option" data-toggle="tab" href="#nationalsLocations">Nationals Locations</a></li>
+        <li><a class="option" data-toggle="tab" href="#bookStudies">Books Studied</a></li>
+        <li><a class="option" data-toggle="tab" href="#markellAward">Dave Markell Award</a></li>
+      </ul>
+    </div>
+	</div>
+  <div class="tab-content">
+    <div class="row tab-pane active" id="nationalChampions">
+      {% for dataColumn in entry.nationalChampions %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="nationalChampions" class="panel panel-default">
+            <div class="panel-heading">{{dataColumn.decade}}s</div>
+            <div class="panel-body">{{dataColumn.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="multipleChampions">
+      {% for dataColumn in entry.multipleChampions %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="multipleChampions" class="panel panel-default">
+            <div class="panel-heading">{{dataColumn.decade}}s</div>
+            <div class="panel-body">{{dataColumn.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="individualChampions">
+      {% for dataColumn in entry.individualChampions %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="individualChampions" class="panel panel-default">
+            <div class="panel-heading">{{dataColumn.decade}}s</div>
+            <div class="panel-body">{{dataColumn.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="nationalsLocations">
+      {% for dataColumn in entry.nationalsLocations %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="nationalsLocations" class="panel panel-default">
+            <div class="panel-heading">{{dataColumn.decade}}s</div>
+            <div class="panel-body">{{dataColumn.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="bookStudies">
+      {% for dataColumn in entry.booksStudied %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="bookStudies" class="panel panel-default">
+            <div class="panel-heading">{{dataColumn.decade}}s</div>
+            <div class="panel-body">{{dataColumn.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row tab-pane" id="markellAward">
+      {% for page in entry.markellAward %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div id="markellAward" class="panel panel-default">
+            <div class="panel-heading">{{dataColumn.decade}}s</div>
+            <div class="panel-body">{{dataColumn.body}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

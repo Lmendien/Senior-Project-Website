@@ -1,3 +1,36 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+.carousel {
+  text-align: center;
+	.archive {
+		font-size: 24pt;
+		font-weight: bold;
+		margin-bottom: 25px;
+		margin-top: 20px;
+		a .glyphicon{
+			color: black;
+		}
+	}
+	.year {
+		font-weight: bold;
+		font-size: 18pt;
+		margin-bottom: 25px;
+	}
+	.carousel-inner {
+
+		.archive-list {
+			font-size: 12pt;
+			background-color: rgb(97,97,97);
+			color: white;
+			margin-bottom: 30px;
+			padding:25px 0px;
+			text-align: center;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+		}
+	 }
+}
+
+// History Page Styles
 .history {
 	.nav-tabs {
 		width: 100%;
@@ -28,6 +61,56 @@
 		outline: none;
 	}
 }
+
+.historical-data {
+	min-height: 500px;
+
+	.dropdown-toggle{
+	    width: 100%;
+	    background-color: #03A9FA;
+	    border: none;
+	    text-align: left;
+	    font-size: 22px;
+	    padding: 20px;
+	}
+
+	.dropdown-menu {
+	    width: 100%;
+	    border: none;
+	    margin: 0px;
+	    padding: 0px;
+
+	    li a {
+		    color: rgba(0,0,0,0.54);
+		    font-size: 22px;
+		    padding: 15px;
+		    border-radius: 0px;
+		}
+	}
+
+	.tab-content {
+		margin-top: 20px;
+
+		.panel-heading {
+		    text-align: center; 
+		}
+
+		.panel-body {
+			text-align: left; 
+		}
+	}
+
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+		background-color: #F5F5F5;
+		color: rgba(0,0,0,0.87);
+	}
+
+	.btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary:active:focus, .open>.dropdown-toggle.btn-primary:active:hover,
+	.open>.dropdown-toggle.btn-primary:hover, .open>.dropdown-toggle.btn-primary, .open>.dropdown-toggle.btn-primary:focus {
+    	background-color: #03A9FA;
+	}
+}
+
 .hall-of-fame {
 	.inductees {
 		margin: 50px auto;
@@ -150,39 +233,41 @@
 	}
 }
 
-/* CSS used here will be applied after bootstrap.css */
-.carousel {
-  text-align: center;
-	.archive {
-		font-size: 24pt;
-		font-weight: bold;
-		margin-bottom: 25px;
-		margin-top: 20px;
-		a .glyphicon{
-			color: black;
-		}
-	}
-	.year {
-		font-weight: bold;
-		font-size: 18pt;
-		margin-bottom: 25px;
-	}
-	.carousel-inner {
+// Store Page Styles
+.store {
+    background-color: #ADD8E6;
+    line-height: 3;
 
-		.archive-list {
-			font-size: 12pt;
-			background-color: rgb(97,97,97);
-			color: white;
-			margin-bottom: 30px;
-			padding:25px 0px;
-			text-align: center;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-		}
-	 }
+    .header {
+	    color: #fff;
+	    background-color: #03A9FA;
+	    line-height: 2;
+	}
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
 
 /* Small devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+	
+	// History Page Styles
+	.history {
+		.nav-tabs {
+			li {
+				width: 33.33%;
+
+				a {
+					font-weight: bold;
+					font-size: 24px;
+				}
+			}
+		}
+		.nav-tabs>li.active>a, &hover, &focus {
+			border-bottom: 4px solid white;
+		}
+	}
+
 	.hall-of-fame {
 		.inductees {
 			.year {
@@ -205,19 +290,19 @@
 		}
 	}
 
-	.history {
-		.nav-tabs {
-			li {
-				width: 33.33%;
-
-				a {
-					font-weight: bold;
-					font-size: 24px;
-				}
-			}
-		}
-		.nav-tabs>li.active>a, &hover, &focus {
-			border-bottom: 4px solid white;
+	.historical-data {
+		.panel {
+			height: 425px;
+			overflow: scroll;
 		}
 	}
 }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }
