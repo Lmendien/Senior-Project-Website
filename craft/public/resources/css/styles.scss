@@ -1,5 +1,35 @@
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default
+
+// Footer Styles
+.footer-hr {
+	margin: 10px 0px;
+	border-top: 1px solid rgba(0,0,0,0.24);
+}
+
+footer {
+	padding: 100px 0px 20px 0px;
+
+	.row {
+		display: none;
+
+		li {
+			list-style-type: none;
+
+			a {
+				color: rgba(0,0,0,0.54);
+			}
+		}
+	} 
+	.links {
+		img {
+			max-height: 40px;
+			padding: 0px 5px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
 .carousel {
   text-align: center;
 	.archive {
@@ -302,7 +332,21 @@
 @media (min-width: 768px) { }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { }
+@media (min-width: 992px) {
+	// Footer Styles
+	footer {
+		.row {
+    		display: inherit;
+  		}
+		
+		.links {
+			img {
+				max-height: 75px;
+				padding: 5px 10px;
+			}
+		}
+	}
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { }

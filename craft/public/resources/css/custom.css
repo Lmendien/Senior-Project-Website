@@ -272,31 +272,6 @@ h6 {
   color: white;
 }
 
-/* Styles for Footer */
-footer {
-  background-color: #0D47A1;
-  padding: 100px 0px 20px 0px;
-  color: #FFFFFF;
-}
-
-footer a {
-  color: #FFFFFF;
-}
-
-footer li {
-  list-style-type: none;
-}
-
-footer .links img {
-  max-height: 40px;
-  padding: 0px 5px;
-  margin-bottom: 20px;
-}
-
-footer .row {
-  display: none;
-}
-
 /* HOMEPAGE STYLES */
 /*******************/
 
@@ -529,16 +504,6 @@ footer .row {
   .banner-full {
     height: 80vh;
     max-height: 80vh;
-  }
-
-  /* Styles for Footer*/
-  footer .row {
-    display: inherit;
-  }
-
-  footer .links img {
-    max-height: 75px;
-    padding: 5px 10px;
   }
 
   /* HOMEPAGE STYLES */
