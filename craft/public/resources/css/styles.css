@@ -73,7 +73,7 @@
 .info-page .tournaments .container h3 {
   font-weight: bold;
   display: inline;
-  font-size: 18pt; }
+  font-size: 24pt; }
 .info-page .tournaments .container .month {
   margin-top: 5px;
   margin-bottom: 20px; }
@@ -88,7 +88,8 @@
 .info-page .tournaments .container .schedule-btn {
   height: 65px;
   border-radius: 3px;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  margin-top: 20px; }
 .info-page .quotes {
   background-color: #03A9FA;
   background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1);
@@ -106,38 +107,49 @@
     margin-top: 25px;
     color: white;
     text-align: center; }
-  .info-page .quotes .container .test {
+  .info-page .quotes .container .quotes-btn {
     text-align: center; }
-    .info-page .quotes .container .test .quotes-btn {
+.info-page .group {
+  margin-top: 25px; }
+  .info-page .group .cycle {
+    text-align: center; }
+    .info-page .group .cycle h3 {
+      margin-bottom: -10px;
+      font-weight: bold;
+      font-size: 18pt; }
+    .info-page .group .cycle h4 {
+      margin-bottom: -12px;
+      font-weight: bold; }
+  .info-page .group .supplies {
+    width: 100%;
+    text-align: center; }
+    .info-page .group .supplies h3 {
+      font-weight: bold; }
+    .info-page .group .supplies .supplies-btn {
       height: 65px;
+      padding-left: 75px;
+      padding-right: 75px;
       border-radius: 3px;
-      margin-top: 40px;
       margin-bottom: 50px; }
-.info-page .cycle {
-  text-align: center; }
-  .info-page .cycle h3 {
-    margin-bottom: -10px;
-    font-weight: bold;
-    font-size: 24pt; }
-  .info-page .cycle h4 {
-    margin-bottom: -12px;
-    font-weight: bold; }
-  .info-page .cycle h5 {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 20px; }
-.info-page .supplies {
-  background-color: #B3E5FC;
-  text-align: center; }
-  .info-page .supplies h3 {
-    margin-top: 30px;
-    padding-top: 50px;
-    font-weight: bold; }
-  .info-page .supplies .supplies-btn {
-    height: 65px;
-    padding-left: 75px;
-    padding-right: 75px;
-    border-radius: 3px;
-    margin-bottom: 50px; }
+  .info-page .group .contact {
+    text-align: center; }
+    .info-page .group .contact h3 {
+      font-weight: bold; }
+    .info-page .group .contact h4 {
+      margin-top: -5px; }
+
+@media only screen and (min-width: 992px) {
+  .info-page .group {
+    margin-top: 100px; }
+    .info-page .group .well-info {
+      height: 250px;
+      margin-bottom: 100px; }
+    .info-page .group .supplies {
+      background-color: #f5f5f5; }
+      .info-page .group .supplies h3 {
+        padding-top: 0px;
+        margin-top: 40px; }
+    .info-page .group .contact h3 {
+      margin-top: 45px; } }
 
 /*# sourceMappingURL=styles.css.map */
