@@ -10,12 +10,156 @@ $gray-dark: #616161;
 $black: #000000;
 $white: #FFFFFF;
 
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Footer Styles
+.footer-hr {
+	margin: 10px 0px;
+	border-top: 1px solid rgba(0,0,0,0.24);
+}
+
+footer {
+	padding: 100px 0px 20px 0px;
+
+	.row {
+		display: none;
+
+		li {
+			list-style-type: none;
+
+			a {
+				color: rgba(0,0,0,0.54);
+			}
+		}
+	}
+	.links {
+		img {
+			max-height: 40px;
+			padding: 0px 5px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.carousel {
+  text-align: center;
+	.archive {
+		font-size: 24pt;
+		font-weight: bold;
+		margin-bottom: 25px;
+		margin-top: 20px;
+		a .glyphicon{
+			color: black;
+		}
+	}
+	.year {
+		font-weight: bold;
+		font-size: 18pt;
+		margin-bottom: 25px;
+	}
+	.carousel-inner {
+
+		.archive-list {
+			font-size: 12pt;
+			background-color: rgb(97,97,97);
+			color: white;
+			margin-bottom: 30px;
+			padding:25px 0px;
+			text-align: center;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+		}
+	 }
+}
+
+// History Page Styles
+.history {
+	.nav-tabs {
+		width: 100%;
+		background-color: #03a9FA;
+		box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+
+		li {
+			width: 100%;
+			text-align: center;
+
+			a {
+				padding: 15px;
+				background-color: #03a9FA;
+				color: rgba(256,256,256,0.54);
+			}
+		}
+	}
+
+	.nav-tabs>li>a:hover, .nav-tabs>li>a:hover {
+		border: none;
+		color: #FFFFFF;
+	}
+
+	.nav-tabs>li.active>a, &hover, &focus {
+		background-color: #03a9FA;
+		color: white;
+		border: none;
+		outline: none;
+	}
+}
+
+.historical-data {
+	min-height: 500px;
+
+	.dropdown-toggle{
+	    width: 100%;
+	    background-color: #03A9FA;
+	    border: none;
+	    text-align: left;
+	    font-size: 22px;
+	    padding: 20px;
+	}
+
+	.dropdown-menu {
+	    width: 100%;
+	    border: none;
+	    margin: 0px;
+	    padding: 0px;
+
+	    li a {
+		    color: rgba(0,0,0,0.54);
+		    font-size: 22px;
+		    padding: 15px;
+		    border-radius: 0px;
+		}
+	}
+
+	.tab-content {
+		margin-top: 20px;
+
+		.panel-heading {
+		    text-align: center;
+		}
+
+		.panel-body {
+			text-align: left;
+		}
+	}
+
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+		background-color: #F5F5F5;
+		color: rgba(0,0,0,0.87);
+	}
+
+	.btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary:active:focus, .open>.dropdown-toggle.btn-primary:active:hover,
+	.open>.dropdown-toggle.btn-primary:hover, .open>.dropdown-toggle.btn-primary, .open>.dropdown-toggle.btn-primary:focus {
+    	background-color: #03A9FA;
+	}
+}
+
 .hall-of-fame {
 	.inductees {
-		margin-top: 50px;
+		margin: 50px auto;
 		text-align: center;
 
 		.year {
+			text-align: left;
 
 			.inductee {
 				height: 70px;
@@ -23,6 +167,7 @@ $white: #FFFFFF;
 				margin: 10px auto;
 				box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 				text-align: left;
+				cursor: pointer;
 
 				&:hover {
 					box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
@@ -59,6 +204,20 @@ $white: #FFFFFF;
 				border-radius: 0px;
 
 				.modal-content {
+					min-height: 100vh;
+
+					.modal-header {
+						border: none;
+						padding: 0px 15px;
+
+						.close {
+							margin: 0px;
+							font-size: 54px;
+							font-weight: normal;
+							color: rgba(0,0,0,0.54);
+							opacity: 1;
+						}
+					}
 
 					.modal-body {
 						padding: 20px;
@@ -70,21 +229,44 @@ $white: #FFFFFF;
 						.general-info {
 							background-color: #F5F5F5;
 							border-radius: 4px;
+							width: 100%;
 
 							img {
-								height: 150px;
+								width: 100%;
 								display: inline-block;
-								margin-right: 10px;
-								border-radius: 4px 0px 0px 4px;
+								border-radius: 4px 4px 0px 0px;
 							}
 
 							.title-info {
 								display: inline-block;
+								vertical-align: middle;
+								margin-left: 10px;
+
+								.name {
+									margin-bottom: 0px;
+								}
 							}
 						}
 
 						.detailed-info {
-							margin: 10px 0px;
+							margin: 20px 0px;
+						}
+
+						.questions {
+							.panel-group {
+								.panel {
+									.panel-heading {
+										background-color: #616161;
+										padding: 15px;
+
+										.panel-title {
+											a {
+												color: #FFFFFF;
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -93,35 +275,16 @@ $white: #FFFFFF;
 	}
 }
 
-/* CSS used here will be applied after bootstrap.css */
-.carousel {
-  text-align: center;
-	.archive {
-		font-size: 24pt;
-		font-weight: bold;
-		margin-bottom: 25px;
-		margin-top: 20px;
-		a .glyphicon{
-			color: black;
-		}
-	}
-	.year {
-		font-weight: bold;
-		font-size: 18pt;
-		margin-bottom: 25px;
-	}
-	.carousel-inner {
+// Store Page Styles
+.store {
+    background-color: #ADD8E6;
+    line-height: 3;
 
-		.archive-list {
-			font-size: 12pt;
-			background-color: rgb(97,97,97);
-			color: white;
-			margin-bottom: 30px;
-			padding:25px 0px;
-			text-align: center;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-		}
-	 }
+    .header {
+	    color: #fff;
+	    background-color: #03A9FA;
+	    line-height: 2;
+	}
 }
 
 .info-page {
@@ -219,8 +382,74 @@ $white: #FFFFFF;
 	}
 }
 
-@media only screen and (min-width: 992px) {
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	// History Page Styles
+	.history {
+		.nav-tabs {
+			li {
+				width: 33.33%;
+
+				a {
+					font-weight: bold;
+					font-size: 24px;
+				}
+			}
+		}
+		.nav-tabs>li.active>a, &hover, &focus {
+			border-bottom: 4px solid white;
+		}
+	}
+
+	.hall-of-fame {
+		.inductees {
+			.year {
+				.modal-dialog {
+					width: 96%;
+					margin: 2%;
+
+					.modal-content {
+						.modal-body {
+							padding: 20px 50px 50px 50px;
+							.general-info {
+								img {
+									width: 200px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.historical-data {
+		.panel {
+			height: 425px;
+			overflow: scroll;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	// Footer Styles
+	footer {
+		.row {
+    		display: inherit;
+  		}
+
+		.links {
+			img {
+				max-height: 75px;
+				padding: 5px 10px;
+			}
+		}
+	}
 	.info-page {
 		.group {
 			margin-top: 100px;
@@ -242,4 +471,7 @@ $white: #FFFFFF;
 				}
 			}
 	 }
-	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }

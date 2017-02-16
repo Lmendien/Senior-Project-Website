@@ -1,5 +1,5 @@
 {#
- # Layout template
+ # Main Layout template
  # ---------------
  #
  # This template defines your site’s global layout. It can be
@@ -7,34 +7,47 @@
  #
  # See Twig’s Template Inheritance documentation for more details:
  # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #
+ # This template is extended for every page on the website. It includes the navigation and the footer
  #}
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
-	<meta charset="utf-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
-	<link rel="home" href="{{ siteUrl }}" />
+	<head>
+		<!-- First meta tag declares the encoding being used. Second tag declares the viewport method -->
+		<meta charset="utf-8" />
+		<!-- THIS TAG IS CRUCIAL FOR MOBILE FREINDLT DISPLAY -->
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	  	<!-- Title Info -->
+		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+		<link rel="home" href="{{ siteUrl }}" />
 
-  {% includeCssFile "https://fonts.googleapis.com/icon?family=Material+Icons" %}
-  {% includeCssFile "resources/bootstrap/css/bootstrap.min.css" %}
-  {% includeCssFile "resources/css/custom.css" %}
-  {% includeCssFile "resources/css/styles.css" %}
-</head>
+		<!-- CSS and Icon File links -->
+		{% includeCssFile "https://fonts.googleapis.com/icon?family=Material+Icons" %}
+		{% includeCssFile "resources/bootstrap/css/bootstrap.min.css" %}
+		{% includeCssFile "resources/css/custom.css" %}
+		{% includeCssFile "resources/css/styles.css" %}
+	</head>
 
-<body>
-    {% include "standard_navigation_header.html" %}
-		<main id="content" role="main">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
-	{% include "footer.html" %}
-	{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
-	{% includeJsFile "resources/bootstrap/js/bootstrap.min.js" %}
-	{% includeJsFile "resources/js/custom.js" %}
-</body>
+	<body>
+		<!-- Includes the navigation element -->
+	    {% include "_includes/_navigation.html" %}
+			
+			<!-- Main Content DO NOT CHANGE!!! -->
+			<main id="content" role="main">
+				{% block content %}
+					<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+					<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+				{% endblock %}
+			</main>
+
+		<!-- Includes the footer -->
+		{% include "_includes/_footer.html" %}
+
+		<!-- Javascript Includes -->
+		{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
+		{% includeJsFile "resources/bootstrap/js/bootstrap.min.js" %}
+		{% includeJsFile "resources/js/custom.js" %}
+	</body>
 </html>

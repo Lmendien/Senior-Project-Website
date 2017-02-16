@@ -1,51 +1,20 @@
-.hall-of-fame .inductees {
-  margin-top: 50px;
-  text-align: center; }
-  .hall-of-fame .inductees .year .inductee {
-    height: 70px;
-    background-color: #F5F5F5;
-    margin: 10px auto;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    text-align: left; }
-    .hall-of-fame .inductees .year .inductee:hover {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
-    .hall-of-fame .inductees .year .inductee .headshot {
-      display: inline-block;
-      vertical-align: top;
-      height: 70px; }
-    .hall-of-fame .inductees .year .inductee .inductee-info {
-      display: inline-block;
-      height: 70px;
-      margin: 5px; }
-      .hall-of-fame .inductees .year .inductee .inductee-info .inductee-name {
-        font-size: 1em;
-        line-height: 1em;
-        font-weight: bold; }
-      .hall-of-fame .inductees .year .inductee .inductee-info .inductee-city {
-        font-size: 0.8em;
-        line-height: 1em; }
-  .hall-of-fame .inductees .year .modal-dialog {
-    width: 100%;
-    margin: 0px;
-    border-radius: 0px; }
-    .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body {
-      padding: 20px; }
-      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body p {
-        line-height: 1.2em; }
-      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info {
-        background-color: #F5F5F5;
-        border-radius: 4px; }
-        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info img {
-          height: 150px;
-          display: inline-block;
-          margin-right: 10px;
-          border-radius: 4px 0px 0px 4px; }
-        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info .title-info {
-          display: inline-block; }
-      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .detailed-info {
-        margin: 10px 0px; }
+.footer-hr {
+  margin: 10px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.24); }
 
-/* CSS used here will be applied after bootstrap.css */
+footer {
+  padding: 100px 0px 20px 0px; }
+  footer .row {
+    display: none; }
+    footer .row li {
+      list-style-type: none; }
+      footer .row li a {
+        color: rgba(0, 0, 0, 0.54); }
+  footer .links img {
+    max-height: 40px;
+    padding: 0px 5px;
+    margin-bottom: 20px; }
+
 .carousel {
   text-align: center; }
   .carousel .archive {
@@ -67,6 +36,136 @@
     padding: 25px 0px;
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
+
+.history .nav-tabs {
+  width: 100%;
+  background-color: #03a9FA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); }
+  .history .nav-tabs li {
+    width: 100%;
+    text-align: center; }
+    .history .nav-tabs li a {
+      padding: 15px;
+      background-color: #03a9FA;
+      color: rgba(255, 255, 255, 0.54); }
+.history .nav-tabs > li > a:hover, .history .nav-tabs > li > a:hover {
+  border: none;
+  color: #FFFFFF; }
+.history .nav-tabs > li.active > a, .historyhover, .historyfocus {
+  background-color: #03a9FA;
+  color: white;
+  border: none;
+  outline: none; }
+
+.historical-data {
+  min-height: 500px; }
+  .historical-data .dropdown-toggle {
+    width: 100%;
+    background-color: #03A9FA;
+    border: none;
+    text-align: left;
+    font-size: 22px;
+    padding: 20px; }
+  .historical-data .dropdown-menu {
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px; }
+    .historical-data .dropdown-menu li a {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 22px;
+      padding: 15px;
+      border-radius: 0px; }
+  .historical-data .tab-content {
+    margin-top: 20px; }
+    .historical-data .tab-content .panel-heading {
+      text-align: center; }
+    .historical-data .tab-content .panel-body {
+      text-align: left; }
+  .historical-data .nav-pills > li.active > a, .historical-data .nav-pills > li.active > a:hover, .historical-data .nav-pills > li.active > a:focus {
+    background-color: #F5F5F5;
+    color: rgba(0, 0, 0, 0.87); }
+  .historical-data .btn-primary:active:focus, .historical-data .btn-primary:active:hover, .historical-data .open > .dropdown-toggle.btn-primary:active:focus, .historical-data .open > .dropdown-toggle.btn-primary:active:hover,
+  .historical-data .open > .dropdown-toggle.btn-primary:hover, .historical-data .open > .dropdown-toggle.btn-primary, .historical-data .open > .dropdown-toggle.btn-primary:focus {
+    background-color: #03A9FA; }
+
+.hall-of-fame .inductees {
+  margin: 50px auto;
+  text-align: center; }
+  .hall-of-fame .inductees .year {
+    text-align: left; }
+    .hall-of-fame .inductees .year .inductee {
+      height: 70px;
+      background-color: #F5F5F5;
+      margin: 10px auto;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+      text-align: left;
+      cursor: pointer; }
+      .hall-of-fame .inductees .year .inductee:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
+      .hall-of-fame .inductees .year .inductee .headshot {
+        display: inline-block;
+        vertical-align: top;
+        height: 70px; }
+      .hall-of-fame .inductees .year .inductee .inductee-info {
+        display: inline-block;
+        height: 70px;
+        margin: 5px; }
+        .hall-of-fame .inductees .year .inductee .inductee-info .inductee-name {
+          font-size: 1em;
+          line-height: 1em;
+          font-weight: bold; }
+        .hall-of-fame .inductees .year .inductee .inductee-info .inductee-city {
+          font-size: 0.8em;
+          line-height: 1em; }
+    .hall-of-fame .inductees .year .modal-dialog {
+      width: 100%;
+      margin: 0px;
+      border-radius: 0px; }
+      .hall-of-fame .inductees .year .modal-dialog .modal-content {
+        min-height: 100vh; }
+        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-header {
+          border: none;
+          padding: 0px 15px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-header .close {
+            margin: 0px;
+            font-size: 54px;
+            font-weight: normal;
+            color: rgba(0, 0, 0, 0.54);
+            opacity: 1; }
+        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body {
+          padding: 20px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body p {
+            line-height: 1.2em; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info {
+            background-color: #F5F5F5;
+            border-radius: 4px;
+            width: 100%; }
+            .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info img {
+              width: 100%;
+              display: inline-block;
+              border-radius: 4px 4px 0px 0px; }
+            .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info .title-info {
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 10px; }
+              .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info .title-info .name {
+                margin-bottom: 0px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .detailed-info {
+            margin: 20px 0px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .questions .panel-group .panel .panel-heading {
+            background-color: #616161;
+            padding: 15px; }
+            .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .questions .panel-group .panel .panel-heading .panel-title a {
+              color: #FFFFFF; }
+
+.store {
+  background-color: #ADD8E6;
+  line-height: 3; }
+  .store .header {
+    color: #fff;
+    background-color: #03A9FA;
+    line-height: 2; }
 
 .info-page .tournaments .archive {
   margin-bottom: 0px; }
@@ -138,7 +237,34 @@
     .info-page .group .contact h4 {
       margin-top: -5px; }
 
-@media only screen and (min-width: 992px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .history .nav-tabs li {
+    width: 33.33%; }
+    .history .nav-tabs li a {
+      font-weight: bold;
+      font-size: 24px; }
+  .history .nav-tabs > li.active > a, .historyhover, .historyfocus {
+    border-bottom: 4px solid white; }
+
+  .hall-of-fame .inductees .year .modal-dialog {
+    width: 96%;
+    margin: 2%; }
+    .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body {
+      padding: 20px 50px 50px 50px; }
+      .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info img {
+        width: 200px; }
+
+  .historical-data .panel {
+    height: 425px;
+    overflow: scroll; } }
+@media (min-width: 992px) {
+  footer .row {
+    display: inherit; }
+  footer .links img {
+    max-height: 75px;
+    padding: 5px 10px; }
+
   .info-page .group {
     margin-top: 100px; }
     .info-page .group .well-info {
