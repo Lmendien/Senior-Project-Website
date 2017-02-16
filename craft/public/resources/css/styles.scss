@@ -1,18 +1,20 @@
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default
+// Include other CSS files and docs
+@import url("../font-awesome/css/font-awesome.min.css");
 
+ 
+// No media query since this is the default
 // Footer Styles
 .footer-hr {
 	margin: 10px 0px;
 	border-top: 1px solid rgba(0,0,0,0.24);
 }
-
 footer {
-	padding: 100px 0px 20px 0px;
+	padding: 50px 20px 10px 20px;
+	text-align: center;
 
-	.row {
-		display: none;
-
+	ul {
+		padding: 0px;
+		margin-bottom: 10px;
 		li {
 			list-style-type: none;
 
@@ -20,13 +22,16 @@ footer {
 				color: rgba(0,0,0,0.54);
 			}
 		}
-	} 
-	.links {
-		img {
-			max-height: 40px;
-			padding: 0px 5px;
-			margin-bottom: 20px;
-		}
+	}
+
+	.social {
+		font-size: 40px;
+		text-align: center;
+		margin: 20px;
+	}
+
+	.copyright {
+		font-size: 12px;
 	}
 }
 
@@ -278,7 +283,7 @@ footer {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { }
 
-/* Small devices (tablets, 768px and up) */
+// Medium devices (tablets, 768px and up)
 @media only screen and (min-width: 768px) {
 	
 	// History Page Styles
@@ -327,10 +332,6 @@ footer {
 		}
 	}
 }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { }
-
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 	// Footer Styles

@@ -1,19 +1,24 @@
+@import url("../font-awesome/css/font-awesome.min.css");
 .footer-hr {
   margin: 10px 0px;
   border-top: 1px solid rgba(0, 0, 0, 0.24); }
 
 footer {
-  padding: 100px 0px 20px 0px; }
-  footer .row {
-    display: none; }
-    footer .row li {
+  padding: 50px 20px 10px 20px;
+  text-align: center; }
+  footer ul {
+    padding: 0px;
+    margin-bottom: 10px; }
+    footer ul li {
       list-style-type: none; }
-      footer .row li a {
+      footer ul li a {
         color: rgba(0, 0, 0, 0.54); }
-  footer .links img {
-    max-height: 40px;
-    padding: 0px 5px;
-    margin-bottom: 20px; }
+  footer .social {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px; }
+  footer .copyright {
+    font-size: 12px; }
 
 .carousel {
   text-align: center; }
