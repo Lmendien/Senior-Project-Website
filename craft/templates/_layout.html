@@ -25,9 +25,9 @@
 
 		<!-- CSS and Icon File links -->
 		{% includeCssFile "https://fonts.googleapis.com/icon?family=Material+Icons" %}
-		{% includeCssFile "resources/bootstrap/css/bootstrap.min.css" %}
-		{% includeCssFile "resources/css/custom.css" %}
-		{% includeCssFile "resources/css/styles.css" %}
+		{% includeCssFile siteUrl~"resources/bootstrap/css/bootstrap.min.css" %}
+		{% includeCssFile siteUrl~"resources/css/custom.css" %}
+		{% includeCssFile siteUrl~"resources/css/styles.css" %}
 	</head>
 
 	<body>
@@ -47,7 +47,7 @@
 
 		<!-- Javascript Includes -->
 		{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
-		{% includeJsFile "resources/bootstrap/js/bootstrap.min.js" %}
-		{% includeJsFile "resources/js/custom.js" %}
+		{% includeJsFile siteUrl~"resources/bootstrap/js/bootstrap.min.js" %}
+		{% includeJsFile siteUrl~"resources/js/custom.js" %}
 	</body>
 </html>
