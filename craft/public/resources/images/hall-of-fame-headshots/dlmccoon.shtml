@@ -1,0 +1,73 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>FM Bible Quizzing | Hall of Fame</TITLE>
+	<!--#include virtual="../includes/head.html" -->
+	<!--#config timefmt="%A, %d %B %Y"-->
+</HEAD>
+<BODY>
+	<!--#include virtual="../includes/header.html" -->
+	<table width="100%" border="0" cellspacing="3" cellpadding="0">
+		<TR>
+			<!--#include virtual="../includes/sidenav.html" -->
+			<TD width="100%" valign="top">
+				<FONT face="Verdana,helvetica,Arial">
+				<DIV align="right"><FONT size="2"><!--#echo var="date_gmt"--></FONT></div>
+				<FONT size="5">Hall of Fame:</FONT>
+				<HR color="blue">
+
+<table>
+<tr>
+<td>
+
+<h2>DAWN MCCOON</h2>
+Waterford, Michigan<br>
+<ol>
+<li> What years did you quiz? <br>In 1961 I participated in Baseball Quizzing. For one season in 1965-66 I participated in Jump Quizzing.</li>
+<li> Where and for what church did you quiz? <br>Pontiac (MI) First Free Methodist Church</li>
+<li> What were the highlights of your quizzing years? <br>I loved studying Acts. I also loved watching the Jump Quizzing competition that was held during Camp and Conference at the East Michigan Camp ground.</li>
+<li> Did you or your team win any championships? <br>If so, what and when? No, our team did not get to compete at conference that year.</li>
+<li>  Did you receive any other special quizzing awards? <br>If so, what? No</li>
+<li> What was your favorite scripture? Why? <br>I found Acts 1:7-8 a comfort when people would try to say that the end was coming at such and such a time. And I would claim verse 8 knowing that the Holy Sprit's power was with me especially when I would witness to my friends.  Since I have been coaching quizzing I have found that Romans 8:23 is there when I don't know how I should pray, because the word promises that the Sprit intercedes for us when we can't express ourselves with words.</li>
+<li>  How did quizzing affect you as a teen? <br>I found that studying the Word of God was actually fun and I loved the competition.</li>
+<li> What difference has quizzing made in your life to this day? <br>I have learned how to use scripture in my everyday life. I have learned that you have to actually study the word of God--not just memorize it. It is good to have scripture memorized, but if we never learn what it means and how to apply it to our daily walk, it will return void. I learned through Matthew 25:1-13 that you should never give up walking the way God instructs or you may be left behind. Don't get caught without oil in your lamp.</li>
+<li>  Are you presently involved in Bible quizzing in any way or have you since you were a quizzer? If so, how? <br>I am currently the head coach at the Clarkston FMC and Co-Director of the East Michigan Conference Bible Quiz ministry.</li>
+<li> What ministries are you currently doing? How are you presently active in serving the Lord? <br>Besides being the head coach at the Clarkston (MI) Free Methodist Church and the Co-Director for the conference, I work with the High School teens on Wednesday night and am in charge of a small group. My husband and I are also on the leadership team for one of our Adult Bible Fellowship groups on Sunday morning.</li>
+</ol>
+
+
+<h2>LYLE R. MCCOON</h2> Waterford, Michigan<br>
+<ol>
+<li>  What years did you quiz?<br>I was never privileged to quiz.
+<li> What was your favorite scripture? Why?<br> My favorite scripture from Romans is Chapter 12:1&2. I like this passage because it tells me that what we do on earth should be as a "living sacrifice" and that we should not be concerned what the world says we should do with our lives.
+<li> How did quizzing affect you as a teen?<br> While I did not quiz as a teen I have seen the affects of quizzing on teens at our church. I remember a Sunday school teacher once told me how impressed he was with knowledge the young teen quizzers had of the Bible book he was teaching from. He said he never realized that quizzers studied the Bible to the depth of knowledge they had.
+<li> What difference has quizzing made in your life to this day?<br> My first involvement with quizzing was when my son, Lyle, Jr. was in the eighth grade. He wanted to go to Quiz Nationals, but no one at our church could go. He and I went to Nationals together. I saw how much the quizzers knew and how they were using it in their lives. I decided that quizzing was a ministry that I should help in. I learn along with the quizzers as we study God's word and they get involved with the competition.
+<li> Are you presently involved in Bible quizzing in any way or have you since you were a quizzer? If so, how? <br>At the present time I am fairly involved with Bible Quizzing in the following ways:  I am co-director of Bible Quizzing for the East Michigan Conference.  I repair quiz sets at conference, regional and national quiz meets.  During Quiz practices at our church I lead in-depth Bible studies.
+<li> What ministries are you currently doing? How are you presently active in serving the Lord?<br>I drive buses for Church activities.  I assist with leadership of our Adult Bible Fellowship (Sunday school).  I teach Adult Bible Fellowship (Sunday school) classes as needed.  I am a substitute sound technician.  I am co-chair of the Church Board of Trustees.  I occasionally teach the High School class on Wednesday evenings.  I work with a small group of High School students on Wednesday evenings.
+</ol>
+
+</td>
+<td valign=top align=center><a href="images/"><img src="images/" alt="" border="2"></a>
+</td>
+</tr>
+</table>
+<hr>
+
+<p><b>2006 Inductees:</b></p>
+<ul>
+<li><a href="gfields.shtml"> GREG FIELDS</a> Greenville, IL</li>
+<li><a href="mgray.shtml"> MARVIN EARL GRAY</a> Wilmore, KY</li>
+<li><a href="dlmccoon.shtml"> DAWN &amp; LYLE R. MCCOON</a> Mount Pleasant, MI</li>
+<li><a href="jsetty.shtml"> JAMES E. SETTY</a> (Heaven)</li>
+</ul>
+				
+				
+			</TD>
+		</TR>
+	</TABLE><hr><div align="CENTER"><small>
+	<!--#include virtual="../includes/footer.html" -->	 
+Last Modified: <!--#echo var="last_modified"--> 
+</small></div>
+	
+</BODY>
+</HTML>

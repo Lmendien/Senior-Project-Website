@@ -1,0 +1,89 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>FM Bible Quizzing | Hall of Fame</TITLE>
+	<!--#include virtual="../includes/head.html" -->
+	<!--#config timefmt="%A, %d %B %Y"-->
+</HEAD>
+<BODY>
+	<!--#include virtual="../includes/header.html" -->
+	<table width="100%" border="0" cellspacing="3" cellpadding="0">
+		<TR>
+			<!--#include virtual="../includes/sidenav.html" -->
+			<TD width="100%" valign="top">
+				<FONT face="Verdana,helvetica,Arial">
+				<DIV align="right"><FONT size="2"><!--#echo var="date_gmt"--></FONT></div>
+				<FONT size="5">Hall of Fame:</FONT>
+				<HR color="blue">
+
+<table>
+<tr>
+<td>
+
+<h2>DALE MARTIN</h2>
+Greenville, IL<br>
+Email Address:   dfmcrm@juno.com<br>
+<ol>
+<li> What years did you quiz?<br>
+1955-56, 1956-57, 1957-58
+
+<li> Where and for what church did you quiz?<br>
+Winona Lake (IN) Free Methodist Church</li>
+
+<li> What were the highlights of your quizzing years?<br>
+Attending Youth Camp at Camp Mack in northern Indiana; meeting other
+quizzers; having Florence Murray, a retired missionary, as our coach.</li>
+
+<li> Did you or your team win any championships? If so, what and when?<br>
+We were 3rd in 1956, quizzing on Romans.  In 1957 (first year the electric
+chairs were used) we won the championship on the book of John.  We were
+runners-up (by 15 points) in 1968, quizzing on Genesis.</li>
+
+<li> What was your favorite scripture? Why?<br>
+At this distance in time, I can't recall a favorite.</li>
+
+<li> How did quizzing affect you as a teen?<br>
+Quizing gave a focus to our summer, and helped develop concentration and
+dedication, spurred on by the challenge of competition.</li>
+
+<li> What difference has quizzing made in your life to this day?<br>
+It has given me a high regard for scripture and its importance, as well as
+an understanding of the value of memorization so that the Word is close at
+hand.</li>
+
+<li> Are you presently involved in Bible quizzing in any way or have you
+since you were a quizzer? If so, how?<br>
+A couple of our kids participated when they were in FMY.</li>
+
+<li> What ministries are you currently doing? How are you presently active
+in serving the Lord?<br>
+I've taught at Greenville College for 38 years and am active in our local FM
+church.</li>
+</ol>
+
+
+</td>
+<td valign=top align=center><a href="images/dmartin.jpg"><img src="images/dmartin.jpg" alt="" border="2"></a>
+</td>
+</tr>
+</table>
+<hr>
+
+<p><b>2005 Inductees:</b></p>
+<ul>
+<li><a href="dmartin.shtml"> DALE MARTIN</a> Greenville, IL</li>
+<li><a href="lmccoon.shtml"> LYLE MCCOON, JR.</a> Wilmore, KY</li>
+<li><a href="psamuelson.shtml"> PETER SAMUELSON</a> Mount Pleasant, MI</li>
+<li><a href="dwhitlock.shtml"> DOUG WHITLOCK</a> (Heaven)</li>
+</ul>
+				
+				
+			</TD>
+		</TR>
+	</TABLE><hr><div align="CENTER"><small>
+	<!--#include virtual="../includes/footer.html" -->	 
+Last Modified: <!--#echo var="last_modified"--> 
+</small></div>
+	
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>FM Bible Quizzing | Hall of Fame</TITLE>
+	<!--#include virtual="../includes/head.html" -->
+	<!--#config timefmt="%A, %d %B %Y"-->
+</HEAD>
+<BODY>
+	<!--#include virtual="../includes/header.html" -->
+	<table width="100%" border="0" cellspacing="3" cellpadding="0">
+		<TR>
+			<!--#include virtual="../includes/sidenav.html" -->
+			<TD width="100%" valign="top">
+				<FONT face="Verdana,helvetica,Arial">
+				<DIV align="right"><FONT size="2"><!--#echo var="date_gmt"--></FONT></div>
+				<FONT size="5">Hall of Fame:</FONT>
+				<HR color="blue">
+
+<table>
+<tr>
+<td>
+
+<h2>JAMES E. SETTY</h2>
+Dyer, Indiana<br>
+<ol>
+<li> What years did you quiz? <br>1957-1959</li>
+<li>  Where and for what church did you quiz? <br>Harvey (IL) Free Methodist Church</li>
+<li> What were the highlights of your quizzing years? <br>We met once a week at someone's home for practice, study, and fellowship. We only quizzed against other churches once or twice during the year.  Our conference finals were at Camp Epworth in Belvidere, Illinois.  Rev. W. R. Thompson was our pastor and quiz coach.  He wrote all of his own materials. I enjoyed spending time with my friends, going to camps, and quizzing against other teams.</li>
+<li>  Did you or your team win any championships? <br>If so, what and when? Our team won the 1958 International Bible Quiz Championship at Camp Mack, near Winona Lake, Indiana.  We studied the book of Genesis (all 52 chapters).  We quizzed against the Winona Lake team in the final round and won.</li>
+<li> Did you receive any other special quizzing awards? If so, what? <br>In addition to the trophy (which I still have), we each received a leather Bible and $100.</li>
+<li>  What was your favorite scripture? Why? <br>Genesis really didn't give me a favorite scripture but one of my favorite scriptures from the Old Testament is Proverbs 3:5.  God is a lot smarter than I am.  He has always provided for me, both spiritually and materially. I can see how the Lord has directed my life in providing a marriage partner, raising my children, and keeping me in a church where I have been able to serve Him.</li>
+<li> How did quizzing affect you as a teen? <br>It gave me an incentive to read the Bible.  Once I got started, I wanted to know more.  I associated mostly with Christian young people, which helped me to live a Christian life. Quizzing gave me confidence in myself.</li>
+<li> What difference has quizzing made in your life to this day? <br>I met my wife, Meredith, through being involved in Free Methodist youth activities. Meredith was also a quizzer in the FM church in Melrose Park, Illinois. Also, I have enjoyed lasting friendships with many people as a quizzer and coach.</li>
+<li> Are you presently involved in Bible quizzing in any way or have you since you were a quizzer? <br>If so, how? We have had quiz programs in the past.  In 1969, when I was in the Army in Fairbanks, Alaska, my wife and I organized our first quiz team at the Fairbanks First Church of the Nazarene. We coached 4 or 5 young people.  One of the members of that team has gone on to be a very active quizzing organizer for the Nazarene denomination and has had many years of success in quizzing.  His children are now active in quizzing under his coaching.  In the 1970's we had a team, and in 1987-88 we had a team with my two children were involved with two other team members. We started our current quiz program in Monee, IL in 2002.  I am amazed at what the Lord has done for our young people through this program.  We started with a group of kids from three difference schools who were not very close to each other and now we have a group of close friends.  The parents have commented that the quiz program has done so much for their kids.  These kids are now becoming members of our church and are looking forward to coaching someday.  What a miracle!!</li>
+<li> What ministries are you currently doing? How are you presently active in serving the Lord? <br>I am currently our local church delegate to the North Central Conference, Sunday morning worship song leader, on our local Board of Administration, substitute teacher for the adult and teen Sunday School classes, and quiz coach. </li>
+</ol>
+
+
+</td>
+<td valign=top align=center><a href="images/"><img src="images/" alt="" border="2"></a>
+</td>
+</tr>
+</table>
+<hr>
+
+<p><b>2006 Inductees:</b></p>
+<ul>
+<li><a href="gfields.shtml"> GREG FIELDS</a> Greenville, IL</li>
+<li><a href="mgray.shtml"> MARVIN EARL GRAY</a> Wilmore, KY</li>
+<li><a href="dlmccoon.shtml"> DAWN &amp; LYLE R. MCCOON</a> Mount Pleasant, MI</li>
+<li><a href="jsetty.shtml"> JAMES E. SETTY</a> (Heaven)</li>
+</ul>
+				
+				
+			</TD>
+		</TR>
+	</TABLE><hr><div align="CENTER"><small>
+	<!--#include virtual="../includes/footer.html" -->	 
+Last Modified: <!--#echo var="last_modified"--> 
+</small></div>
+	
+</BODY>
+</HTML>
