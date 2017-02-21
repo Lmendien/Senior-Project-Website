@@ -2,8 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="../public/resources/css/custom.css">
-<link rel="stylesheet" href="../public/resources/css/styles.css">
+<link rel="stylesheet" href="../../public/resources/css/custom.css">
+<link rel="stylesheet" href="../../public/resources/css/styles.css">
 
 
 <!-- jQuery library -->
@@ -16,17 +16,10 @@
   <div class="tournaments">
     <div class="container">
       <div id="myCarousel" class="carousel slide t" data-ride="carousel">
-        <div class="archive"> <a class="left" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
+        <div class="archive">
           <h3>
         Tournaments
           </h3>
-        <a class="right" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
         <div class="carousel-inner" role="listbox">
          <div class="item active">
@@ -36,12 +29,23 @@
              </h3>
           </div>
            <div class="row">
-             <div class="col-md-6 col-xs-12"><div class="tournament-list"><h4>Gowanda, NY</h4></div></div>
-             <div class="col-md-6 col-xs-12"><div class="tournament-list"><h4>Aldersgate (Indy), IN</h4></div></div>
-             <div class="col-md-6 col-xs-12"><div class="tournament-list"><h4>Janesville, WI</h4></div></div>
-             <div class="col-md-6 col-xs-12"><div class="tournament-list"><h4>Moses Lake, WA</h4></div></div>
-             <div class="col-md-6 col-xs-12"><div class="tournament-list"><h4>Ogemaw, Hills, MI</h4></div></div>
-             <div class="col-md-6 col-xs-12"><div class="tournament-list"><h4>Monaca, PA</h4></div></div>
+             {% for month in craft.entries.section("tournaments") %}
+               {% for event in month.competition %}
+                 <div class="col-md-6 col-xs-12">
+                   <div class="tournament-list">
+                     <div class="tournament-date">
+                       {{event.date.day}}
+                     </div>
+                     <div class="tournament-location">
+                       {{event.location}}
+                   </div>
+                   <div class="tournament-conference">
+                     {{event.conference}}
+                   </div>
+                 </div>
+               </div>
+               {% endfor %}
+             {% endfor %}
            </div>
            <button class="btn btn-primary schedule-btn" type="button">Full Schedule</button>
          </div>
@@ -91,4 +95,4 @@
    </div>
  </div>
 </div>
-<script src="../public/resources/js/custom.js"></script>
+<!-- <script src="../public/resources/js/custom.js"></script> -->
