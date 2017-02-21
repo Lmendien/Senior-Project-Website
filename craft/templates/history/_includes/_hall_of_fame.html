@@ -17,7 +17,7 @@
 						<div type="button" class="inductee" data-toggle="modal" data-target="#{{inductee.id}}">
 							{% set headshot = inductee.headshot.first() %}
 							{# Displays the headshot, name, and city of the inductee #}
-							<img class="headshot" src="{{ headshot.url }}">
+							<img class="headshot" src="{{ headshot.getUrl('headshotThumbnail') }}">
 							<div class="inductee-info">
 								<h6 class="inductee-name">{{ inductee.title }}</h6>
 								<p class="inductee-city">{{ inductee.churchCity }}</p>
@@ -36,7 +36,7 @@
 								</div>
 								<div class="modal-body text-left">
 									<div class="row">
-										<div class="col-xs-12">
+										<div class="col-sm-12 col-md-8 col-lg-6">
 											<div class="general-info">
 												<img class="headshot" src="{{ headshot.url }}">
 												<div class="title-info">
@@ -47,21 +47,12 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="detailed-info">
-											<div class="col-md-6">
+										<div class="col-xs-12">
+											<div class="detailed-info">
+												<h5>Bio</h5>
 												<p><b>Church:</b> {{ inductee.churchName }}</p>
-												<p><b>Years Quizzed:</b> {{ inductee.yearsQuizzed }}</p>
-												<p><b>Notable Results:</b></p>
-												<ul>
-												{% for notableResult in inductee.notableResults %}
-													<li>{{ notableResult.year }} - {{ notableResult.result }}</li>
-												{% endfor %}
-												</ul>
-											</div>
-											<div class="col-md-6">
-												</ul>
-												<p><b>Favorite Scripture:</b></p>
-												<div>{{ inductee.favoriteScripture }}</div>
+												<p><b>Years in Quizzing:</b> {{ inductee.yearsQuizzed }}</p>
+												<div>{{ inductee.bio }}</div>
 											</div>
 										</div>
 									</div>

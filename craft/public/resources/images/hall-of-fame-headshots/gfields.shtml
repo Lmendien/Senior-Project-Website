@@ -1,0 +1,74 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>FM Bible Quizzing | Hall of Fame</TITLE>
+	<!--#include virtual="../includes/head.html" -->
+	<!--#config timefmt="%A, %d %B %Y"-->
+</HEAD>
+<BODY>
+	<!--#include virtual="../includes/header.html" -->
+	<table width="100%" border="0" cellspacing="3" cellpadding="0">
+		<TR>
+			<!--#include virtual="../includes/sidenav.html" -->
+			<TD width="100%" valign="top">
+				<FONT face="Verdana,helvetica,Arial">
+				<DIV align="right"><FONT size="2"><!--#echo var="date_gmt"--></FONT></div>
+				<FONT size="5">Hall of Fame:</FONT>
+				<HR color="blue">
+
+<table>
+<tr>
+<td>
+
+<h2>GREG FIELDS</h2>
+McPherson, Kansas<br>
+<ol>
+
+<li> What years did you quiz? </li>
+
+<li> Where and for what church did you quiz? <br>McPherson (KS) Free Methodist Church</li>
+
+<li>  What were the highlights of your quizzing years? <br>Finally becoming good friends with the Bedford team.  Quizzing side by side with my lifelong best friend - Ryan Joy.  Winning the Spit Shine Award the year we didn't study like we should have.  Endless hours of quoting scripture to my mom and dad.</li>
+
+<li> Did you or your team win any championships? <br>If so, what and when? 1985 - 1st young teen veteran team in 1985; 1st senior teen veteran team in 1989; 1st senior teen veteran team in 1990; and 1st senior teen veteran individual in 1990.</li>
+
+<li> Did you receive any other special quizzing awards? <br>If so, what? The cherished Spit Shine Award in 1987!</li>
+
+<li> What was your favorite scripture? Why? <br>Matthew 22:37-40.  This is where Jesus told the Pharisees that loving God and loving our neighbors are what all of the commandments revolve around. It simplifies a lot of scripture.  It reminds me that I have to put away all my pride and think about first of all pleasing God and loving Him, and then showing His love to those around me.  I can use this verse to check my own actions by determining if my motives are to benefit myself or to bring glory to God by loving Him and/or others.</li>
+
+<li>  How did quizzing affect you as a teen? <br>My sophomore year was the first year that I started memorizing the entire portion word for word.  That year my grades in school went from a B - C average to straight A's.  I felt like I was able to retain any information I saw or heard much easier when I was memorizing scripture.  More importantly than my grades though, quizzing helped ground me in my faith.  Middle school and High school are difficult years and there were many times when I felt the world calling me away from the Lord.  I was definitely not perfect throughout these years, but I know that there were many good decisions that I made only because I had God's word in my heart.  I also knew that I was being held accountable by my fellow quizzers.</li>
+
+<li> What difference has quizzing made in your life to this day? <br>Quizzing gave me a great foundation in the scripture.  I am amazed to see how many life-long church goers really don't know a lot about what God says to us in His word.  I probably wouldn't have either if I hadn't been in Quizzing.  I am in sales now, and I know that quizzing helped give me confidence to get up in front of people.  It also gave me confidence in myself to know that when we are diligent about something and work at it with all of our strength, God will reward us - even if it's not in the way we expected. Hard work pays off, and God will reward those who work hard for Him.</li>
+
+<li> Are you presently involved in Bible quizzing in any way or have you since you were a quizzer? If so, how? <br>I have helped in some way with the quiz ministry at McPherson since I returned to live there in 1994.</li>
+
+<li> What ministries are you currently doing? How are you presently active in serving the Lord? <br>My wife and I teach 3rd Grade Sunday School at the McPherson Free Methodist church (helping with some future champion quizzers).  We also lead the 5th Grade class on Wednesday nights.  I have served on various committees at the church for the last several years and am currently on the board of Elyria Christian School close to McPherson.  I enjoy singing whenever I can to praise our Lord.</li>
+
+</ol>
+
+
+</td>
+<td valign=top align=center><a href="images/"><img src="images/" alt="" border="2"></a>
+</td>
+</tr>
+</table>
+<hr>
+
+<p><b>2006 Inductees:</b></p>
+<ul>
+<li><a href="gfields.shtml"> GREG FIELDS</a> Greenville, IL</li>
+<li><a href="mgray.shtml"> MARVIN EARL GRAY</a> Wilmore, KY</li>
+<li><a href="dlmccoon.shtml"> DAWN &amp; LYLE R. MCCOON</a> Mount Pleasant, MI</li>
+<li><a href="jsetty.shtml"> JAMES E. SETTY</a> (Heaven)</li>
+</ul>
+				
+				
+			</TD>
+		</TR>
+	</TABLE><hr><div align="CENTER"><small>
+	<!--#include virtual="../includes/footer.html" -->	 
+Last Modified: <!--#echo var="last_modified"--> 
+</small></div>
+	
+</BODY>
+</HTML>
