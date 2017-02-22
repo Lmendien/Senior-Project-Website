@@ -32,7 +32,8 @@
 
 	<!-- INCLUDING BANNER IMAGE TEMPLATE -->
 	<div id="banner-index" class="banner banner-full">
-        <h1 id="title-index">Free Methodist Bible Quizzing</h1>
+        <h1 id="title-index">Free Methodist Bible Quizzing</h1><br>
+        <p id="scroll-down" class="text-center"><a href="#scroll-down"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a></p>
     </div>
    	{% include "_includes/_announcements.html" %}
     <div id="mission-statement">
@@ -45,12 +46,12 @@
 		<div class="row row-home">
 			<div class="col-sm-6">
 				<div class="container-fluid newsletter-form">
-					<form action="post" action="http://www.ymlp.com/subscribe.php?fmquizzing" class="register-form">
+					<form action="post" action="http://www.ymlp.com/subscribe.php?fmquizzing">
 						<h3 class="text-center">Newsletter Sign Up</h3>
 						<input name="YMLP0" class="form-control" type="text" placeholder="Email"></input>
 						<input name="YMLP1" class="form-control" type="text" placeholder="Church"></input>
 						<input name="YMLP2" class="form-control" type="text" placeholder="Conference"></input>
-						<input type="submit" class="btn btn-primary logbutton"></input>
+						<div type="submit" class="btn btn-primary btn-block">Submit</div>
 				  	</form>
 				</div>
 			</div>
