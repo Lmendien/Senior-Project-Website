@@ -25,13 +25,15 @@
          <div class="item active">
            <div class="month">
              <h3>
-           October
+               {% for month in craft.entries.section("tournaments") %}
+                {{ month.title }}
+               {% endfor %}
              </h3>
           </div>
            <div class="row">
              {% for month in craft.entries.section("tournaments") %}
                {% for event in month.competition %}
-                 <div class="col-md-6 col-xs-12">
+                 <div class="col-sm-6 col-xs-12">
                    <div class="tournament-list">
                      <div class="tournament-date">
                        {{event.date.day}}
