@@ -743,9 +743,23 @@ footer {
 				border-width: .5px;
 				margin-bottom: 10px;
 				height: 65px;
-				h4 {
-					font-size: 12pt;
-				}
+				.tournament-date {
+          float: left;
+          width: 48px;
+          text-align: right;
+          font-size: 32pt;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        .tournament-location {
+          font-weight: bold;
+          font-size: 12pt;
+          text-align: left;
+          margin-top: 9px;
+        }
+        .tournament-conference {
+          text-align: left;
+        }
 			}
 			.schedule-btn {
 				height: 65px;
@@ -844,7 +858,7 @@ footer {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { }
-	
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	
