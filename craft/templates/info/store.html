@@ -1,16 +1,13 @@
-<head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{#
+ # Store Page Template
+ # ---------------
+ #}
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% extends "_layout" %}
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="templates.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<div class="container" flex>
+{% block content %}
+
+<div class="container">
     <div class="row">
         <section class="col-xs-12">
             <h3 class="text-center">Store</h3>
@@ -23,3 +20,5 @@
         </section>
     </div>
 </div>
+
+{% endblock %}
