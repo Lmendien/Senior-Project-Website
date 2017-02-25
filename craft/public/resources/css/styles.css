@@ -67,11 +67,8 @@ a {
 
 .navbar {
   background-color: #03A9FA;
-  color: #000000;
   border: none;
-  margin: 0px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  padding: 0px 0px; }
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
   .navbar .navbar-brand {
     padding: 0px;
     display: inline-block; }
@@ -80,124 +77,31 @@ a {
       padding: 10px;
       position: relative;
       display: inline-block; }
-  .navbar .menu-toggle {
-    right: 0;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-top: 8px;
-    background-color: transparent;
+  .navbar .navbar-toggle {
     border: none;
-    outline: none;
-    position: absolute;
-    z-index: 1500; }
-    .navbar .menu-toggle .menu-line {
-      display: block; }
-      .navbar .menu-toggle .menu-line .menu-bar {
-        background-color: white;
-        width: 20px;
-        height: 5px;
-        margin: 5px;
-        display: inline-block; }
-  .navbar .navbar-nav {
-    width: 100%;
-    margin: 0px 0px;
-    position: fixed;
-    right: 0px;
-    z-index: 1001; }
-    .navbar .navbar-nav .menu-container {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      background-color: #FFFFFF;
-      padding-top: 5vh;
-      padding-bottom: 5vh;
-      z-index: 1000;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
-      .navbar .navbar-nav .menu-container a {
-        text-decoration: none; }
-      .navbar .navbar-nav .menu-container .navbar-item {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10vh 0px;
-        text-align: center;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
-        .navbar .navbar-nav .menu-container .navbar-item h4 {
-          color: white;
-          margin: 0px; }
-        .navbar .navbar-nav .menu-container .navbar-item:hover {
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
-  .navbar #home {
-    background: url("../images/menu-images/home-menu-thumb.jpg");
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg");
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg");
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg");
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/home-menu-thumb.jpg");
-    /* Standard syntax */
-    background-position: top; }
-  .navbar #about {
-    background: url("../images/menu-images/about-menu.jpg");
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg");
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg");
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg");
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/about-menu.jpg");
-    /* Standard syntax */ }
-  .navbar #info {
-    background: url("../images/menu-images/info-menu-thumb.jpg");
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg");
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg");
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg");
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/info-menu-thumb.jpg");
-    /* Standard syntax */ }
-  .navbar #history {
-    background: url("../images/menu-images/history-menu-thumb.jpg");
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg");
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg");
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg");
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/history-menu-thumb.jpg");
-    /* Standard syntax */ }
-  .navbar #media {
-    background: url("../images/menu-images/media-menu-thumb.jpg");
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg");
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg");
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg");
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/media-menu-thumb.jpg");
-    /* Standard syntax */
-    background-position: bottom; }
-  .navbar #finals {
-    background: url("../images/menu-images/finals-menu.jpg");
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg");
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg");
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg");
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6)), url("../images/menu-images/finals-menu.jpg");
-    /* Standard syntax */ }
+    padding: 8px;
+    margin: 10px 15px; }
+    .navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
+      background-color: #0288D1; }
+    .navbar .navbar-toggle .icon-bar {
+      width: 26px;
+      height: 3px;
+      margin: 6px; }
+  .navbar .navbar-nav li a {
+    padding: 20px; }
+    .navbar .navbar-nav li a:hover {
+      background-color: #0D47A1; }
+  .navbar .navbar-nav .active a {
+    background-color: #0288D1; }
+    .navbar .navbar-nav .active a:hover, .navbar .navbar-nav .active a:focus {
+      background-color: #0288D1; }
+  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
+    background-color: #03A9FA; }
+  .navbar .navbar-nav .open .dropdown-menu {
+    padding: 0px; }
+    .navbar .navbar-nav .open .dropdown-menu li a {
+      background-color: #0D47A1;
+      padding: 15px 50px; }
 
 .footer-hr {
   margin: 10px 0px;
@@ -368,6 +272,7 @@ footer {
   background-attachment: fixed; }
 
 .conference {
+  height: 100px;
   padding: 20px 0px;
   width: 100%;
   color: rgba(0, 0, 0, 0.87); }
@@ -380,11 +285,11 @@ footer {
 .about-international img {
   opacity: 0.8;
   width: 100%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
-.about-international:hover {
-  opacity: 1;
-  width: 100%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  .about-international img:hover {
+    opacity: 1;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
 
 .history .nav-tabs {
   width: 100%;
@@ -637,8 +542,15 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .menu-container {
-    top: 70px; }
+  .navbar .navbar-nav li a {
+    padding: 27px; }
+  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
+    background-color: #0D47A1; }
+  .navbar .navbar-nav .open .dropdown-menu li a {
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.54); }
+    .navbar .navbar-nav .open .dropdown-menu li a:hover {
+      color: rgba(0, 0, 0, 0.87); }
 
   .history .nav-tabs li {
     width: 33.33%; }
@@ -660,34 +572,6 @@ footer {
     height: 425px;
     overflow: scroll; } }
 @media (min-width: 992px) {
-  .navbar .menu-toggle {
-    margin-right: 10px; }
-  .navbar a.menu-toggle.active .menu-line .menu-bar {
-    background-color: #0288D1;
-    -webkit-transition: ease all .7s;
-    transition: ease all .7s; }
-  .navbar a.menu-toggle.active.collapsed .menu-line .menu-bar {
-    background-color: white;
-    -webkit-transition: ease all .7s;
-    transition: ease all .7s; }
-  .navbar .navbar-nav {
-    width: 50%;
-    position: fixed;
-    right: 0px; }
-    .navbar .navbar-nav .menu-container {
-      margin: 0px;
-      position: fixed;
-      width: 50%;
-      height: 100%;
-      padding-top: 80px;
-      padding-bottom: 11vh;
-      top: 0;
-      right: 0; }
-      .navbar .navbar-nav .menu-container .navbar-item {
-        opacity: 0.8; }
-        .navbar .navbar-nav .menu-container .navbar-item:hover {
-          opacity: 1; }
-
   footer .row {
     display: inherit; }
   footer .links img {
