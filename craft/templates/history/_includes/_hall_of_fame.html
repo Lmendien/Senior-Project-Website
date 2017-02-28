@@ -36,28 +36,22 @@
 								</div>
 								<div class="modal-body text-left">
 									<div class="row">
-										<div class="col-sm-12 col-md-8 col-lg-6">
+										<div class="col-sm-12 col-md-3">
 											<div class="general-info">
 												<img class="headshot" src="{{ headshot.url }}">
 												<div class="title-info">
 													<h5 class="name">{{ inductee.title }}</h5>
-													<p class="city">{{ inductee.churchCity }}</p>
+													<p>{{ inductee.churchName }}</p>
+													<p>{{ inductee.churchCity }}</p>
+													<p>{{ inductee.yearsQuizzed }}</p>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12">
+										<div class="col-sm-12 col-md-9">
 											<div class="detailed-info">
 												<h5>Bio</h5>
-												<p><b>Church:</b> {{ inductee.churchName }}</p>
-												<p><b>Years in Quizzing:</b> {{ inductee.yearsQuizzed }}</p>
 												<div>{{ inductee.bio }}</div>
 											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12">
 											<div class="questions">
 												<h5>Questions & Answers</h5>
 												<div class="panel-group" id="accordion">
