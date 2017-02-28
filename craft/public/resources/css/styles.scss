@@ -338,7 +338,7 @@ footer {
 	position: relative;
 	text-align: center;
 	padding: 40vh 10px;
-	margin: 0px; 
+	margin: 0px;
 }
 
 .announcements {
@@ -357,7 +357,7 @@ footer {
 			background-color: #FFFFFF;
 			border: 1px solid rgba(0,0,0,0.32);
 		}
-		
+
 		.active {
 			background-color: rgba(0,0,0,0.54);
 		}
@@ -371,7 +371,7 @@ footer {
 	}
 }
 
-#mission-statement { 
+#mission-statement {
 	@include background($main-gradient1, $main-gradient2, "../images/background-images/world-pic.jpg");
 	background-size: cover;
 	background-attachment: fixed;
@@ -742,14 +742,25 @@ footer {
 				border-style: groove;
 				border-width: .5px;
 				margin-bottom: 10px;
-				height: 65px;
+        margin-right: 10px;
+        height: 100px;
+
 				.tournament-date {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          padding: 5px;
+          padding-right: 22px;
+          background-color: white;
           float: left;
           width: 48px;
           text-align: right;
           font-size: 32pt;
           margin-left: 10px;
           margin-right: 10px;
+            .abbrev {
+              font-size: 16pt;
+              margin-bottom: -10px;
+            }
         }
         .tournament-location {
           font-weight: bold;
@@ -861,7 +872,7 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	
+
 	.menu-container {
 		top: 70px;
 	}
@@ -916,10 +927,10 @@ footer {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	
+
 	///////////////////////////////////////////////////////////////////////
 	// GLOBAL STYLES
-	
+
 	// Navbar
 	.navbar {
 		.menu-toggle {
@@ -997,7 +1008,7 @@ footer {
 		font-size: 48px;
 	}
 
-	#mission-statement { 
+	#mission-statement {
 		padding: 100px 0px;
 
 			p {

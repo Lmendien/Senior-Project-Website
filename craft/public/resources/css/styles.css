@@ -552,14 +552,23 @@ footer {
   border-style: groove;
   border-width: .5px;
   margin-bottom: 10px;
-  height: 65px; }
+  margin-right: 10px;
+  height: 100px; }
   .info-page .tournaments .container .tournament-list .tournament-date {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-right: 22px;
+    background-color: white;
     float: left;
     width: 48px;
     text-align: right;
     font-size: 32pt;
     margin-left: 10px;
     margin-right: 10px; }
+    .info-page .tournaments .container .tournament-list .tournament-date .abbrev {
+      font-size: 16pt;
+      margin-bottom: -10px; }
   .info-page .tournaments .container .tournament-list .tournament-location {
     font-weight: bold;
     font-size: 12pt;
