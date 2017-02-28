@@ -8,14 +8,14 @@ class TournamentData_ChurchService extends BaseApplicationComponent
         $churchRecord = new TournamentData_ChurchRecord();
 
         $churchRecord->setAttributes( $church->getAttributes() );
-
+		
 		if ( $churchRecord->save() )
 		{
 		    error_log('SUCCESS');
 		}
 		else
 		{
-			error_log($churchRecord->getErrors());
+			error_log($church->getAttributes());
 		}
     }
 

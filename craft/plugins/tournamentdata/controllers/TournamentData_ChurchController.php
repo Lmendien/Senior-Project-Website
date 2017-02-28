@@ -3,21 +3,30 @@ namespace Craft;
 
 class TournamentData_ChurchController extends BaseController
 {
+    protected $allowAnonymous = true;
+
     public function actionSaveChurch()
     {
+        
         $this->requirePostRequest();
+        error_log(craft()->request->getQueryString());
 
         $church = new TournamentData_ChurchModel();
+        $church->name = craft()->request->getPost("name");
+        
+        foreach (craft()->request-> as $param_name => $param_val) {
+            error_log("Param: $param_name; Value: $param_val<br />\n");
+        }
 
         foreach($church->attributes as $key => &$value)
         {
             $value = craft()->request->getPost($key);
+            error_log((string)$value);
         }
 
-        if(craft()->tournamentdata_church->saveChurch($church))
+        if(craft()->tournamentData_church->saveChurch($church))
         {
             craft()->userSession->setNotice(Craft::t('Church saved.'));
-            $this->redirectToPostedUrl();
         }
         else
         {
@@ -28,6 +37,7 @@ class TournamentData_ChurchController extends BaseController
             // since it contains the user's dumb input as well as the validation errors.
             craft()->urlManager->setRouteVariables(array('church' => $church));
         }
+        $this->redirect("/fmquizzing/craft/public");
     }
 
     public function actionDeleteChurch()
