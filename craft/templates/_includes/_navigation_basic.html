@@ -10,21 +10,21 @@
 	</div>
 	<div class="collapse navbar-collapse" id="myNavbar">
 	  <ul class="nav navbar-nav navbar-right">
-		<li class="active"><a href="#">Home</a></li>
-		<li><a href="#">About</a></li> 
+		<li class="active"><a href="{{ siteUrl }}">Home</a></li>
+		<li><a href="{{ siteUrl }}/about">About</a></li> 
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Info
 			<span class="caret"></span></a>
 			<ul class="dropdown-menu">
-			  <li><a href="#">Tournaments</a></li>
-			  <li><a href="#">Quotes</a></li>
-			  <li><a href="#">Contacts</a></li> 
-			  <li><a href="#">Store</a></li>
+			  <li><a href="{{ siteUrl }}/info/tournaments">Tournaments</a></li>
+			  <li><a href="{{ siteUrl }}/info/quotes">Quotes</a></li>
+			  <li><a href="{{ siteUrl }}/info/contacts">Contacts</a></li> 
+			  <li><a href="{{ siteUrl }}/info/store">Store</a></li>
 			</ul>
 		  </li>
-		<li><a href="#">History</a></li> 
-		<li><a href="#">Media</a></li>
-		<li><a href="#">Finals</a></li> 
+		<li><a href="{{ siteUrl }}/history">History</a></li> 
+		<li><a href="{{ siteUrl }}/media">Media</a></li>
+		<li><a href="{{ siteUrl }}/finals">Finals</a></li> 
 	  </ul>
 	</div>
   </div>

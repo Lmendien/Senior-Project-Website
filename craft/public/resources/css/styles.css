@@ -48,6 +48,9 @@ a {
   font-family: "PT Sans", sans-serif;
   font-color: #0D47A1; }
 
+hr {
+  border-top: 1px solid #9E9E9E; }
+
 .btn-primary {
   background-color: #0D47A1;
   font-size: 24px;
@@ -217,7 +220,7 @@ footer {
     color: white; }
 
 .newsletter-form {
-  margin: 50px 0px; }
+  margin-bottom: 50px; }
   .newsletter-form input {
     width: 100%;
     margin-bottom: 20px;
@@ -229,8 +232,46 @@ footer {
 
 .fb-page {
   width: 100%;
-  text-align: center;
+  text-align: center; }
+
+.nav .quick-link a {
+  background-color: #0288D1;
+  font-size: 24px;
+  color: white;
+  padding: 30px 20px;
+  margin: 5px 0px; }
+  .nav .quick-link a:hover, .nav .quick-link a:focus {
+    background-color: #0D47A1; }
+
+.row-home {
   margin: 50px 0px; }
+
+.upcoming-event {
+  border: 1px solid #F5F5F5;
+  border-radius: 4px;
+  margin: 5px 0px; }
+  .upcoming-event .date {
+    display: inline-block;
+    background: #F5F5F5;
+    padding: 5px;
+    width: 75px;
+    text-align: center;
+    vertical-align: middle; }
+    .upcoming-event .date .month {
+      display: block; }
+    .upcoming-event .date .day {
+      font-size: 32px;
+      text-align: center;
+      vertical-align: middle; }
+  .upcoming-event .info {
+    display: inline-block;
+    vertical-align: middle; }
+    .upcoming-event .info h6 {
+      line-height: 1.2;
+      margin: 0px; }
+    .upcoming-event .info p {
+      line-height: 1;
+      margin: 0px; }
 
 #banner-about {
   background: url("../images/banner-images/banner-about.jpg");

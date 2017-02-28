@@ -110,6 +110,10 @@ a {
   font-color: $accent1-dark;
 }
 
+hr {
+	border-top: 1px solid $gray;
+}
+
 // Button Styles
 .btn-primary {
 	background-color: $accent1-dark;
@@ -346,7 +350,7 @@ footer {
 }
 
 .newsletter-form {
-	margin: 50px 0px;
+	margin-bottom: 50px;
 
 	input {
 		width: 100%;
@@ -362,7 +366,66 @@ footer {
 .fb-page {
 	width: 100%;
 	text-align: center;
+}
+
+.nav {
+	.quick-link {
+		a {
+			background-color: $primary-dark;
+			font-size: 24px;
+			color: white;
+			padding: 30px 20px;
+			margin: 5px 0px;
+
+			&:hover, &:focus {
+				background-color: $accent1-dark;
+			}
+		}
+	}
+}
+
+.row-home {
 	margin: 50px 0px;
+}
+
+.upcoming-event {
+	border: 1px solid $gray-light;
+	border-radius: 4px;
+	margin: 5px 0px;
+	
+	.date {
+		display: inline-block;
+	    background: $gray-light;
+	    padding: 5px;
+	    width: 75px;
+	    text-align: center;
+	    vertical-align: middle;
+
+	    .month {
+	    	display: block;
+	    }
+
+	    .day {
+	    	font-size: 32px;
+		    text-align: center;
+		    vertical-align: middle;
+	    }
+	}
+
+	.info {
+		display: inline-block;
+		vertical-align: middle;
+
+		h6 {
+			line-height: 1.2;
+			margin: 0px;
+		}
+
+		p {
+			line-height: 1;
+			margin: 0px;
+		}
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -898,50 +961,6 @@ footer {
 	
 	///////////////////////////////////////////////////////////////////////
 	// GLOBAL STYLES
-	
-	// // Navbar
-	// .navbar {
-	// 	.menu-toggle {
- //    		margin-right: 10px;
-	//   	}
-
-	//   	a.menu-toggle.active .menu-line .menu-bar {
- //    		background-color: #0288D1;
- //    		-webkit-transition: ease all .7s;
- //    		transition: ease all .7s;
- //    	}
-
-	//   	a.menu-toggle.active.collapsed .menu-line .menu-bar {
- //    		background-color: white;
- //    		-webkit-transition: ease all .7s;
- //    		transition: ease all .7s;
- //    	}
-
-	// 	.navbar-nav {
-	// 		width: 50%;
-	// 		position: fixed;
-	// 		right: 0px;
-
-	// 	    .menu-container {
-	// 	    	margin:0px;
-	// 			position: fixed;
-	// 			width: 50%;
-	// 			height: 100%;
-	// 			padding-top: 80px;
-	// 			padding-bottom: 11vh;
-	// 			top:0;
-	// 			right:0;
-
-	// 			.navbar-item {
-	// 				opacity: 0.8;
-
-	// 				&:hover {
-	// 					opacity: 1;
-	// 				}
-	//  			}
-	//   		}
-	// 	}
-	// }
 
 	// Footer Styles
 	footer {
