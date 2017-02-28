@@ -14,9 +14,9 @@
 {% set title = "News" %}
 
 {% block content %}
-	<h1>News</h1>
-
-	{% for entry in craft.entries.section('news').find() %}
+	<div class="container no-banner">
+	<h1>Blog</h1>
+	{% for entry in craft.entries.section('blog').find() %}
 		<article>
 			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
 			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
@@ -24,4 +24,5 @@
 			<p><a href="{{ entry.url }}">Continue reading</a></p>
 		</article>
 	{% endfor %}
+	</div>
 {% endblock %}

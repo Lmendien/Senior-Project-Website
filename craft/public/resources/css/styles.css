@@ -148,6 +148,9 @@ footer {
 .banner-full {
   height: 100vh; }
 
+.no-banner {
+  margin-top: 100px; }
+
 #banner-index {
   background: url("../images/banner-images/banner-index.jpg");
   /* For browsers that do not support gradients */

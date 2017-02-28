@@ -96,6 +96,17 @@
    			</div>
    			<div class="col-sm-4">
    				<h4>Blog Feed</h4>
+   				{% for entry in craft.entries.section('blog').order('postDate').limit(1) %}
+					<div class="blog-post">	
+						{% set image = entry.image.first() %}
+						<img src="{{ image.url }}"/>
+						<span class="content">
+							<h5><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
+							<p>{{ entry.body|striptags|slice(0,100)|default('Read more') }}...<a href="{{ entry.url }}">Continue reading</a></p>
+						</span>
+					</div>
+				{% endfor %}
+				<a href="#">More Posts</a>
    			</div>
    			<div class="col-sm-4">
    				<h4>Quiz Cycle</h4>
