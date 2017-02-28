@@ -110,6 +110,10 @@ a {
   font-color: $accent1-dark;
 }
 
+hr {
+	border-top: 1px solid $gray;
+}
+
 // Button Styles
 .btn-primary {
 	background-color: $accent1-dark;
@@ -134,11 +138,8 @@ a {
 // Navbar
 .navbar {
 	background-color: $primary;
-	color: $black;
 	border: none;
-	margin: 0px;
 	box-shadow: 0px 2px 2px $box-shadow-color;
-	padding: 0px 0px;
 
 	.navbar-brand {
 	  	padding: 0px;
@@ -152,98 +153,56 @@ a {
 		}
 	}
 
-	.menu-toggle {
-		right: 0;
-		cursor: pointer;
-		margin-right: 10px;
-		margin-top: 8px;
-		background-color: transparent;
+	.navbar-toggle {
 		border: none;
-		outline:none;
-		position: absolute;
-		z-index: 1500;
+		padding: 8px;
+		margin: 10px 15px;
 
-		.menu-line {
-		  	display: block;
+		&:hover, &:focus {
+			background-color: $primary-dark;
+		}
 
-			 .menu-bar {
-				background-color: white;
-				width: 20px;
-				height: 5px;
-				margin: 5px;
-				display: inline-block;
-			}
+		.icon-bar {
+			width: 26px;
+			height: 3px;
+			margin: 6px;
 		}
 	}
 
 	.navbar-nav {
-  		width: 100%;
-  		margin: 0px 0px;
-  		position: fixed;
-		right: 0px;
-  		z-index: 1001;
-
-  		.menu-container {
-			position: fixed;
-			height: 100%;
-			width: 100%;
-			background-color: $white;
-			padding-top: 5vh;
-			padding-bottom: 5vh;
-			z-index: 1000;
-			box-shadow: 0px 2px 2px $box-shadow-color;
-
+		li {
 			a {
-				text-decoration: none;
-			}
-
-			.navbar-item {
-				background-size: cover;
-				background-position: center;
-				background-repeat: no-repeat;
-				margin-bottom: 30px;
-				margin-left: auto;
-				margin-right: auto;
-				padding: 10vh 0px;
-				text-align: center;
-				box-shadow: 0px 2px 2px $box-shadow-color;
-
-				h4 {
-					color: white;
-					margin: 0px;
-				}
+				padding: 20px;
 
 				&:hover {
-					box-shadow: 0px 4px 4px $box-shadow-color;
+					background-color: $accent1-dark;
 				}
 			}
 		}
-	}
 
-	#home {
-		@include background(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6), "../images/menu-images/home-menu-thumb.jpg");
-	  	background-position: top;
-	}
+		.active a {
+			background-color: $primary-dark;
 
-	#about {
-		@include background(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6), "../images/menu-images/about-menu.jpg");
-	}
+			&:hover, &:focus {
+				background-color: $primary-dark;
+			}
+		}
 
-	#info {
-		@include background(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6), "../images/menu-images/info-menu-thumb.jpg");
-	}
+		.open {
+			a, a:hover, a:focus {
+				background-color: $primary;
+			}
 
-	#history {
-		@include background(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6), "../images/menu-images/history-menu-thumb.jpg");
-	}
+			.dropdown-menu {
+				padding: 0px;
 
-	#media {
-		@include background(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6), "../images/menu-images/media-menu-thumb.jpg");
-	  	background-position: bottom;
-	}
+				li a{
+					background-color: $accent1-dark;
+					padding: 15px 50px;
+				}
 
-	#finals {
-		@include background(rgba(1, 63, 93, 0.6), rgba(1, 63, 93, 0.6), "../images/menu-images/finals-menu.jpg");
+			}
+		}
 	}
 }
 
@@ -391,7 +350,7 @@ footer {
 }
 
 .newsletter-form {
-	margin: 50px 0px;
+	margin-bottom: 50px;
 
 	input {
 		width: 100%;
@@ -407,7 +366,66 @@ footer {
 .fb-page {
 	width: 100%;
 	text-align: center;
+}
+
+.nav {
+	.quick-link {
+		a {
+			background-color: $primary-dark;
+			font-size: 24px;
+			color: white;
+			padding: 30px 20px;
+			margin: 5px 0px;
+
+			&:hover, &:focus {
+				background-color: $accent1-dark;
+			}
+		}
+	}
+}
+
+.row-home {
 	margin: 50px 0px;
+}
+
+.upcoming-event {
+	border: 1px solid $gray-light;
+	border-radius: 4px;
+	margin: 5px 0px;
+	
+	.date {
+		display: inline-block;
+	    background: $gray-light;
+	    padding: 5px;
+	    width: 75px;
+	    text-align: center;
+	    vertical-align: middle;
+
+	    .month {
+	    	display: block;
+	    }
+
+	    .day {
+	    	font-size: 32px;
+		    text-align: center;
+		    vertical-align: middle;
+	    }
+	}
+
+	.info {
+		display: inline-block;
+		vertical-align: middle;
+
+		h6 {
+			line-height: 1.2;
+			margin: 0px;
+		}
+
+		p {
+			line-height: 1;
+			margin: 0px;
+		}
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -445,6 +463,7 @@ footer {
 }
 
 .conference {
+	height: 100px;
 	padding: 20px 0px;
 	width: 100%;
 	color: rgba(0,0,0,0.87);
@@ -463,13 +482,13 @@ footer {
 	img {
 		opacity: 0.8;
 		width: 100%;
-		box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
-	}
+		box-shadow: 0px 2px 2px $box-shadow-color;
 
-	&:hover {
-		opacity: 1;
-		width: 100%;
-		box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+			&:hover {
+			opacity: 1;
+			width: 100%;
+			box-shadow: 0px 4px 4px $box-shadow-color;
+		}
 	}
 }
 
@@ -862,8 +881,31 @@ footer {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	
-	.menu-container {
-		top: 70px;
+	.navbar {
+		.navbar-nav {
+			li {
+				a {
+					padding: 27px;
+				}
+			}
+			.open {
+
+				a, a:hover, a:focus {
+					background-color: $accent1-dark;
+				}
+
+				.dropdown-menu {
+					li a {
+						background-color: $white;
+						color: $black-54;
+
+						&:hover {
+							color: $black-87;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	///////////////////////////////////////////////////////////////////////
@@ -894,11 +936,6 @@ footer {
 					.modal-content {
 						.modal-body {
 							padding: 20px 50px 50px 50px;
-							.general-info {
-								img {
-									width: 200px;
-								}
-							}
 						}
 					}
 				}
@@ -919,50 +956,6 @@ footer {
 	
 	///////////////////////////////////////////////////////////////////////
 	// GLOBAL STYLES
-	
-	// Navbar
-	.navbar {
-		.menu-toggle {
-    		margin-right: 10px;
-	  	}
-
-	  	a.menu-toggle.active .menu-line .menu-bar {
-    		background-color: #0288D1;
-    		-webkit-transition: ease all .7s;
-    		transition: ease all .7s;
-    	}
-
-	  	a.menu-toggle.active.collapsed .menu-line .menu-bar {
-    		background-color: white;
-    		-webkit-transition: ease all .7s;
-    		transition: ease all .7s;
-    	}
-
-		.navbar-nav {
-			width: 50%;
-			position: fixed;
-			right: 0px;
-
-		    .menu-container {
-		    	margin:0px;
-				position: fixed;
-				width: 50%;
-				height: 100%;
-				padding-top: 80px;
-				padding-bottom: 11vh;
-				top:0;
-				right:0;
-
-				.navbar-item {
-					opacity: 0.8;
-
-					&:hover {
-						opacity: 1;
-					}
-	 			}
-	  		}
-		}
-	}
 
 	// Footer Styles
 	footer {
