@@ -7,7 +7,9 @@ class TournamentData_ChurchService extends BaseApplicationComponent
     {
         $churchRecord = new TournamentData_ChurchRecord();
 
-        $churchRecord->setAttributes( $church->getAttributes() );
+		$churchRecord->name = $church->name;
+		$churchRecord->address = $church->address;
+		$churchRecord->isActive = $church->isActive;
 		
 		if ( $churchRecord->save() )
 		{

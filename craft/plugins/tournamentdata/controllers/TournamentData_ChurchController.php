@@ -7,22 +7,14 @@ class TournamentData_ChurchController extends BaseController
 
     public function actionSaveChurch()
     {
-        
         $this->requirePostRequest();
         error_log(craft()->request->getQueryString());
 
         $church = new TournamentData_ChurchModel();
-        $church->name = craft()->request->getPost("name");
-        
-        foreach (craft()->request-> as $param_name => $param_val) {
-            error_log("Param: $param_name; Value: $param_val<br />\n");
-        }
 
-        foreach($church->attributes as $key => &$value)
-        {
-            $value = craft()->request->getPost($key);
-            error_log((string)$value);
-        }
+        $church->name = craft()->request->getPost("name");
+        $church->address = craft()->request->getPost("address");
+        $church->isActive = (bool)craft()->request->getPost("isActive");
 
         if(craft()->tournamentData_church->saveChurch($church))
         {
@@ -37,7 +29,7 @@ class TournamentData_ChurchController extends BaseController
             // since it contains the user's dumb input as well as the validation errors.
             craft()->urlManager->setRouteVariables(array('church' => $church));
         }
-        $this->redirect("/fmquizzing/craft/public");
+        $this->redirectToPostedUrl();
     }
 
     public function actionDeleteChurch()
