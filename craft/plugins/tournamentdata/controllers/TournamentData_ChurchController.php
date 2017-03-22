@@ -8,13 +8,12 @@ class TournamentData_ChurchController extends BaseController
     public function actionSaveChurch()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $church = new TournamentData_ChurchModel();
 
         $church->name       = craft()->request->getPost("name");
         $church->address    = craft()->request->getPost("address");
-        $church->isActive   = (bool)craft()->request->getPost("isActive");
+        $church->isActive   = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_church->saveChurch($church))
         {
@@ -82,7 +81,7 @@ class TournamentData_ChurchController extends BaseController
 
         $churchTeam->churchId = craft()->request->getPost("churchId");
         $churchTeam->tournamentteamId = craft()->request->getPost("tournamentteamId");
-        $churchTeam->isActive = (bool)craft()->request->getPost("isActive");
+        $churchTeam->isActive = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_church->saveChurchTeam($church))
         {

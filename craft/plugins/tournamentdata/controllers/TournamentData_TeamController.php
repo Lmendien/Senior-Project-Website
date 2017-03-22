@@ -8,13 +8,12 @@ class TournamentData_TeamController extends BaseController
     public function actionSaveTeam()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $team = new TournamentData_TeamModel();
 
         $team->churchId         = craft()->request->getPost("churchId");
         $team->tournamentteamId = craft()->request->getPost("tournamentteamId");
-        $team->isActive         = (bool)craft()->request->getPost("isActive");
+        $team->isActive         = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_team->saveTeam($team))
         {
@@ -76,13 +75,12 @@ class TournamentData_TeamController extends BaseController
     public function actionSaveTeamMember()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $teamMember = new TournamentData_TeamMemberModel();
 
         $teamMember->churchteamId = craft()->request->getPost("churchteamId");
         $teamMember->individualId = craft()->request->getPost("individualId");
-        $teamMember->isActive     = (bool)craft()->request->getPost("isActive");
+        $teamMember->isActive     = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_team->saveTeamMember($teamMember))
         {

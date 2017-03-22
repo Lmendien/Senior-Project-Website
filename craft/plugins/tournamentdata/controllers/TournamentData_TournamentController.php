@@ -8,7 +8,6 @@ class TournamentData_TournamentController extends BaseController
     public function actionSaveTournament()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $tournament = new TournamentData_TournamentModel();
 
@@ -16,8 +15,8 @@ class TournamentData_TournamentController extends BaseController
         $tournament->address    = craft()->request->getPost("address");
         $tournament->date       = craft()->request->getPost("date");
         $tournament->portion    = craft()->request->getPost("portion");
-        $tournament->final      = (bool)craft()->request->getPost("final");
-        $tournament->isActive   = (bool)craft()->request->getPost("isActive");
+        $tournament->final      = filter_var(craft()->request->getPost("final"), FILTER_VALIDATE_BOOLEAN);;
+        $tournament->isActive   = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_tournament->saveTournament($tournament))
         {
@@ -79,13 +78,12 @@ class TournamentData_TournamentController extends BaseController
     public function actionSaveTournamentRound()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $tournamentRound = new TournamentData_TournamentRoundModel();
 
         $tournamentRound->round         = craft()->request->getPost("round");
         $tournamentRound->tournamentId  = craft()->request->getPost("tournamentId");
-        $tournamentRound->isActive      = (bool)craft()->request->getPost("isActive");
+        $tournamentRound->isActive      = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_tournamentRound->saveTournamentRound($tournamentRound))
         {
@@ -147,13 +145,12 @@ class TournamentData_TournamentController extends BaseController
     public function actionSaveTournamentTeam()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $tournamentTeam = new TournamentData_TournamentTeamModel();
 
         $tournamentTeam->teamnumber     = craft()->request->getPost("teamnumber");
         $tournamentTeam->tournamentId   = craft()->request->getPost("tournamentId");
-        $tournamentTeam->isActive       = (bool)craft()->request->getPost("isActive");
+        $tournamentTeam->isActive       = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_tournamentRound->saveTournamentRound($tournamentTeam))
         {

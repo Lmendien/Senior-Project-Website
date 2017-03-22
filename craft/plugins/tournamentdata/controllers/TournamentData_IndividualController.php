@@ -8,7 +8,6 @@ class TournamentData_IndividualController extends BaseController
     public function actionSaveIndividual()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $individual = new TournamentData_IndividualModel();
 
@@ -81,7 +80,6 @@ class TournamentData_IndividualController extends BaseController
     public function actionSaveIndividualRound()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $individualRound = new TournamentData_IndividualRoundModel();
 
@@ -150,7 +148,6 @@ class TournamentData_IndividualController extends BaseController
     public function actionSaveIndividualTournament()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $individualTournament = new TournamentData_IndividualTournamentModel();
 

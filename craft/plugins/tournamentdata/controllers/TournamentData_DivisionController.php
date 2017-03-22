@@ -8,12 +8,11 @@ class TournamentData_DivisionController extends BaseController
     public function actionSaveDivision()
     {
         $this->requirePostRequest();
-        error_log(craft()->request->getQueryString());
 
         $division = new TournamentData_DivisionModel();
 
         $division->name     = craft()->request->getPost("name");
-        $division->isActive = (bool)craft()->request->getPost("isActive");
+        $division->isActive = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
 
         if(craft()->tournamentData_division->saveDivision($division))
         {

@@ -15,3 +15,4 @@ class TournamentData_ChurchServiceTest extends BaseTest
 	{
 
 	}
+}
