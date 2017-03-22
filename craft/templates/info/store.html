@@ -11,10 +11,10 @@
     <div class="row">
         <section class="col-xs-12">
             <h3 class="text-center">Store</h3>
-            {% for store in entry.storeMatrix %}
+            {% for storeSection in entry.storeMatrix %}
                 <div class="store">
-                    <h2 class="header text-center">{{store.sectionTitle}}</h2>
-                    <p>{{store.body}}</p>
+                    <h4 class="header text-center">{{storeSection.sectionTitle}}</h4>
+                    {{storeSection.body}}
                 </div>
             {% endfor %}
         </section>

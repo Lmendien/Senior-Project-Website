@@ -20,6 +20,22 @@
 {% extends "_layout" %}
 
 {% block content %}
+
+	{% macro monthConvert(meetblock) %}
+		{% switch meetblock.date.month %}
+			{% case 1 %}
+				<span class="month">JAN</span>
+			{% case 2 %}
+				<span class="month">FEB</span>
+			{% case 3 %}
+				<span class="month">MAR</span>
+			{% case 4 %}
+				<span class="month">APR</span>
+			{% default %}
+				HMM
+		{% endswitch %}
+	{% endmacro %}
+
 	<!-- DO NOT REMOVE UNLESS CHANGING OR REMOVING FACEBOOK FEED -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -35,7 +51,63 @@
         <h1 id="title-index">Free Methodist Bible Quizzing</h1><br>
         <p id="scroll-down" class="text-center"><a href="#scroll-down"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a></p>
     </div>
-   	{% include "_includes/_announcements.html" %}
+   	<div class="container">
+   		<div class="row row-home">
+   			<div class="col-sm-4">
+   				<h4>Upcoming Events</h4>
+   				{% set events = [] %}
+   				{% for month in craft.entries.section("tournaments") %}
+   					{% set events = events|merge(month.competition) %}
+   				{% endfor %}
+   				{% set events = events|sort('date') %}
+   				{% for meet in events|slice(0,2) %}
+   					<div class="upcoming-event">
+   						<span class="date">
+   							{{ _self.monthConvert(meet) }}
+   							<span class="day">{{ meet.date.day }}</span>
+   						</span>
+   						<span class="info">
+   							<h6>{{ meet.conference }}</h6>
+   							<p>{{ meet.location }}</p>
+   						</span>
+   					</div>
+   				{% endfor %}
+   				<a href="#">Full Schedule</a>
+   			</div>
+   			<div class="col-sm-8">
+	   			<h4>Announcements</h4>
+	   			{% for announcement in entry.announcementMatrix %}
+	   				<div class="_announcement">
+	   					<h6>{{ announcement.announcementTitle }}</h6>
+	   					<p>{{ announcement.body }}</p>
+	   				</div>
+	   			{% endfor %}
+   			</div>
+   		</div>
+   		<hr>
+   		<div class="row row-home">
+   			<div class="col-sm-4">
+   				<h4>Quick Links</h4>
+   				<ul class="nav nav-pills nav-stacked">
+   				{% for link in entry.quickLinks %}
+				    <li class="quick-link"><a href="{{ link.entryLink.first().url }}"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;{{ link.linkTitle }}</i></a></li>
+				{% endfor %}
+				 </ul>
+   			</div>
+   			<div class="col-sm-4">
+   				<h4>Blog Feed</h4>
+   			</div>
+   			<div class="col-sm-4">
+   				<h4>Quiz Cycle</h4>
+   				<div class="well text-center">
+	   				<h5>Current Year</h5>
+	   				<p>{{ entry.currentMaterial }}</p>
+	   				<h6>Next Year</h6>
+	   				<p>{{ entry.nextMaterial }}</p>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
     <div id="mission-statement">
     	<div class="container">
         	<h3>Mission Statment</h3>
@@ -44,21 +116,22 @@
     </div>
 	<div class="container">
 		<div class="row row-home">
-			<div class="col-sm-6">
+			<div class="col-sm-8">
+				<h4>Media Highlights</h4>
+			</div>
+			<div class="col-sm-4">
 				<div class="container-fluid newsletter-form">
 					<form action="post" action="http://www.ymlp.com/subscribe.php?fmquizzing">
-						<h3 class="text-center">Newsletter Sign Up</h3>
+						<h4 class="text-center">Newsletter Sign Up</h4>
 						<input name="YMLP0" class="form-control" type="text" placeholder="Email"></input>
 						<input name="YMLP1" class="form-control" type="text" placeholder="Church"></input>
 						<input name="YMLP2" class="form-control" type="text" placeholder="Conference"></input>
 						<div type="submit" class="btn btn-primary btn-block">Submit</div>
 				  	</form>
 				</div>
-			</div>
-			<div class="col-sm-6">
 				<div class="fb-page" data-href="https://www.facebook.com/fmbiblequizzing/" data-tabs="timeline, albums" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/fmbiblequizzing/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/fmbiblequizzing/">Free Methodist Bible Quizzing</a></blockquote>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 {% endblock %}

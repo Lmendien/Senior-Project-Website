@@ -4,51 +4,60 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../../resources/css/styles.css">
 
-
+{% block content %}
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% macro monthConvert(meetblock) %}
+  {% switch meetblock.date.month %}
+    {% case 1 %}
+      <span class="month">JAN</span>
+    {% case 2 %}
+      <span class="month">FEB</span>
+    {% case 3 %}
+      <span class="month">MAR</span>
+    {% case 4 %}
+      <span class="month">APR</span>
+  {% endswitch %}
+{% endmacro %}
+
 <div class="info-page">
   <div class="tournaments">
     <div class="container">
       <div id="myCarousel" class="carousel slide t" data-ride="carousel">
-        <div class="archive">
-          <h3>
-        Tournaments
-          </h3>
-      </div>
         <div class="carousel-inner" role="listbox">
          <div class="item active">
            <div class="month">
              <h3>
-               {% for month in craft.entries.section("tournaments") %}
-                {{ month.title }}
-               {% endfor %}
+               Tournaments
              </h3>
           </div>
            <div class="row">
-             {% for month in craft.entries.section("tournaments") %}
-               {% for event in month.competition %}
-                 <div class="col-sm-6 col-xs-12">
+             {% for event in craft.entries.section("tournaments") %}
+               {% set image=event.tournamentImage.first() %}
+                 <div class="col-sm-6 col-lg-4 col-med-6 col-xs-12">
+                 <div class="image-container">
+                   <img src="{{image.url}}" class="img" >
+                 </div>
                    <div class="tournament-list">
+                     <span class="tournament-date">
+                       {{ _self.monthConvert(event) }}
+                        <span class="date">{{event.date.day}}</span>
+                     </span>
+                     <span class="tournament-info">
+                       <div class="tournament-location">
+                         {{event.location}}
+                       </div>
+                       <div class="tournamet-conference">
+                         {{ event.title }}
+                       </div>
 
-                     <div class="tournament-date">
-                       <div class="abbrev">
-                       {{event.abbreviation}}
-                        </div>
-                       {{event.date.day}}
-                     </div>
-                     <div class="tournament-location">
-                       {{event.location}}
-                   </div>
-                   <div class="tournament-conference">
-                     {{event.conference}}
-                   </div>
+                     </span>
                  </div>
                </div>
-               {% endfor %}
              {% endfor %}
            </div>
            <button class="btn btn-primary schedule-btn" type="button">Full Schedule</button>
@@ -57,46 +66,7 @@
       </div>
     </div>
   </div>
-  <div class="quotes">
-    <div class="container">
-        <div class="row">
-          <h3 class="text-center">
-            Quotes
-          </h3>
-          <div class="quotes-btn">
-           <button class="btn btn-primary" type="button">Download All Quotes</button>
-          </div>
-         </div>
-         <!-- </div>
-       </div>
-      </div> -->
-  </div>
- </div>
- <div class="container">
-   <div class="row">
-     <div class="group">
-       <div class="col-sm-4 col-xs-12">
-         <div class="cycle well well-info">
-           <h3> Quiz Cycle </h3>
-           <h4> 2016-2017 </h4>
-           <h5> Galatians, Ephesians, Philippians, Colossians, Philemon </h5>
-         </div>
-       </div>
-       <div class="col-sm-4 col-xs-12">
-         <div class="supplies well well-info">
-           <h3> Need Supplies? </h3>
-           <button class="btn btn-primary supplies-btn" type="button">Store</button>
-         </div>
-       </div>
-       <div class="col-sm-4 col-xs-12">
-         <div class="contact well well-info">
-            <h3> Contact Us </h3>
-            <h4> fmquizzing@gmail.com </h4>
-            <a href="#">All contacts</a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
 </div>
+{% endblock %}
+
 <!-- <script src="../public/resources/js/custom.js"></script> -->
