@@ -22,7 +22,7 @@
 {% block content %}
 
 	{% macro monthConvert(meetblock) %}
-		{% switch meetblock.date.month %}
+		{% switch meetblock.tournamentDate.month %}
 			{% case 1 %}
 				<span class="month">JAN</span>
 			{% case 2 %}
@@ -31,8 +31,22 @@
 				<span class="month">MAR</span>
 			{% case 4 %}
 				<span class="month">APR</span>
-			{% default %}
-				HMM
+			{% case 5 %}
+				<span class="month">MAY</span>
+			{% case 6 %}
+				<span class="month">JUN</span>
+			{% case 7 %}
+				<span class="month">JUL</span>
+			{% case 8 %}
+				<span class="month">AUG</span>
+			{% case 9 %}
+				<span class="month">SEPT</span>
+			{% case 10 %}
+				<span class="month">OCT</span>
+			{% case 11 %}
+				<span class="month">NOV</span>
+			{% case 12 %}
+				<span class="month">DEC</span>
 		{% endswitch %}
 	{% endmacro %}
 
@@ -53,29 +67,24 @@
     </div>
    	<div class="container">
    		<div class="row row-home">
-   			<div class="col-sm-4">
-   				<h4>Upcoming Events</h4>
-   				{% set events = [] %}
-   				{% for month in craft.entries.section("tournaments") %}
-   					{% set events = events|merge(month.competition) %}
-   				{% endfor %}
-   				{% set events = events|sort('date') %}
-   				{% for meet in events|slice(0,2) %}
+   			<div class="col-sm-5 col-md-4 home-column">
+   				<h4 class="text-center">Upcoming Events</h4>
+   				{% for event in craft.entries.section("tournaments").order("tournamentDate").limit(5) %}
    					<div class="upcoming-event">
    						<span class="date">
-   							{{ _self.monthConvert(meet) }}
-   							<span class="day">{{ meet.date.day }}</span>
+   							{{ _self.monthConvert(event) }}
+   							<span class="day">{{ event.tournamentDate.day }}</span>
    						</span>
    						<span class="info">
-   							<h6>{{ meet.conference }}</h6>
-   							<p>{{ meet.location }}</p>
+   							<h6>{{ event.title }}</h6>
+   							<p>{{ event.tournamentLocatio }}</p>
    						</span>
    					</div>
    				{% endfor %}
    				<a href="#">Full Schedule</a>
    			</div>
-   			<div class="col-sm-8">
-	   			<h4>Announcements</h4>
+   			<div class="col-sm-7 col-md-8 home-column">
+	   			<h4 class="text-center">Announcements</h4>
 	   			{% for announcement in entry.announcementMatrix %}
 	   				<div class="_announcement">
 	   					<h6>{{ announcement.announcementTitle }}</h6>
@@ -86,24 +95,55 @@
    		</div>
    		<hr>
    		<div class="row row-home">
-   			<div class="col-sm-4">
-   				<h4>Quick Links</h4>
+   			<div class="col-sm-6 col-md-4 home-column">
+   				<h4 class="text-center">Quick Links</h4>
    				<ul class="nav nav-pills nav-stacked">
    				{% for link in entry.quickLinks %}
 				    <li class="quick-link"><a href="{{ link.entryLink.first().url }}"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;{{ link.linkTitle }}</i></a></li>
 				{% endfor %}
 				 </ul>
    			</div>
-   			<div class="col-sm-4">
-   				<h4>Blog Feed</h4>
+   			<div class="col-sm-6 col-md-4 home-column">
+   				<h4 class="text-center">Blog Feed</h4>
+   				{% for entry in craft.entries.section('blog').order('postDate').limit(3) %}
+					{% if loop.first %}
+					<div class="blog-post">	
+						{% set image = entry.image.first() %}
+						<img src="{{ image.getUrl('homepageBlogPhoto') }}"/>
+						<span class="content">
+							<h5><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
+							<p>{{ entry.body|striptags|slice(0,100)|default('Read more') }}...<a href="{{ entry.url }}">Continue reading</a></p>
+						</span>
+					</div>
+					{% else %}
+					<div class="blog-post">	
+						<span class="content">
+							<h6><a href="{{ entry.url }}">{{ entry.title }}</a></h6>
+							<p>{{ entry.body|striptags|slice(0,25)|default('Read more') }}...<a href="{{ entry.url }}">Read More</a></p>
+						</span>
+					</div>
+					{% endif %}
+				{% endfor %}
+				<a href="#">More Posts</a>
    			</div>
-   			<div class="col-sm-4">
-   				<h4>Quiz Cycle</h4>
-   				<div class="well text-center">
-	   				<h5>Current Year</h5>
-	   				<p>{{ entry.currentMaterial }}</p>
-	   				<h6>Next Year</h6>
-	   				<p>{{ entry.nextMaterial }}</p>
+   			<div class="col-sm-12 col-md-4 home-column">
+   				<h4 class="text-center">Quiz Cycle</h4>
+   				<div class="quiz-cycle text-center">
+   				{% for year in entry.quizCycle.order("state") %}
+					{% switch year.state %}
+						{% case "currentYear" %}
+							<p><b>Current Year</b></p>
+							<h5>{{ year.material }}</h5>
+							<hr>
+						{% case "nextYear" %}
+							<p><b>Next Year</b></p>
+							<h5>{{ year.material }}</h5>
+							<hr>
+							<p><b>Other Years</b></p>
+						{% default %}
+							{{ year.material }},
+					{% endswitch %}
+   				{% endfor %}
    				</div>
    			</div>
    		</div>
@@ -116,10 +156,10 @@
     </div>
 	<div class="container">
 		<div class="row row-home">
-			<div class="col-sm-8">
+			<div class="col-sm-6 col-md-8 home-column">
 				<h4>Media Highlights</h4>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-6 col-md-4 home-column">
 				<div class="container-fluid newsletter-form">
 					<form action="post" action="http://www.ymlp.com/subscribe.php?fmquizzing">
 						<h4 class="text-center">Newsletter Sign Up</h4>

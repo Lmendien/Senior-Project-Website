@@ -270,6 +270,10 @@ footer {
 	height: 100vh;
 }
 
+.no-banner {
+	margin-top: 100px;
+}
+
 ///////////////////////////////////////////////////////////////////////
 // Home Page Styles
 #banner-index {
@@ -371,14 +375,15 @@ footer {
 .nav {
 	.quick-link {
 		a {
-			background-color: $primary-dark;
+			background-color: $primary-light;
 			font-size: 24px;
-			color: white;
+			color: $black-87;
 			padding: 30px 20px;
-			margin: 5px 0px;
+			margin-bottom: 10px;
 
 			&:hover, &:focus {
 				background-color: $accent1-dark;
+				color: white
 			}
 		}
 	}
@@ -386,6 +391,10 @@ footer {
 
 .row-home {
 	margin: 50px 0px;
+
+	.home-column {
+		margin-top: 20px;
+	}
 }
 
 .upcoming-event {
@@ -396,11 +405,13 @@ footer {
 //////////////////////////////////////////////
 	.date {
 		display: inline-block;
-	    background: $gray-light;
+	    background: $accent2;
 	    padding: 5px;
 	    width: 75px;
 	    text-align: center;
 	    vertical-align: middle;
+	    color: white;
+	    margin-right: 10px;
 
 	    .month {
 	    	display: block;
@@ -425,6 +436,50 @@ footer {
 			line-height: 1;
 			margin: 0px;
 		}
+	}
+}
+
+.blog-post{
+	border: 1px solid $gray-light;
+	border-radius: 4px;
+	margin-bottom: 5px;
+
+	img {
+		width: 100%;
+		border-radius: 4px 4px 0px 0px;
+	}
+
+	.content {
+		margin: 5px;
+		display: inline-block;
+
+		h5 {
+			margin: 0px;
+		}
+
+		h6 {
+			margin: 0px;
+			line-height: 1;
+		}
+
+		p {
+			margin: 0px;
+		}
+	}
+}
+
+.quiz-cycle {
+	h5 {
+		margin: 0px;
+	}
+
+	p {
+		margin: 0px;
+	}
+
+	hr {
+		width: 50%;
+		border-color: $gray-light;
 	}
 }
 
