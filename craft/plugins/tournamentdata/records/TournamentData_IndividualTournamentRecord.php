@@ -54,9 +54,9 @@ class TournamentData_IndividualTournamentRecord extends BaseRecord
 	protected function defineAttributes()
 	{
 		return array(
-			'notes' => array(AttributeType::String, 'required' => true),
-			'points' => array(AttributeType::Number, 'required' => true),
-			'isActive' => array(AttributeType::Bool, 'required' => true),
+			'notes' 	=> array(AttributeType::String, 'required' => true),
+			'points' 	=> array(AttributeType::Number, 'required' => true),
+			'isActive' 	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
 }

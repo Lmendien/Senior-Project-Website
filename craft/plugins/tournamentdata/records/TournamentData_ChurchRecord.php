@@ -27,9 +27,9 @@ class TournamentData_ChurchRecord extends BaseRecord
 	protected function defineAttributes()
 	{
 		return array(
-			'name' => array(AttributeType::String, 'required' => true),
-			'address' => array(AttributeType::String, 'required' => false),
-			'isActive' => array(AttributeType::Bool, 'required' => true),
+			'name'		=> array(AttributeType::String, 'required' => true),
+			'address' 	=> array(AttributeType::String, 'required' => false),
+			'isActive' 	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
 

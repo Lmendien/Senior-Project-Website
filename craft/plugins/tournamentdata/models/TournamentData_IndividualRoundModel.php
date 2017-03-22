@@ -6,9 +6,9 @@ class TournamentData_IndividualRoundModel extends BaseModel
     protected function defineAttributes()
 	{
 		return array(
-			'individualId' => AttributeType::Number,
+			'individualId' 		=> AttributeType::Number,
             'tournamentRoundId' => AttributeType::Number,
-			'isActive' => AttributeType::Bool,
+			'isActive' 			=> AttributeType::Bool,
 		);
 	}
 }

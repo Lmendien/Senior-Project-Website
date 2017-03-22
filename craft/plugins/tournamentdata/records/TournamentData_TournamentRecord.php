@@ -39,12 +39,12 @@ class TournamentData_TournamentRecord extends BaseRecord
 	protected function defineAttributes()
 	{
 		return array(
-			'name' => array(AttributeType::String, 'required' => true),
-			'address' => array(AttributeType::String, 'required' => false),
-			'date' => array(AttributeType::DateTime, 'required' => false),
-			'portion' => array(AttributeType::String, 'required' => false),
-			'final' => array(AttributeType::Bool, 'required' => true),
-			'isActive' => array(AttributeType::Bool, 'required' => true),
+			'name' 		=> array(AttributeType::String, 'required' => true),
+			'address' 	=> array(AttributeType::String, 'required' => false),
+			'date' 		=> array(AttributeType::DateTime, 'required' => false),
+			'portion' 	=> array(AttributeType::String, 'required' => false),
+			'final' 	=> array(AttributeType::Bool, 'required' => true),
+			'isActive' 	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
 

@@ -28,8 +28,8 @@ class TournamentData_IndividualRecord extends BaseRecord
 	{
 		return array(
 			'firstname' => array(AttributeType::String, 'required' => true),
-			'lastname' => array(AttributeType::String, 'required' => true),
-			'isActive' => array(AttributeType::Bool, 'required' => true),
+			'lastname' 	=> array(AttributeType::String, 'required' => true),
+			'isActive'	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
 

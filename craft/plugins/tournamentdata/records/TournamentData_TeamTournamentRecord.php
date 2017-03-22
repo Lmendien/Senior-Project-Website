@@ -54,10 +54,10 @@ class TournamentData_TeamTournamentRecord extends BaseRecord
 	protected function defineAttributes()
 	{
 		return array(
-			'wins' => array(AttributeType::Number, 'required' => true),
-			'losses' => array(AttributeType::Number, 'required' => true),
-			'points' => array(AttributeType::Number, 'required' => true),
-			'isActive' => array(AttributeType::Bool, 'required' => true),
+			'wins' 		=> array(AttributeType::Number, 'required' => true),
+			'losses' 	=> array(AttributeType::Number, 'required' => true),
+			'points' 	=> array(AttributeType::Number, 'required' => true),
+			'isActive' 	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
 }

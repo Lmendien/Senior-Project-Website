@@ -7,8 +7,8 @@ class TournamentData_IndividualModel extends BaseModel
 	{
 		return array(
 			'firstname' => AttributeType::String,
-			'lastname' => AttributeType::String,
-			'isActive' => AttributeType::Bool,
+			'lastname' 	=> AttributeType::String,
+			'isActive' 	=> AttributeType::Bool,
 		);
 	}
 }

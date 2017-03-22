@@ -7,7 +7,7 @@ class TournamentData_DivisionService extends BaseApplicationComponent
     {
         $divisionRecord = new TournamentData_DivisionRecord();
 
-		$divisionRecord->name = $division->name;
+		$divisionRecord->name     = $division->name;
 		$divisionRecord->isActive = $division->isActive;
 		
 		if ( $divisionRecord->save() )

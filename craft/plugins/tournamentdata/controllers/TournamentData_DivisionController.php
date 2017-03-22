@@ -12,7 +12,7 @@ class TournamentData_DivisionController extends BaseController
 
         $division = new TournamentData_DivisionModel();
 
-        $division->name = craft()->request->getPost("name");
+        $division->name     = craft()->request->getPost("name");
         $division->isActive = (bool)craft()->request->getPost("isActive");
 
         if(craft()->tournamentData_division->saveDivision($division))

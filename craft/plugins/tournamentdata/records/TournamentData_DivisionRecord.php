@@ -27,8 +27,8 @@ class TournamentData_DivisionRecord extends BaseRecord
 	protected function defineAttributes()
 	{
 		return array(
-			'name' => array(AttributeType::String, 'required' => true),
-			'isActive' => array(AttributeType::Bool, 'required' => true),
+			'name' 		=> array(AttributeType::String, 'required' => true),
+			'isActive' 	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
 }
