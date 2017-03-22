@@ -1,0 +1,114 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>FM Bible Quizzing | Hall of Fame</TITLE>
+	<!--#include virtual="../includes/head.html" -->
+	<!--#config timefmt="%A, %d %B %Y"-->
+</HEAD>
+<BODY>
+	<!--#include virtual="../includes/header.html" -->
+	<table width="100%" border="0" cellspacing="3" cellpadding="0">
+		<TR>
+			<!--#include virtual="../includes/sidenav.html" -->
+			<TD width="100%" valign="top">
+				<FONT face="Verdana,helvetica,Arial">
+				<DIV align="right"><FONT size="2"><!--#echo var="date_gmt"--></FONT></div>
+				<FONT size="5">Hall of Fame:</FONT>
+				<HR color="blue">
+
+<p>Beginning at the 2003 Bible Quiz Finals at Roberts Wesleyan College (on the
+50th anniversary of Free Methodist Bible Quizzing), special recognition was
+given to former quizzers who not only did well in competition, but more
+importantly who applied what they learned and are currently living
+God-honoring lives in faithful service for the Lord.</p>
+
+<ol><li>Purpose:</li>
+<ul>
+<li>To connect former quizzers with the denominational program and honor their
+accomplishments and service in the Bible quiz ministry.</li>
+<li>To record the blessings and benefits of Bible quizzing in order to
+encourage current quizzers and coaches.</li>
+<li>To gather additional information about our Bible quizzing history and keep
+a record for future quizzers.</li>
+</ul><br>
+<li>Qualifications for Nominees:</li>
+<ul>
+<li>Is a committed follower of Jesus Christ, active in church participation,
+and faithfully serving the Lord.</li>
+<li>Has competed at least two years in Bible Quizzing, and did well in
+competition.</li>
+<li>Is at least 23 years of age.</li>
+<li>MUST be able to be present at the Quiz Finals on the occasion of their
+induction.</li>
+<li>Quiz leadership that never competed as teens might also be considered.</li>
+</ul>
+</ol>
+
+<p>Through the Prophet Isaiah, God said, "As the rain and the snow come down
+from heaven, and do not return to it without watering the earth and making
+it bud and flourish, so that it yields seed for the sower and bread for the
+eater, so is My word that goes out from My mouth: It will not return to Me
+empty, but will accomplish what I desire, and achieve the purpose for which
+I sent it." (Isaiah 55:10-11)</p>
+
+
+<p><b>2006 Inductees:</b></p>
+<ul>
+<li><a href="gfields.shtml"> GREG FIELDS</a> Greenville, IL</li>
+<li><a href="mgray.shtml"> MARVIN EARL GRAY</a> Wilmore, KY</li>
+<li><a href="dlmccoon.shtml"> DAWN &amp; LYLE R. MCCOON</a> Mount Pleasant, MI</li>
+<li><a href="jsetty.shtml"> JAMES E. SETTY</a> (Heaven)</li>
+</ul>
+
+<p><b>2005 Inductees:</b></p>
+<ul>
+<li><a href="dmartin.shtml"> DALE MARTIN</a> Greenville, IL</li>
+<li><a href="lmccoon.shtml"> LYLE MCCOON, JR.</a> Wilmore, KY</li>
+<li><a href="psamuelson.shtml"> PETER SAMUELSON</a> Mount Pleasant, MI</li>
+<li><a href="dwhitlock.shtml"> DOUG WHITLOCK</a> (Heaven)</li>
+</ul>
+
+<p><b>2004 Inductees:</b></p>
+<ul>
+<li><a href="jallman.shtml">JULIE ALLMAN</a> New Brighton, PA</li>
+<li><a href="hallman.shtml">HAROLD &AMP; LOIS ALLMAN</a> New Brighton, PA</li>
+<li><a href="scoates.shtml">STEVE COATES</a> JAPAN</li>
+<li><a href="kcostello.shtml">KATHY COSTELLO</a> Albion, NY</li>
+<li><a href="gsanders.shtml">GREG SANDERS</a> Greenville, IL</li>
+<li><a href="sthompson.shtml">STANLEY THOMPSON</a> Spring Arbor, MI</li>
+</ul>
+
+<p><b>2003 Inductees:</b></p>
+<ul>
+<li><a href="dcharles.shtml">DENNIS CHARLES</a> Indianapolis, IN</li>
+<li><a href="gcoates.shtml">GERALD COATES</a> Indianapolis, IN</li>
+<li><a href="hcoates.shtml">HERBERT W. COATES</a> Vincennes, IN</li>
+<li><a href="lcolberg.shtml">LAURA CHRISTENSEN COLBERG</a> Lake Forest Park, WA</li>
+<li><a href="mcolgan.shtml">MARK COLGAN</a> Upland, IN</li>
+<li><a href="bkaufmann.shtml">BRUCE KAUFMANN</a> Seminole, FL</li>
+<li><a href="dkaufmann.shtml">DONALD KAUFMANN</a> Kissimmee, FL</li>
+<li><a href="jkramer.shtml">JAMES P. KRAMER</a> Redmond, OR</li>
+<li><a href="lkrober.shtml">BISHOP LESLIE L. KROBER</a> Greenville, IL</li>
+<li><a href="dmarkell.shtml">DAVE MARKELL</a> (Heaven)</li>
+<li><a href="smullis.shtml">SHANNON MULLIS</a> Indianapolis, IN</li>
+<li><a href="anoble.shtml">ALAN NOBLE</a> Redlands, CA</li>
+<li><a href="isewell.shtml">IONA SEWELL</a> Indianapolis, IN</li>
+<li><a href="ssittig.shtml">SCOTT SITTIG</a> Chicago, IL</li>
+<li><a href="lsykora.shtml">LYNETTE SITTIG SYKORA</a> Rochester, NY</li>
+<li><a href="pstackhouse.shtml">PAUL STACKHOUSE</a> Lexington, KY</li>
+<li><a href="eyoung.shtml">ERIC YOUNG</a> Gowanda, NY</li>
+</ul>
+
+
+				
+<div align="center"><img src="images/plaque.jpg" width="300" height="374" alt="" border="0"></div>
+
+			</TD>
+		</TR>
+	</TABLE><hr><div align="CENTER"><small>
+	<!--#include virtual="../includes/footer.html" -->	 
+Last Modified: <!--#echo var="last_modified"--> 
+</small></div>
+	
+</BODY>
+</HTML>

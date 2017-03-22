@@ -1,0 +1,62 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>FM Bible Quizzing | Hall of Fame</TITLE>
+	<!--#include virtual="../includes/head.html" -->
+	<!--#config timefmt="%A, %d %B %Y"-->
+</HEAD>
+<BODY>
+	<!--#include virtual="../includes/header.html" -->
+	<table width="100%" border="0" cellspacing="3" cellpadding="0">
+		<TR>
+			<!--#include virtual="../includes/sidenav.html" -->
+			<TD width="100%" valign="top">
+				<FONT face="Verdana,helvetica,Arial">
+				<DIV align="right"><FONT size="2"><!--#echo var="date_gmt"--></FONT></div>
+				<FONT size="5">Hall of Fame:</FONT>
+				<HR color="blue">
+
+<table>
+<tr>
+<td>
+
+<h2>MARVIN EARL GRAY</h2>
+ Seattle, Washington<br>
+<ol>
+<li> What years did you quiz?<br> 1983-1989</li>
+<li>  Where and for what church did you quiz?<br> McPherson (KS) Free Methodist Church</li>
+<li>What were the highlights of your quizzing years? <br>Lots of road-trips; memorizing all of James, John, Hebrews, 1 & 2 Peter, & Matthew, and some of the other books; singing "So go on and quiz out, good bye bye bye good bye" at Spring Arbor Nationals Awards Banquet with Dan Koehn, Ryan Joy, and Greg Fields in 1987; staying up all night with friends after the awards banquet; pleasing coaches Greg and Nancy Gossell; and Bruce's bad buffalo bonus quiz questionables.</li>
+<li>  Did you or your team win any championships? If so, what and when? <br>We placed 2nd at Greenville over Hebrews 1 & 2 Peter in 1988.  It was my first quiz that year, as I'd been in the Dominican Republic with VISA all year.</li>
+<li> Did you receive any other special quizzing awards? If so, what? <br>As a 7th grader over Romans and James in 1984, I was the 5th highest points per question in at Bible Quiz Finals.  I was the "Coach of the Year" in the Pacific Northwest Conference in 1995.</li>
+<li> How did quizzing affect you as a teen? <br>It gave me something to work on and work for.  It filled a lot of time I would have wasted otherwise.  It helped me to know and understand God's word much more deeply.  It helped cement life-long friendships.</li>
+<li>  What difference has quizzing made in your life to this day? <br>I still get thrills and chills about QUiC (adult) quizzing; and I love to Quizmaster and make it fun but excellent.  I quote scripture (that I have memorized or reviewed recently) often in ministry and teaching.  I love to read and study the Bible and to inspire my own children to do the same.</li>
+<li>Are you presently involved in Bible quizzing in any way or have you since you were a quizzer?<br> If so, how? I am a coach, quizmaster, and quiz parent.  I have coached for 8 years, and been at 11 of the last 20 Nationals.  I have coached at least 5 1st place teams at our regional tournament, and a 5th place team at nationals.  I love to QUiC Quiz.</li>
+<li> What ministries are you currently doing? How are you presently active in serving the Lord? <br>I am a community pastor at Seattle's Rainier Avenue Free Methodist Church. I lead a men's recovery group. I help raise up and train leaders in our local church and neighborhood.  I teach at Seattle Pacific University as an adjunct faculty member.  I have been working at Operation Nightwatch, referring homeless clients to shelter. I am loving my wife Julie and 4 children Maria, Daniel, Rachel, and Melody.</li>
+</ol>
+
+
+</td>
+<td valign=top align=center><a href="images/"><img src="images/" alt="" border="2"></a>
+</td>
+</tr>
+</table>
+<hr>
+
+<p><b>2006 Inductees:</b></p>
+<ul>
+<li><a href="gfields.shtml"> GREG FIELDS</a> Greenville, IL</li>
+<li><a href="mgray.shtml"> MARVIN EARL GRAY</a> Wilmore, KY</li>
+<li><a href="dlmccoon.shtml"> DAWN &amp; LYLE R. MCCOON</a> Mount Pleasant, MI</li>
+<li><a href="jsetty.shtml"> JAMES E. SETTY</a> (Heaven)</li>
+</ul>
+				
+				
+			</TD>
+		</TR>
+	</TABLE><hr><div align="CENTER"><small>
+	<!--#include virtual="../includes/footer.html" -->	 
+Last Modified: <!--#echo var="last_modified"--> 
+</small></div>
+	
+</BODY>
+</HTML>

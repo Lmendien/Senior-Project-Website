@@ -1,0 +1,24 @@
+{#
+ # Store Page Template
+ # ---------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <section class="col-xs-12">
+            <h3 class="text-center">Store</h3>
+            {% for storeSection in entry.storeMatrix %}
+                <div class="store">
+                    <h4 class="header text-center">{{storeSection.sectionTitle}}</h4>
+                    {{storeSection.body}}
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+</div>
+
+{% endblock %}

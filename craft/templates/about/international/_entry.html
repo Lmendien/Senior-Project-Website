@@ -1,0 +1,24 @@
+{#
+ # Internation Template template
+ # ---------------
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+		<div class="row country">
+			<div class="container">
+				<div class="col-sm-3">
+					{% set banner = entry.flagImage.first()%}
+					<img class="banner-country" src="{{ banner.getUrl('flagThumbnail') }}">
+				</div>
+				<div class="col-sm-9">
+					<h1>{{ entry.title }}</h1>
+					{{ entry.body }}
+				</div>
+			</div>
+		</div>
+{% endblock %}

@@ -1,0 +1,648 @@
+@import url("../font-awesome/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.87); }
+
+h1 {
+  font-size: 2.6em;
+  line-height: 1.6em;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 2.0em;
+  line-height: 2.0em;
+  font-weight: 400; }
+
+h3 {
+  font-size: 2.0em;
+  line-height: 2.0em;
+  font-weight: 200; }
+
+h4 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 400; }
+
+h5 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 200; }
+
+h6 {
+  font-size: 1em;
+  line-height: 1.6em;
+  font-weight: 600; }
+
+ul, ol, li {
+  font-family: "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 0.54); }
+
+p {
+  font-family: "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+  line-height: 1.6em; }
+
+a {
+  font-family: "PT Sans", sans-serif;
+  font-color: #0D47A1; }
+
+hr {
+  border-top: 1px solid #9E9E9E; }
+
+.btn-primary {
+  background-color: #0D47A1;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 0px;
+  border: none;
+  color: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+
+.btn-centered {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 75px; }
+
+.btn-block {
+  width: 100%; }
+
+.navbar {
+  background-color: #03A9FA;
+  border: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  .navbar .navbar-brand {
+    padding: 0px;
+    display: inline-block; }
+    .navbar .navbar-brand #logo {
+      height: 70px;
+      padding: 10px;
+      position: relative;
+      display: inline-block; }
+  .navbar .navbar-toggle {
+    border: none;
+    padding: 8px;
+    margin: 10px 15px; }
+    .navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
+      background-color: #0288D1; }
+    .navbar .navbar-toggle .icon-bar {
+      width: 26px;
+      height: 3px;
+      margin: 6px; }
+  .navbar .navbar-nav li a {
+    padding: 20px; }
+    .navbar .navbar-nav li a:hover {
+      background-color: #0D47A1; }
+  .navbar .navbar-nav .active a {
+    background-color: #0288D1; }
+    .navbar .navbar-nav .active a:hover, .navbar .navbar-nav .active a:focus {
+      background-color: #0288D1; }
+  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
+    background-color: #03A9FA; }
+  .navbar .navbar-nav .open .dropdown-menu {
+    padding: 0px; }
+    .navbar .navbar-nav .open .dropdown-menu li a {
+      background-color: #0D47A1;
+      padding: 15px 50px; }
+
+.footer-hr {
+  margin: 10px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.24); }
+
+footer {
+  padding: 50px 20px 10px 20px;
+  text-align: center; }
+  footer ul {
+    padding: 0px;
+    margin-bottom: 10px; }
+    footer ul li {
+      list-style-type: none; }
+      footer ul li a {
+        color: rgba(0, 0, 0, 0.54); }
+  footer .social {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px; }
+  footer .copyright {
+    font-size: 12px; }
+  footer .links img {
+    max-height: 40px;
+    padding: 0px 5px;
+    margin-bottom: 20px; }
+
+.banner {
+  text-align: left;
+  position: relative; }
+
+.banner-small {
+  height: 40vh;
+  max-height: 500px; }
+  .banner-small h1 {
+    position: absolute;
+    bottom: 0px;
+    padding: 0px 10px;
+    margin: 0px;
+    color: white; }
+
+.banner-full {
+  height: 100vh; }
+
+#banner-index {
+  background: url("../images/banner-images/banner-index.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0px; }
+  #banner-index #scroll-down {
+    position: absolute;
+    width: 100%;
+    bottom: 0px; }
+    #banner-index #scroll-down i {
+      font-size: 50px;
+      color: white; }
+
+#title-index {
+  color: white;
+  font-size: 32px;
+  position: relative;
+  text-align: center;
+  padding: 40vh 10px;
+  margin: 0px; }
+
+.announcements .carousel-control, .announcements .announcements .carousel-control:active, .announcements .announcements .carousel-control:visited {
+  color: rgba(0, 0, 0, 0.54);
+  background: none;
+  display: none; }
+.announcements .carousel-control:hover {
+  color: rgba(0, 0, 0, 0.87); }
+.announcements .carousel-indicators li {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.32); }
+.announcements .carousel-indicators .active {
+  background-color: rgba(0, 0, 0, 0.54); }
+.announcements .item {
+  min-height: 300px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width: 100%; }
+
+#mission-statement {
+  background: url("../images/background-images/world-pic.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/background-images/world-pic.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/background-images/world-pic.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/background-images/world-pic.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/background-images/world-pic.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 30px 0px; }
+  #mission-statement h3 {
+    color: white; }
+  #mission-statement p {
+    color: white; }
+
+.newsletter-form {
+  margin-bottom: 50px; }
+  .newsletter-form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 30px 10px;
+    border-radius: 2px;
+    border-color: black;
+    font-size: 16px;
+    color: black; }
+
+.fb-page {
+  width: 100%;
+  text-align: center; }
+
+.nav .quick-link a {
+  background-color: #0288D1;
+  font-size: 24px;
+  color: white;
+  padding: 30px 20px;
+  margin: 5px 0px; }
+  .nav .quick-link a:hover, .nav .quick-link a:focus {
+    background-color: #0D47A1; }
+
+.row-home {
+  margin: 50px 0px; }
+
+.upcoming-event {
+  border: 1px solid #F5F5F5;
+  border-radius: 4px;
+  margin: 5px 0px; }
+  .upcoming-event .date {
+    display: inline-block;
+    background: #F5F5F5;
+    padding: 5px;
+    width: 75px;
+    text-align: center;
+    vertical-align: middle; }
+    .upcoming-event .date .month {
+      display: block; }
+    .upcoming-event .date .day {
+      font-size: 32px;
+      text-align: center;
+      vertical-align: middle; }
+  .upcoming-event .info {
+    display: inline-block;
+    vertical-align: middle; }
+    .upcoming-event .info h6 {
+      line-height: 1.2;
+      margin: 0px; }
+    .upcoming-event .info p {
+      line-height: 1;
+      margin: 0px; }
+
+#banner-about {
+  background: url("../images/banner-images/banner-about.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom; }
+
+.well-rules {
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px; }
+  .well-rules h6 {
+    font-size: 24px; }
+  .well-rules .material-icons {
+    font-size: 56px; }
+
+.world-wide {
+  background: url("../images/background-images/world-pic.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, white, rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, white, rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, white, rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, white, rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed; }
+
+.conference {
+  height: 100px;
+  padding: 20px 0px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.87); }
+  .conference:hover {
+    color: black;
+    text-decoration: underline; }
+  .conference h4 {
+    text-transform: uppercase; }
+
+.about-international img {
+  opacity: 0.8;
+  width: 100%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  .about-international img:hover {
+    opacity: 1;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
+
+.history .nav-tabs {
+  width: 100%;
+  background-color: #03a9FA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); }
+  .history .nav-tabs li {
+    width: 100%;
+    text-align: center; }
+    .history .nav-tabs li a {
+      padding: 15px;
+      background-color: #03a9FA;
+      color: rgba(255, 255, 255, 0.54); }
+.history .nav-tabs > li > a:hover, .history .nav-tabs > li > a:hover {
+  border: none;
+  color: #FFFFFF; }
+.history .nav-tabs > li.active > a, .historyhover, .historyfocus {
+  background-color: #03a9FA;
+  color: white;
+  border: none;
+  outline: none; }
+
+.historical-data {
+  min-height: 500px; }
+  .historical-data .dropdown-toggle {
+    width: 100%;
+    background-color: #03A9FA;
+    border: none;
+    text-align: left;
+    font-size: 22px;
+    padding: 20px; }
+  .historical-data .dropdown-menu {
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px; }
+    .historical-data .dropdown-menu li a {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 22px;
+      padding: 15px;
+      border-radius: 0px; }
+  .historical-data .tab-content {
+    margin-top: 20px; }
+    .historical-data .tab-content .panel-heading {
+      text-align: center; }
+    .historical-data .tab-content .panel-body {
+      text-align: left; }
+  .historical-data .nav-pills > li.active > a, .historical-data .nav-pills > li.active > a:hover, .historical-data .nav-pills > li.active > a:focus {
+    background-color: #F5F5F5;
+    color: rgba(0, 0, 0, 0.87); }
+  .historical-data .btn-primary:active:focus, .historical-data .btn-primary:active:hover, .historical-data .open > .dropdown-toggle.btn-primary:active:focus, .historical-data .open > .dropdown-toggle.btn-primary:active:hover,
+  .historical-data .open > .dropdown-toggle.btn-primary:hover, .historical-data .open > .dropdown-toggle.btn-primary, .historical-data .open > .dropdown-toggle.btn-primary:focus {
+    background-color: #03A9FA; }
+
+.hall-of-fame .inductees {
+  margin: 50px auto;
+  text-align: center; }
+  .hall-of-fame .inductees .year {
+    text-align: left; }
+    .hall-of-fame .inductees .year .inductee {
+      height: 70px;
+      background-color: #F5F5F5;
+      margin: 10px auto;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+      text-align: left;
+      cursor: pointer; }
+      .hall-of-fame .inductees .year .inductee:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
+      .hall-of-fame .inductees .year .inductee .headshot {
+        display: inline-block;
+        vertical-align: top;
+        height: 70px; }
+      .hall-of-fame .inductees .year .inductee .inductee-info {
+        display: inline-block;
+        height: 70px;
+        margin: 5px; }
+        .hall-of-fame .inductees .year .inductee .inductee-info .inductee-name {
+          font-size: 1em;
+          line-height: 1em;
+          font-weight: bold; }
+        .hall-of-fame .inductees .year .inductee .inductee-info .inductee-city {
+          font-size: 0.8em;
+          line-height: 1em; }
+    .hall-of-fame .inductees .year .modal-dialog {
+      width: 100%;
+      margin: 0px;
+      border-radius: 0px; }
+      .hall-of-fame .inductees .year .modal-dialog .modal-content {
+        min-height: 100vh; }
+        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-header {
+          border: none;
+          padding: 0px 15px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-header .close {
+            margin: 0px;
+            font-size: 54px;
+            font-weight: normal;
+            color: rgba(0, 0, 0, 0.54);
+            opacity: 1; }
+        .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body {
+          padding: 20px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body p {
+            line-height: 1.2em; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info {
+            background-color: #F5F5F5;
+            border-radius: 4px;
+            width: 100%; }
+            .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info img {
+              width: 100%;
+              display: inline-block;
+              border-radius: 4px 4px 0px 0px; }
+            .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info .title-info {
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 10px; }
+              .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .general-info .title-info .name {
+                margin-bottom: 0px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .detailed-info {
+            margin: 20px 0px; }
+          .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .questions .panel-group .panel .panel-heading {
+            background-color: #616161;
+            padding: 15px; }
+            .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body .questions .panel-group .panel .panel-heading .panel-title a {
+              color: #FFFFFF; }
+
+.carousel {
+  text-align: center; }
+  .carousel .archive {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 20px; }
+    .carousel .archive a .glyphicon {
+      color: black; }
+  .carousel .year {
+    font-weight: bold;
+    font-size: 18pt;
+    margin-bottom: 25px; }
+  .carousel .carousel-inner .archive-list {
+    font-size: 12pt;
+    background-color: #616161;
+    color: white;
+    margin-bottom: 30px;
+    padding: 25px 0px;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
+
+.store {
+  background-color: #ADD8E6;
+  line-height: 3; }
+  .store .header {
+    color: #fff;
+    background-color: #03A9FA;
+    line-height: 2; }
+
+.info-page .tournaments .archive {
+  margin-bottom: 0px; }
+.info-page .tournaments .container h3 {
+  font-weight: bold;
+  display: inline;
+  font-size: 24pt; }
+.info-page .tournaments .container .month {
+  margin-top: 5px;
+  margin-bottom: 20px; }
+.info-page .tournaments .container .tournament-list {
+  background-color: whitesmoke;
+  border-style: groove;
+  border-width: .5px;
+  margin-bottom: 10px;
+  height: 65px; }
+  .info-page .tournaments .container .tournament-list .tournament-date {
+    float: left;
+    width: 48px;
+    text-align: right;
+    font-size: 32pt;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .info-page .tournaments .container .tournament-list .tournament-location {
+    font-weight: bold;
+    font-size: 12pt;
+    text-align: left;
+    margin-top: 9px; }
+  .info-page .tournaments .container .tournament-list .tournament-conference {
+    text-align: left; }
+.info-page .tournaments .container .schedule-btn {
+  height: 65px;
+  border-radius: 3px;
+  margin-bottom: 35px;
+  margin-top: 20px; }
+.info-page .quotes {
+  background-color: #03A9FA;
+  background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0288D1, #03A9FA, #0288D1);
+  /* Standard syntax */
+  background-size: cover;
+  padding-bottom: 25px; }
+  .info-page .quotes .container h3 {
+    font-size: 32pt;
+    margin-top: 25px;
+    color: white;
+    text-align: center; }
+  .info-page .quotes .container .quotes-btn {
+    text-align: center; }
+.info-page .group {
+  margin-top: 25px; }
+  .info-page .group .cycle {
+    text-align: center; }
+    .info-page .group .cycle h3 {
+      margin-bottom: -10px;
+      font-weight: bold;
+      font-size: 18pt; }
+    .info-page .group .cycle h4 {
+      margin-bottom: -12px;
+      font-weight: bold; }
+  .info-page .group .supplies {
+    width: 100%;
+    text-align: center; }
+    .info-page .group .supplies h3 {
+      font-weight: bold; }
+    .info-page .group .supplies .supplies-btn {
+      height: 65px;
+      padding-left: 75px;
+      padding-right: 75px;
+      border-radius: 3px;
+      margin-bottom: 50px; }
+  .info-page .group .contact {
+    text-align: center; }
+    .info-page .group .contact h3 {
+      font-weight: bold; }
+    .info-page .group .contact h4 {
+      margin-top: -5px; }
+
+.country {
+  margin: 100px auto; }
+
+.banner-country {
+  width: 100%; }
+
+#error-404 {
+  margin: 200px 0px;
+  text-align: center; }
+  #error-404 h1 {
+    font-size: 100px;
+    line-height: 1em; }
+  #error-404 h2 {
+    line-height: 1em; }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar .navbar-nav li a {
+    padding: 27px; }
+  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
+    background-color: #0D47A1; }
+  .navbar .navbar-nav .open .dropdown-menu li a {
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.54); }
+    .navbar .navbar-nav .open .dropdown-menu li a:hover {
+      color: rgba(0, 0, 0, 0.87); }
+
+  .history .nav-tabs li {
+    width: 33.33%; }
+    .history .nav-tabs li a {
+      font-weight: bold;
+      font-size: 24px; }
+  .history .nav-tabs > li.active > a, .historyhover, .historyfocus {
+    border-bottom: 4px solid white; }
+
+  .hall-of-fame .inductees .year .modal-dialog {
+    width: 96%;
+    margin: 2%; }
+    .hall-of-fame .inductees .year .modal-dialog .modal-content .modal-body {
+      padding: 20px 50px 50px 50px; }
+
+  .historical-data .panel {
+    height: 425px;
+    overflow: scroll; } }
+@media (min-width: 992px) {
+  footer .row {
+    display: inherit; }
+  footer .links img {
+    max-height: 75px;
+    padding: 5px 10px; }
+
+  .banner {
+    background-attachment: fixed; }
+
+  .banner-small h1 {
+    padding: 0px 50px; }
+
+  #title-index {
+    font-size: 48px; }
+
+  #mission-statement {
+    padding: 100px 0px; }
+    #mission-statement p {
+      color: white;
+      font-size: 18px; }
+
+  .info-page .group {
+    margin-top: 100px; }
+    .info-page .group .well-info {
+      height: 250px;
+      margin-bottom: 100px; }
+    .info-page .group .supplies {
+      background-color: #f5f5f5; }
+      .info-page .group .supplies h3 {
+        padding-top: 0px;
+        margin-top: 40px; }
+    .info-page .group .contact h3 {
+      margin-top: 45px; } }
+
+/*# sourceMappingURL=styles.css.map */

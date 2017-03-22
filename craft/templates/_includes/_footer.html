@@ -1,0 +1,43 @@
+<!-- Template for the footer -->
+<hr class="footer-hr">
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-xs-12 hidden-xs">
+        <h6>Main Pages</h6>
+        <ul>
+          <li><a href="{{ siteUrl }}">Home</a></li>
+          <li><a href="{{ siteUrl }}/about">About</a></li>
+          <li><a href="{{ siteUrl }}/info">Info</a></li>
+          <li><a href="{{ siteUrl }}/history">History</a></li>
+          <li><a href="{{ siteUrl }}/media">Media</a></li>
+          <li><a href="{{ siteUrl }}/finals">Finals</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="{{ siteUrl }}/info/#tournaments">Tournaments</a></li>
+          <li><a href="{{ siteUrl }}/info/quotes">Quotes</a></li>
+          <li><a href="{{ siteUrl }}/info/store">Store</a></li>
+          <li><a href="{{ siteUrl }}/about/#conferences">Conferences</a></li>
+          <li><a href="{{ siteUrl }}/about/#international">International</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-xs-12 hidden-xs">
+        <h6>Other Resources</h6>
+        <ul>
+          <li><a href="http://fmcusa.org/">FMCUSA</a></li>
+          <li><a href="http://fmcusa.org/fmmissions/">FM Mission</a></li>
+          <li><a href="http://fminfuse.org/">FM Infuse</a></li>
+          <li><a href="https://www.bible.com/">YouVersion</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/fmbiblequizzing/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/fmquizzing"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    </div>
+    <p class="text-center copyright">Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved</p>
+  </div>
+</footer>

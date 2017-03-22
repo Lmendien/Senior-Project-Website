@@ -1,0 +1,1030 @@
+// Include other CSS files and docs
+@import url("../font-awesome/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/////////////////////////////////////////////////////////////////////
+// VARIABLES
+
+// Colors
+$primary: #03A9FA;
+$primary-light: #B3E5FC;
+$primary-dark: #0288D1;
+$accent1-light: #1976D2;
+$accent1-dark: #0D47A1;
+$accent2: #4CAF50;
+$gray: #9E9E9E;
+$gray-light: #F5F5F5;
+$gray-dark: #616161;
+$black: #000000;
+$white: #FFFFFF;
+$box-shadow-color: rgba(0, 0, 0, 0.2);
+$main-gradient1: rgba(2, 136, 209, 0.7);
+$main-gradient2: rgba(3, 169, 250, 0.85);
+
+// Font Families
+$heading-font: 'PT Sans', sans-serif;
+$paragraph-font: 'Helvetica', sans-serif;
+
+// Font Colors
+$black-87: rgba(0,0,0,0.87);
+$black-54: rgba(0,0,0,0.54);
+
+// Font Size
+$base-font: 16px;
+
+
+/////////////////////////////////////////////////////////////////////
+// MIXINS
+
+// Background Gradient Mixin
+@mixin background($gradient1, $gradient2, $image) {
+  background: url($image); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($gradient1, $gradient2), url($image); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($gradient1, $gradient2), url($image); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($gradient1, $gradient2), url($image); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($gradient1, $gradient2), url($image); /* Standard syntax */
+}
+
+/////////////////////////////////////////////////////////////////////
+// GLOBAL STYLES
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Heading Styles
+h1,h2,h3,h4,h5,h6 {
+	font-family: $heading-font;
+ 	color: $black-87;
+}
+
+h1 {
+  font-size: 2.6em;
+  line-height: 1.6em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.0em;
+  line-height: 2.0em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2.0em;
+  line-height: 2.0em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.6em;
+  font-weight: 600;
+}
+
+// Inline text styles
+ul,ol,li {
+  font-family: $paragraph-font;
+  color: $black-54;
+}
+
+p {
+  font-family: $paragraph-font;
+  color: $black-54;
+  font-size: $base-font;
+  line-height: 1.6em;
+}
+
+a {
+  font-family: $heading-font;
+  font-color: $accent1-dark;
+}
+
+hr {
+	border-top: 1px solid $gray;
+}
+
+// Button Styles
+.btn-primary {
+	background-color: $accent1-dark;
+	font-size: 24px;
+	padding: 20px;
+	border-radius: 0px;
+	border: none;
+	color:white;
+	box-shadow: 0px 2px 2px $box-shadow-color;
+}
+
+.btn-centered {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 75px;
+}
+
+.btn-block {
+	width: 100%;
+}
+
+// Navbar
+.navbar {
+	background-color: $primary;
+	border: none;
+	box-shadow: 0px 2px 2px $box-shadow-color;
+
+	.navbar-brand {
+	  	padding: 0px;
+	  	display: inline-block;
+
+		#logo {
+			height: 70px;
+			padding: 10px;
+			position: relative;
+			display: inline-block;
+		}
+	}
+
+	.navbar-toggle {
+		border: none;
+		padding: 8px;
+		margin: 10px 15px;
+
+		&:hover, &:focus {
+			background-color: $primary-dark;
+		}
+
+		.icon-bar {
+			width: 26px;
+			height: 3px;
+			margin: 6px;
+		}
+	}
+
+	.navbar-nav {
+		li {
+			a {
+				padding: 20px;
+
+				&:hover {
+					background-color: $accent1-dark;
+				}
+			}
+		}
+
+		.active a {
+			background-color: $primary-dark;
+
+			&:hover, &:focus {
+				background-color: $primary-dark;
+			}
+		}
+
+		.open {
+			a, a:hover, a:focus {
+				background-color: $primary;
+			}
+
+			.dropdown-menu {
+				padding: 0px;
+
+				li a{
+					background-color: $accent1-dark;
+					padding: 15px 50px;
+				}
+
+			}
+		}
+	}
+}
+
+// Footer Styles
+.footer-hr {
+	margin: 10px 0px;
+	border-top: 1px solid rgba(0,0,0,0.24);
+}
+
+footer {
+	padding: 50px 20px 10px 20px;
+	text-align: center;
+
+	ul {
+		padding: 0px;
+		margin-bottom: 10px;
+		li {
+			list-style-type: none;
+
+			a {
+				color: rgba(0,0,0,0.54);
+			}
+		}
+	}
+
+	.social {
+		font-size: 40px;
+		text-align: center;
+		margin: 20px;
+	}
+
+	.copyright {
+		font-size: 12px;
+	}
+
+	.links {
+		img {
+			max-height: 40px;
+			padding: 0px 5px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+// Banner Styles
+.banner {
+	text-align: left;
+	position: relative;
+}
+
+.banner-small {
+	height: 40vh;
+	max-height: 500px;
+
+	h1{
+		position: absolute;
+		bottom: 0px;
+		padding: 0px 10px;
+		margin: 0px;
+		color: white;
+	}
+}
+
+.banner-full {
+	height: 100vh;
+}
+
+///////////////////////////////////////////////////////////////////////
+// Home Page Styles
+#banner-index {
+	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-index.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	margin: 0px;
+
+	#scroll-down {
+		position: absolute;
+		width: 100%;
+	    bottom: 0px;
+
+	    i {
+	    	font-size: 50px;
+	    	color: white;
+		}
+	}
+}
+
+#title-index {
+	color: white;
+	font-size: 32px;
+	position: relative;
+	text-align: center;
+	padding: 40vh 10px;
+	margin: 0px; 
+}
+
+.announcements {
+	.carousel-control,.announcements .carousel-control:active,.announcements .carousel-control:visited {
+		color: rgba(0,0,0,0.54);
+		background: none;
+		display: none;
+	}
+
+	.carousel-control:hover {
+		color: rgba(0,0,0,0.87);
+	}
+
+	.carousel-indicators {
+		li {
+			background-color: #FFFFFF;
+			border: 1px solid rgba(0,0,0,0.32);
+		}
+		
+		.active {
+			background-color: rgba(0,0,0,0.54);
+		}
+	}
+
+	.item {
+		min-height: 300px;
+		padding-top: 20px;
+		padding-bottom: 30px;
+		width: 100%;
+	}
+}
+
+#mission-statement { 
+	@include background($main-gradient1, $main-gradient2, "../images/background-images/world-pic.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 30px 0px;
+
+	h3 {
+		color: white;
+	}
+
+	p {
+		color: white;
+	}
+}
+
+.newsletter-form {
+	margin-bottom: 50px;
+
+	input {
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 30px 10px;
+		border-radius: 2px;
+		border-color: black;
+		font-size: 16px;
+		color: black;
+	}
+}
+
+.fb-page {
+	width: 100%;
+	text-align: center;
+}
+
+.nav {
+	.quick-link {
+		a {
+			background-color: $primary-dark;
+			font-size: 24px;
+			color: white;
+			padding: 30px 20px;
+			margin: 5px 0px;
+
+			&:hover, &:focus {
+				background-color: $accent1-dark;
+			}
+		}
+	}
+}
+
+.row-home {
+	margin: 50px 0px;
+}
+
+.upcoming-event {
+	border: 1px solid $gray-light;
+	border-radius: 4px;
+	margin: 5px 0px;
+	
+	.date {
+		display: inline-block;
+	    background: $gray-light;
+	    padding: 5px;
+	    width: 75px;
+	    text-align: center;
+	    vertical-align: middle;
+
+	    .month {
+	    	display: block;
+	    }
+
+	    .day {
+	    	font-size: 32px;
+		    text-align: center;
+		    vertical-align: middle;
+	    }
+	}
+
+	.info {
+		display: inline-block;
+		vertical-align: middle;
+
+		h6 {
+			line-height: 1.2;
+			margin: 0px;
+		}
+
+		p {
+			line-height: 1;
+			margin: 0px;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////
+// About Page Styles
+#banner-about {
+	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-about.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+}
+
+.well-rules {
+	text-align: center;
+	background-color: #4CAF50;
+	color: white;
+	border-radius: 10px;
+
+	h6 {
+		font-size: 24px;
+	}
+
+	.material-icons {
+		font-size: 56px;
+	}
+}
+
+.world-wide {
+	background: url("../images/background-images/world-pic.jpg"); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(179, 229, 252, 0.9)), url("../images/background-images/world-pic.jpg"); /* Standard syntax */
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.conference {
+	height: 100px;
+	padding: 20px 0px;
+	width: 100%;
+	color: rgba(0,0,0,0.87);
+
+	&:hover {
+		color: rgba(0,0,0,1);
+		text-decoration: underline;
+	}
+
+	h4 {
+		text-transform: uppercase;
+	}
+}
+
+.about-international {
+	img {
+		opacity: 0.8;
+		width: 100%;
+		box-shadow: 0px 2px 2px $box-shadow-color;
+
+			&:hover {
+			opacity: 1;
+			width: 100%;
+			box-shadow: 0px 4px 4px $box-shadow-color;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////
+// History Page Styles
+.history {
+	.nav-tabs {
+		width: 100%;
+		background-color: #03a9FA;
+		box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+
+		li {
+			width: 100%;
+			text-align: center;
+
+			a {
+				padding: 15px;
+				background-color: #03a9FA;
+				color: rgba(256,256,256,0.54);
+			}
+		}
+	}
+
+	.nav-tabs>li>a:hover, .nav-tabs>li>a:hover {
+		border: none;
+		color: #FFFFFF;
+	}
+
+	.nav-tabs>li.active>a, &hover, &focus {
+		background-color: #03a9FA;
+		color: white;
+		border: none;
+		outline: none;
+	}
+}
+
+.historical-data {
+	min-height: 500px;
+
+	.dropdown-toggle{
+	    width: 100%;
+	    background-color: #03A9FA;
+	    border: none;
+	    text-align: left;
+	    font-size: 22px;
+	    padding: 20px;
+	}
+
+	.dropdown-menu {
+	    width: 100%;
+	    border: none;
+	    margin: 0px;
+	    padding: 0px;
+
+	    li a {
+		    color: rgba(0,0,0,0.54);
+		    font-size: 22px;
+		    padding: 15px;
+		    border-radius: 0px;
+		}
+	}
+
+	.tab-content {
+		margin-top: 20px;
+
+		.panel-heading {
+		    text-align: center;
+		}
+
+		.panel-body {
+			text-align: left;
+		}
+	}
+
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+		background-color: #F5F5F5;
+		color: rgba(0,0,0,0.87);
+	}
+
+	.btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary:active:focus, .open>.dropdown-toggle.btn-primary:active:hover,
+	.open>.dropdown-toggle.btn-primary:hover, .open>.dropdown-toggle.btn-primary, .open>.dropdown-toggle.btn-primary:focus {
+    	background-color: #03A9FA;
+	}
+}
+
+.hall-of-fame {
+	.inductees {
+		margin: 50px auto;
+		text-align: center;
+
+		.year {
+			text-align: left;
+
+			.inductee {
+				height: 70px;
+				background-color: #F5F5F5;
+				margin: 10px auto;
+				box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+				text-align: left;
+				cursor: pointer;
+
+				&:hover {
+					box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+				}
+
+				.headshot {
+					display: inline-block;
+					vertical-align: top;
+					height: 70px;
+				}
+
+
+				.inductee-info {
+					display: inline-block;
+					height: 70px;
+					margin: 5px;
+
+					.inductee-name {
+						font-size: 1em;
+						line-height: 1em;
+						font-weight: bold;
+					}
+
+					.inductee-city {
+						font-size: 0.8em;
+						line-height: 1em;
+					}
+				}
+			}
+
+			.modal-dialog {
+				width: 100%;
+				margin: 0px;
+				border-radius: 0px;
+
+				.modal-content {
+					min-height: 100vh;
+
+					.modal-header {
+						border: none;
+						padding: 0px 15px;
+
+						.close {
+							margin: 0px;
+							font-size: 54px;
+							font-weight: normal;
+							color: rgba(0,0,0,0.54);
+							opacity: 1;
+						}
+					}
+
+					.modal-body {
+						padding: 20px;
+
+						p {
+							line-height: 1.2em;
+						}
+
+						.general-info {
+							background-color: #F5F5F5;
+							border-radius: 4px;
+							width: 100%;
+
+							img {
+								width: 100%;
+								display: inline-block;
+								border-radius: 4px 4px 0px 0px;
+							}
+
+							.title-info {
+								display: inline-block;
+								vertical-align: middle;
+								margin-left: 10px;
+
+								.name {
+									margin-bottom: 0px;
+								}
+							}
+						}
+
+						.detailed-info {
+							margin: 20px 0px;
+						}
+
+						.questions {
+							.panel-group {
+								.panel {
+									.panel-heading {
+										background-color: #616161;
+										padding: 15px;
+
+										.panel-title {
+											a {
+												color: #FFFFFF;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.carousel {
+  text-align: center;
+	.archive {
+		font-size: 24pt;
+		font-weight: bold;
+		margin-bottom: 25px;
+		margin-top: 20px;
+		a .glyphicon{
+			color: black;
+		}
+	}
+	.year {
+		font-weight: bold;
+		font-size: 18pt;
+		margin-bottom: 25px;
+	}
+	.carousel-inner {
+
+		.archive-list {
+			font-size: 12pt;
+			background-color: rgb(97,97,97);
+			color: white;
+			margin-bottom: 30px;
+			padding:25px 0px;
+			text-align: center;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+		}
+	 }
+}
+
+///////////////////////////////////////////////////////////////////////
+// Store Page Styles
+.store {
+    background-color: #ADD8E6;
+    line-height: 3;
+
+    .header {
+	    color: #fff;
+	    background-color: #03A9FA;
+	    line-height: 2;
+	}
+}
+
+///////////////////////////////////////////////////////////////////////
+// Info Page Styles
+.info-page {
+	.tournaments {
+		.archive{
+			margin-bottom: 0px;
+		}
+		.container {
+			h3 {
+			font-weight: bold;
+			display: inline;
+			font-size: 24pt;
+			}
+			.month {
+			margin-top: 5px;
+			margin-bottom: 20px;
+			}
+			.tournament-list {
+				background-color: rgb(245,245,245);
+				border-style: groove;
+				border-width: .5px;
+				margin-bottom: 10px;
+				height: 65px;
+				.tournament-date {
+          float: left;
+          width: 48px;
+          text-align: right;
+          font-size: 32pt;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        .tournament-location {
+          font-weight: bold;
+          font-size: 12pt;
+          text-align: left;
+          margin-top: 9px;
+        }
+        .tournament-conference {
+          text-align: left;
+        }
+			}
+			.schedule-btn {
+				height: 65px;
+				border-radius: 3px;
+				margin-bottom: 35px;
+				margin-top: 20px;
+			}
+		}
+	}
+	.quotes{
+		background-color: #03A9FA;
+		background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(#0288D1, #03A9FA, #0288D1); /* Standard syntax */
+	  background-size: cover;
+		padding-bottom: 25px;
+		.container{
+			h3 {
+				font-size: 32pt;
+				margin-top: 25px;
+				// display: inline;
+				color: white;
+				text-align: center;
+			}
+			.quotes-btn{
+			 text-align: center;
+		}
+		}
+	}
+	.group {
+		margin-top: 25px;
+		.cycle {
+			text-align: center;
+			h3 {
+				margin-bottom: -10px;
+				font-weight: bold;
+				font-size: 18pt;
+			}
+			h4 {
+				margin-bottom: -12px;
+				font-weight: bold;
+			}
+		}
+		.supplies {
+			width: 100%;
+			text-align: center;
+
+			h3 {
+				font-weight: bold;
+			}
+			.supplies-btn {
+				height: 65px;
+				padding-left: 75px;
+				padding-right: 75px;
+				border-radius: 3px;
+				margin-bottom: 50px;
+			}
+		}
+		.contact {
+			text-align: center;
+			h3 {
+				font-weight: bold;
+			}
+			h4 {
+				margin-top: -5px;
+			}
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////
+// International Styles
+.country {
+	margin: 100px auto;
+}
+
+.banner-country {
+	width: 100%;
+}
+
+// 404 Page
+#error-404 {
+	margin: 200px 0px;
+	text-align: center;
+
+	h1 {
+		font-size: 100px;
+		line-height: 1em;
+	}
+
+	h2 {
+		line-height: 1em;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+	.navbar {
+		.navbar-nav {
+			li {
+				a {
+					padding: 27px;
+				}
+			}
+			.open {
+
+				a, a:hover, a:focus {
+					background-color: $accent1-dark;
+				}
+
+				.dropdown-menu {
+					li a {
+						background-color: $white;
+						color: $black-54;
+
+						&:hover {
+							color: $black-87;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	///////////////////////////////////////////////////////////////////////
+	// History Page Styles
+	.history {
+		.nav-tabs {
+			li {
+				width: 33.33%;
+
+				a {
+					font-weight: bold;
+					font-size: 24px;
+				}
+			}
+		}
+		.nav-tabs>li.active>a, &hover, &focus {
+			border-bottom: 4px solid white;
+		}
+	}
+
+	.hall-of-fame {
+		.inductees {
+			.year {
+				.modal-dialog {
+					width: 96%;
+					margin: 2%;
+
+					.modal-content {
+						.modal-body {
+							padding: 20px 50px 50px 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.historical-data {
+		.panel {
+			height: 425px;
+			overflow: scroll;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	
+	///////////////////////////////////////////////////////////////////////
+	// GLOBAL STYLES
+
+	// Footer Styles
+	footer {
+		.row {
+    		display: inherit;
+  		}
+
+		.links {
+			img {
+				max-height: 75px;
+				padding: 5px 10px;
+			}
+		}
+	}
+
+	.banner {
+		background-attachment: fixed;
+	}
+
+	.banner-small h1{
+		padding: 0px 50px;
+	}
+
+	// .banner-full {
+	// 	height: 80vh;
+	// 	max-height: 80vh;
+	// }
+
+	///////////////////////////////////////////////////////////////////////
+	// Homepage Styles
+	#title-index {
+		font-size: 48px;
+	}
+
+	#mission-statement { 
+		padding: 100px 0px;
+
+			p {
+				color: white;
+				font-size: 18px;
+			}
+	}
+
+	/////////////////////////////////////////////////////////////////////////
+	// Info Page
+	.info-page {
+		.group {
+			margin-top: 100px;
+			.well-info {
+				height:250px;
+				margin-bottom: 100px;
+			}
+			.supplies {
+				background-color: #f5f5f5;
+						h3 {
+							padding-top: 0px;
+							margin-top: 40px;
+						}
+				}
+			.contact {
+				h3 {
+					margin-top: 45px;
+				}
+			}
+		}
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
