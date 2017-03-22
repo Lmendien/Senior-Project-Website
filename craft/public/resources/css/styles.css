@@ -148,6 +148,9 @@ footer {
 .banner-full {
   height: 100vh; }
 
+.no-banner {
+  margin-top: 100px; }
+
 #banner-index {
   background: url("../images/banner-images/banner-index.jpg");
   /* For browsers that do not support gradients */
@@ -235,16 +238,19 @@ footer {
   text-align: center; }
 
 .nav .quick-link a {
-  background-color: #0288D1;
+  background-color: #B3E5FC;
   font-size: 24px;
-  color: white;
+  color: rgba(0, 0, 0, 0.87);
   padding: 30px 20px;
-  margin: 5px 0px; }
+  margin-bottom: 10px; }
   .nav .quick-link a:hover, .nav .quick-link a:focus {
-    background-color: #0D47A1; }
+    background-color: #0D47A1;
+    color: white; }
 
 .row-home {
   margin: 50px 0px; }
+  .row-home .home-column {
+    margin-top: 20px; }
 
 .upcoming-event {
   border: 1px solid #F5F5F5;
@@ -252,11 +258,13 @@ footer {
   margin: 5px 0px; }
   .upcoming-event .date {
     display: inline-block;
-    background: #F5F5F5;
+    background: #4CAF50;
     padding: 5px;
     width: 75px;
     text-align: center;
-    vertical-align: middle; }
+    vertical-align: middle;
+    color: white;
+    margin-right: 10px; }
     .upcoming-event .date .month {
       display: block; }
     .upcoming-event .date .day {
@@ -272,6 +280,32 @@ footer {
     .upcoming-event .info p {
       line-height: 1;
       margin: 0px; }
+
+.blog-post {
+  border: 1px solid #F5F5F5;
+  border-radius: 4px;
+  margin-bottom: 5px; }
+  .blog-post img {
+    width: 100%;
+    border-radius: 4px 4px 0px 0px; }
+  .blog-post .content {
+    margin: 5px;
+    display: inline-block; }
+    .blog-post .content h5 {
+      margin: 0px; }
+    .blog-post .content h6 {
+      margin: 0px;
+      line-height: 1; }
+    .blog-post .content p {
+      margin: 0px; }
+
+.quiz-cycle h5 {
+  margin: 0px; }
+.quiz-cycle p {
+  margin: 0px; }
+.quiz-cycle hr {
+  width: 50%;
+  border-color: #F5F5F5; }
 
 #banner-about {
   background: url("../images/banner-images/banner-about.jpg");
