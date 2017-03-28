@@ -636,17 +636,15 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .menu-container {
-    top: 70px; }
-    .menu-container .navbar .navbar-nav li a {
-      padding: 27px; }
-    .menu-container .navbar .navbar-nav .open a, .menu-container .navbar .navbar-nav .open a:hover, .menu-container .navbar .navbar-nav .open a:focus {
-      background-color: #0D47A1; }
-    .menu-container .navbar .navbar-nav .open .dropdown-menu li a {
-      background-color: #FFFFFF;
-      color: rgba(0, 0, 0, 0.54); }
-      .menu-container .navbar .navbar-nav .open .dropdown-menu li a:hover {
-        color: rgba(0, 0, 0, 0.87); }
+  .navbar .navbar-nav li a {
+    padding: 27px; }
+  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
+    background-color: #0D47A1; }
+  .navbar .navbar-nav .open .dropdown-menu li a {
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.54); }
+    .navbar .navbar-nav .open .dropdown-menu li a:hover {
+      color: rgba(0, 0, 0, 0.87); }
 
   .history .nav-tabs li {
     width: 33.33%; }
@@ -672,34 +670,6 @@ footer {
     display: block;
     width: 100%; } }
 @media (min-width: 992px) {
-  .navbar .menu-toggle {
-    margin-right: 10px; }
-  .navbar a.menu-toggle.active .menu-line .menu-bar {
-    background-color: #0288D1;
-    -webkit-transition: ease all .7s;
-    transition: ease all .7s; }
-  .navbar a.menu-toggle.active.collapsed .menu-line .menu-bar {
-    background-color: white;
-    -webkit-transition: ease all .7s;
-    transition: ease all .7s; }
-  .navbar .navbar-nav {
-    width: 50%;
-    position: fixed;
-    right: 0px; }
-    .navbar .navbar-nav .menu-container {
-      margin: 0px;
-      position: fixed;
-      width: 50%;
-      height: 100%;
-      padding-top: 80px;
-      padding-bottom: 11vh;
-      top: 0;
-      right: 0; }
-      .navbar .navbar-nav .menu-container .navbar-item {
-        opacity: 0.8; }
-        .navbar .navbar-nav .menu-container .navbar-item:hover {
-          opacity: 1; }
-
   footer .row {
     display: inherit; }
   footer .links img {
