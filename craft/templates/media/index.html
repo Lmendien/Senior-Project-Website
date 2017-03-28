@@ -1,0 +1,41 @@
+{#
+ # News entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a News entry’s URL is
+ # requested. That’s because the News section’s Template setting is
+ # set to “news/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested News entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<section id="banner-media" class="banner banner-small">
+        <h1>Media</h1>
+    </section>
+	<div class="container text-center">
+		<div class="row">
+		{% for collection in craft.entries.section("gallery").level(1) %}
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+				<a href="{{collection.url}}">
+					{% set entry = collection.descendants.first() %}
+					{% if (collection.image is not empty) %}
+					{% set image = collection.image.first() %}
+					<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
+					{% else %}
+					{% set image = entry.album.first() %}
+					<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
+					{% endif %}
+					<h6>{{ collection.title }}</h6>
+				</a>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+{% endblock %}

@@ -320,7 +320,7 @@ footer {
   /* Standard syntax */
   background-size: cover;
   background-attachment: fixed;
-  background-position: bottom; }
+  background-position: center; }
 
 .well-rules {
   text-align: center;
@@ -365,6 +365,21 @@ footer {
     opacity: 1;
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
+
+#banner-history {
+  background: url("../images/banner-images/banner-history.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
 
 .history .nav-tabs {
   width: 100%;
@@ -614,6 +629,21 @@ footer {
     line-height: 1em; }
   #error-404 h2 {
     line-height: 1em; }
+
+#banner-media {
+  background: url("../images/banner-images/banner-media.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {

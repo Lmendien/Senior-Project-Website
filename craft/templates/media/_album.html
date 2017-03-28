@@ -1,0 +1,30 @@
+{#
+ # Album entry template
+ # -------------------
+ #
+ # This template is for an album entry in the gallery section of the website
+ #}
+
+{% block content %}
+	<!-- Provides a bootstrap container to wrap the album in -->
+	<div class="container text-center">
+		<!-- Calls the title of the album from the CMS and inserts it into a heading tag -->
+		<h1>{{ entry.title }}</h1>
+		
+		<!-- Creates the album gallery using FancyBox-3.0 -->
+		<!-- Uses a bootstrap row to contain the different columns and images -->
+		<div class="row">
+
+		<!-- For each image in the album, creates a bootstrap column and a fancybox image link with a thumbnail -->
+		{% for image in entry.album %}
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+				<!-- data-fancybox'"gallery" makes all images part of one gallery -->
+				<a href="{{ image.url }}" data-fancybox="gallery">
+					<!-- squareThumbnail creates a thumbnai for the images -->
+					<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
+				</a>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+{% endblock %}

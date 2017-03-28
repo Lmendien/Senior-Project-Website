@@ -489,7 +489,7 @@ footer {
 	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-about.jpg");
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: bottom;
+	background-position: center;
 }
 
 .well-rules {
@@ -549,6 +549,13 @@ footer {
 
 ///////////////////////////////////////////////////////////////////////
 // History Page Styles
+#banner-history {
+	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-history.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
 .history {
 	.nav-tabs {
 		width: 100%;
@@ -928,6 +935,15 @@ footer {
 	h2 {
 		line-height: 1em;
 	}
+}
+
+///////////////////////////////////////////////////////////////////////
+// Media Styles
+#banner-media {
+	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-media.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 
 // Small devices (landscape phones, 576px and up)
