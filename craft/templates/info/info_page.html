@@ -1,0 +1,72 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../resources/css/styles.css">
+
+{% block content %}
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% macro monthConvert(meetblock) %}
+  {% switch meetblock.date.month %}
+    {% case 1 %}
+      <span class="month">JAN</span>
+    {% case 2 %}
+      <span class="month">FEB</span>
+    {% case 3 %}
+      <span class="month">MAR</span>
+    {% case 4 %}
+      <span class="month">APR</span>
+  {% endswitch %}
+{% endmacro %}
+
+<div class="info-page">
+  <div class="tournaments">
+    <div class="container">
+      <div id="myCarousel" class="carousel slide t" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+         <div class="item active">
+           <div class="month">
+             <h3>
+               Tournaments
+             </h3>
+          </div>
+           <div class="row">
+             {% for event in craft.entries.section("tournaments") %}
+               {% set image=event.tournamentImage.first() %}
+                 <div class="col-sm-6 col-lg-4 col-med-6 col-xs-12">
+                 <div class="image-container">
+                   <img src="{{image.url}}" class="img" >
+                 </div>
+                   <div class="tournament-list">
+                     <span class="tournament-date">
+                       {{ _self.monthConvert(event) }}
+                        <span class="date">{{event.date.day}}</span>
+                     </span>
+                     <span class="tournament-info">
+                       <div class="tournament-location">
+                         {{event.Tournamentlocation}}
+                       </div>
+                       <div class="tournamet-conference">
+                         {{ event.title }}
+                       </div>
+
+                     </span>
+                 </div>
+               </div>
+             {% endfor %}
+           </div>
+           <button class="btn btn-primary schedule-btn" type="button">Full Schedule</button>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- <script src="../public/resources/js/custom.js"></script> -->

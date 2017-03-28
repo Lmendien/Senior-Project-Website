@@ -301,7 +301,7 @@ footer {
 	position: relative;
 	text-align: center;
 	padding: 40vh 10px;
-	margin: 0px; 
+	margin: 0px;
 }
 
 .announcements {
@@ -320,7 +320,7 @@ footer {
 			background-color: #FFFFFF;
 			border: 1px solid rgba(0,0,0,0.32);
 		}
-		
+
 		.active {
 			background-color: rgba(0,0,0,0.54);
 		}
@@ -334,7 +334,7 @@ footer {
 	}
 }
 
-#mission-statement { 
+#mission-statement {
 	@include background($main-gradient1, $main-gradient2, "../images/background-images/world-pic.jpg");
 	background-size: cover;
 	background-attachment: fixed;
@@ -401,7 +401,8 @@ footer {
 	border: 1px solid $gray-light;
 	border-radius: 4px;
 	margin: 5px 0px;
-	
+//////////////////////////////////////////////
+//////////////////////////////////////////////
 	.date {
 		display: inline-block;
 	    background: $accent2;
@@ -422,7 +423,6 @@ footer {
 		    vertical-align: middle;
 	    }
 	}
-
 	.info {
 		display: inline-block;
 		vertical-align: middle;
@@ -817,30 +817,61 @@ footer {
 			.month {
 			margin-top: 5px;
 			margin-bottom: 20px;
+			text-align:center;
 			}
-			.tournament-list {
-				background-color: rgb(245,245,245);
-				border-style: groove;
-				border-width: .5px;
-				margin-bottom: 10px;
-				height: 65px;
-				.tournament-date {
-          float: left;
-          width: 48px;
-          text-align: right;
-          font-size: 32pt;
-          margin-left: 10px;
-          margin-right: 10px;
+			.image-container{
+        .img{
+        display: none;
         }
+			}
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+    	.tournament-list {
+				background-color: white;
+				border: 1px solid #F5F5F5;
+				margin-bottom: 10px;
+        margin-right: 10px;
+        font-size:  18pt;
+        display:inline-block;
+        width: 100%;
+
+				.tournament-date {
+            display: inline-block;
+      	    background: $gray-light;
+      	    padding: 5px;
+      	    width: 75px;
+      	    text-align: center;
+      	    vertical-align: middle;
+            float: left;
+            .month {
+              display: block;
+              margin-bottom: -8px;
+              font-size: 18px;
+              text-align:center;
+            }
+            .date {
+              font-size: 32px;
+              text-align: center;
+              vertical-align: middle;
+          }
+        }
+        .tournament-info {
+          font-size: 16px;
+          margin-top: 20px;
+          display: inline-block;
+          vertical-align: middle;
         .tournament-location {
-          font-weight: bold;
-          font-size: 12pt;
-          text-align: left;
-          margin-top: 9px;
+          line-height: 1.2;
+          margin:0px;
         }
         .tournament-conference {
-          text-align: left;
+          line-height: 1;
+          margin: 0px;
         }
+      }
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
 			}
 			.schedule-btn {
 				height: 65px;
@@ -947,11 +978,15 @@ footer {
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { }
+@media (min-width: 576px) {
+
+ }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	
+
+	.menu-container {
+		top: 70px;
 	.navbar {
 		.navbar-nav {
 			li {
@@ -978,6 +1013,7 @@ footer {
 			}
 		}
 	}
+}
 
 	///////////////////////////////////////////////////////////////////////
 	// History Page Styles
@@ -1020,13 +1056,73 @@ footer {
 			overflow: scroll;
 		}
 	}
+
+  .info-page {
+    .tournaments {
+      .container {
+        .month{
+          text-align: left;
+        }
+        .image-container {
+          .img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	
+
 	///////////////////////////////////////////////////////////////////////
 	// GLOBAL STYLES
+
+	// Navbar
+	.navbar {
+		.menu-toggle {
+    		margin-right: 10px;
+	  	}
+
+	  	a.menu-toggle.active .menu-line .menu-bar {
+    		background-color: #0288D1;
+    		-webkit-transition: ease all .7s;
+    		transition: ease all .7s;
+    	}
+
+	  	a.menu-toggle.active.collapsed .menu-line .menu-bar {
+    		background-color: white;
+    		-webkit-transition: ease all .7s;
+    		transition: ease all .7s;
+    	}
+
+		.navbar-nav {
+			width: 50%;
+			position: fixed;
+			right: 0px;
+
+		    .menu-container {
+		    	margin:0px;
+				position: fixed;
+				width: 50%;
+				height: 100%;
+				padding-top: 80px;
+				padding-bottom: 11vh;
+				top:0;
+				right:0;
+
+				.navbar-item {
+					opacity: 0.8;
+
+					&:hover {
+						opacity: 1;
+					}
+	 			}
+	  		}
+		}
+	}
 
 	// Footer Styles
 	footer {
@@ -1061,7 +1157,7 @@ footer {
 		font-size: 48px;
 	}
 
-	#mission-statement { 
+	#mission-statement {
 		padding: 100px 0px;
 
 			p {
@@ -1073,6 +1169,12 @@ footer {
 	/////////////////////////////////////////////////////////////////////////
 	// Info Page
 	.info-page {
+    .tournaments {
+      .container{
+        .image-container{
+        }
+      }
+    }
 		.group {
 			margin-top: 100px;
 			.well-info {

@@ -541,27 +541,46 @@ footer {
   font-size: 24pt; }
 .info-page .tournaments .container .month {
   margin-top: 5px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-align: center; }
+.info-page .tournaments .container .image-container .img {
+  display: none; }
 .info-page .tournaments .container .tournament-list {
-  background-color: whitesmoke;
-  border-style: groove;
-  border-width: .5px;
+  background-color: white;
+  border: 1px solid #F5F5F5;
   margin-bottom: 10px;
-  height: 65px; }
+  margin-right: 10px;
+  font-size: 18pt;
+  display: inline-block;
+  width: 100%; }
   .info-page .tournaments .container .tournament-list .tournament-date {
-    float: left;
-    width: 48px;
-    text-align: right;
-    font-size: 32pt;
-    margin-left: 10px;
-    margin-right: 10px; }
-  .info-page .tournaments .container .tournament-list .tournament-location {
-    font-weight: bold;
-    font-size: 12pt;
-    text-align: left;
-    margin-top: 9px; }
-  .info-page .tournaments .container .tournament-list .tournament-conference {
-    text-align: left; }
+    display: inline-block;
+    background: #F5F5F5;
+    padding: 5px;
+    width: 75px;
+    text-align: center;
+    vertical-align: middle;
+    float: left; }
+    .info-page .tournaments .container .tournament-list .tournament-date .month {
+      display: block;
+      margin-bottom: -8px;
+      font-size: 18px;
+      text-align: center; }
+    .info-page .tournaments .container .tournament-list .tournament-date .date {
+      font-size: 32px;
+      text-align: center;
+      vertical-align: middle; }
+  .info-page .tournaments .container .tournament-list .tournament-info {
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: middle; }
+    .info-page .tournaments .container .tournament-list .tournament-info .tournament-location {
+      line-height: 1.2;
+      margin: 0px; }
+    .info-page .tournaments .container .tournament-list .tournament-info .tournament-conference {
+      line-height: 1;
+      margin: 0px; }
 .info-page .tournaments .container .schedule-btn {
   height: 65px;
   border-radius: 3px;
@@ -647,15 +666,17 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .navbar .navbar-nav li a {
-    padding: 27px; }
-  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
-    background-color: #0D47A1; }
-  .navbar .navbar-nav .open .dropdown-menu li a {
-    background-color: #FFFFFF;
-    color: rgba(0, 0, 0, 0.54); }
-    .navbar .navbar-nav .open .dropdown-menu li a:hover {
-      color: rgba(0, 0, 0, 0.87); }
+  .menu-container {
+    top: 70px; }
+    .menu-container .navbar .navbar-nav li a {
+      padding: 27px; }
+    .menu-container .navbar .navbar-nav .open a, .menu-container .navbar .navbar-nav .open a:hover, .menu-container .navbar .navbar-nav .open a:focus {
+      background-color: #0D47A1; }
+    .menu-container .navbar .navbar-nav .open .dropdown-menu li a {
+      background-color: #FFFFFF;
+      color: rgba(0, 0, 0, 0.54); }
+      .menu-container .navbar .navbar-nav .open .dropdown-menu li a:hover {
+        color: rgba(0, 0, 0, 0.87); }
 
   .history .nav-tabs li {
     width: 33.33%; }
@@ -673,8 +694,42 @@ footer {
 
   .historical-data .panel {
     height: 425px;
-    overflow: scroll; } }
+    overflow: scroll; }
+
+  .info-page .tournaments .container .month {
+    text-align: left; }
+  .info-page .tournaments .container .image-container .img {
+    display: block;
+    width: 100%; } }
 @media (min-width: 992px) {
+  .navbar .menu-toggle {
+    margin-right: 10px; }
+  .navbar a.menu-toggle.active .menu-line .menu-bar {
+    background-color: #0288D1;
+    -webkit-transition: ease all .7s;
+    transition: ease all .7s; }
+  .navbar a.menu-toggle.active.collapsed .menu-line .menu-bar {
+    background-color: white;
+    -webkit-transition: ease all .7s;
+    transition: ease all .7s; }
+  .navbar .navbar-nav {
+    width: 50%;
+    position: fixed;
+    right: 0px; }
+    .navbar .navbar-nav .menu-container {
+      margin: 0px;
+      position: fixed;
+      width: 50%;
+      height: 100%;
+      padding-top: 80px;
+      padding-bottom: 11vh;
+      top: 0;
+      right: 0; }
+      .navbar .navbar-nav .menu-container .navbar-item {
+        opacity: 0.8; }
+        .navbar .navbar-nav .menu-container .navbar-item:hover {
+          opacity: 1; }
+
   footer .row {
     display: inherit; }
   footer .links img {
