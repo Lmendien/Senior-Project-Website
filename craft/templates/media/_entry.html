@@ -1,0 +1,13 @@
+{#
+ # Media entry template
+ # -------------------
+ #
+ # Feeds in another template based on the entry type
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<!-- Example: path will end up media/_collection -->
+	{% include "media/_" ~ entry.type %}
+{% endblock %}

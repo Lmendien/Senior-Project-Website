@@ -22,7 +22,7 @@
 {% block content %}
 
 	{% macro monthConvert(meetblock) %}
-		{% switch meetblock.tournamentDate.month %}
+		{% switch meetblock.date.month %}
 			{% case 1 %}
 				<span class="month">JAN</span>
 			{% case 2 %}
@@ -69,15 +69,15 @@
    		<div class="row row-home">
    			<div class="col-sm-5 col-md-4 home-column">
    				<h4 class="text-center">Upcoming Events</h4>
-   				{% for event in craft.entries.section("tournaments").order("tournamentDate").limit(5) %}
+   				{% for event in craft.entries.section("tournaments").order("date").limit(5) %}
    					<div class="upcoming-event">
    						<span class="date">
    							{{ _self.monthConvert(event) }}
-   							<span class="day">{{ event.tournamentDate.day }}</span>
+   							<span class="day">{{ event.date.day }}</span>
    						</span>
    						<span class="info">
    							<h6>{{ event.title }}</h6>
-   							<p>{{ event.tournamentLocatio }}</p>
+   							<p>{{ event.tournamentLocation }}</p>
    						</span>
    					</div>
    				{% endfor %}

@@ -1,0 +1,32 @@
+{#
+ # Album entry template
+ # -------------------
+ #
+ # This template is for an collection entry in the gallery section of the website
+ #}
+
+{% block content %}
+	<!-- Provides a bootstrap container to wrap the album in -->
+	<div class="container text-center">
+		<!-- Calls the title of the album from the CMS and inserts it into a heading tag -->
+		<h1>{{ entry.title }}</h1>
+
+		<!-- Lists the different albums in the collection -->
+		<!-- Uses a bootstrap row to contain the different albums within  -->
+		<div class="row">
+
+		<!-- For each album in the collection, set the thumbnail to the first image in the album and list the album title -->
+		{% for child in entry.descendants %}
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+				<!-- Link to the album -->
+				<a href="{{child.url}}">
+					{% set image = child.album.first() %}
+					<!-- squareThumbnail creates a thumbnai for the images -->
+					<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
+					<h6>{{ child.title }}</h6>
+				</a>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+{% endblock %}

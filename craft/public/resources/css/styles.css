@@ -320,7 +320,7 @@ footer {
   /* Standard syntax */
   background-size: cover;
   background-attachment: fixed;
-  background-position: bottom; }
+  background-position: center; }
 
 .well-rules {
   text-align: center;
@@ -365,6 +365,21 @@ footer {
     opacity: 1;
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
+
+#banner-history {
+  background: url("../images/banner-images/banner-history.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
 
 .history .nav-tabs {
   width: 100%;
@@ -659,19 +674,32 @@ footer {
   #error-404 h2 {
     line-height: 1em; }
 
+#banner-media {
+  background: url("../images/banner-images/banner-media.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  /* Standard syntax */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .menu-container {
-    top: 70px; }
-    .menu-container .navbar .navbar-nav li a {
-      padding: 27px; }
-    .menu-container .navbar .navbar-nav .open a, .menu-container .navbar .navbar-nav .open a:hover, .menu-container .navbar .navbar-nav .open a:focus {
-      background-color: #0D47A1; }
-    .menu-container .navbar .navbar-nav .open .dropdown-menu li a {
-      background-color: #FFFFFF;
-      color: rgba(0, 0, 0, 0.54); }
-      .menu-container .navbar .navbar-nav .open .dropdown-menu li a:hover {
-        color: rgba(0, 0, 0, 0.87); }
+  .navbar .navbar-nav li a {
+    padding: 27px; }
+  .navbar .navbar-nav .open a, .navbar .navbar-nav .open a:hover, .navbar .navbar-nav .open a:focus {
+    background-color: #0D47A1; }
+  .navbar .navbar-nav .open .dropdown-menu li a {
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.54); }
+    .navbar .navbar-nav .open .dropdown-menu li a:hover {
+      color: rgba(0, 0, 0, 0.87); }
 
   .history .nav-tabs li {
     width: 33.33%; }
@@ -697,34 +725,6 @@ footer {
     display: block;
     width: 100%; } }
 @media (min-width: 992px) {
-  .navbar .menu-toggle {
-    margin-right: 10px; }
-  .navbar a.menu-toggle.active .menu-line .menu-bar {
-    background-color: #0288D1;
-    -webkit-transition: ease all .7s;
-    transition: ease all .7s; }
-  .navbar a.menu-toggle.active.collapsed .menu-line .menu-bar {
-    background-color: white;
-    -webkit-transition: ease all .7s;
-    transition: ease all .7s; }
-  .navbar .navbar-nav {
-    width: 50%;
-    position: fixed;
-    right: 0px; }
-    .navbar .navbar-nav .menu-container {
-      margin: 0px;
-      position: fixed;
-      width: 50%;
-      height: 100%;
-      padding-top: 80px;
-      padding-bottom: 11vh;
-      top: 0;
-      right: 0; }
-      .navbar .navbar-nav .menu-container .navbar-item {
-        opacity: 0.8; }
-        .navbar .navbar-nav .menu-container .navbar-item:hover {
-          opacity: 1; }
-
   footer .row {
     display: inherit; }
   footer .links img {
