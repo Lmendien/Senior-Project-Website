@@ -37,10 +37,14 @@
           </div>
            <div class="row">
              {% for event in craft.entries.section("tournaments") %}
-               {% set image=event.tournamentImage.first() %}
+               	{% if event.image.first() is not empty %}
+               		{% set imageurl = event.image.first().url %}
+               	{% else %}
+               		{% set imageurl = "/resources/images/quiz-event.jpg" %}
+               	{% endif %}
                  <div class="col-sm-6 col-lg-4 col-med-6 col-xs-12">
                  <div class="image-container">
-                   <img src="{{image.url}}" class="img" >
+                   <img src="{{imageurl}}" class="img" >
                  </div>
                    <div class="tournament-list">
                      <span class="tournament-date">
@@ -49,7 +53,7 @@
                      </span>
                      <span class="tournament-info">
                        <div class="tournament-location">
-                         {{event.Tournamentlocation}}
+                         {{event.tournamentLocation}}
                        </div>
                        <div class="tournamet-conference">
                          {{ event.title }}

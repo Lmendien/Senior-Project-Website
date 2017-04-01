@@ -55,21 +55,24 @@
 	<div class="world-wide">
 		<div class="container">
 			<div class="about-conferences">
-				<h2 class="text-center">Conferences</h2>
-				{% set conferences = craft.entries.section('conferences').order('title') %}
-				{% for row in conferences|batch(4, 'No item') %}
-					<div class="row">
-					{% for entry in row %}
-					<a href="{{ entry.url }}">
-						<div class="col-xs-6 col-md-3">
-							<div class="conference">
-								<h4 class="text-center">{{ entry.title }}</h4>
+				
+				{% if craft.entries.section('regions')|length > 0 %}
+				<h2 class="text-center">Regions</h2>
+					{% set regions = craft.entries.section('regions').order('title') %}
+					{% for row in regions|batch(4, 'No item') %}
+						<div class="row">
+						{% for entry in row %}
+						<a href="{{ entry.url }}">
+							<div class="col-xs-6 col-md-3">
+								<div class="conference">
+									<h4 class="text-center"><a href="{{entry.link}}"{{ entry.title }}</h4>
+								</div>
 							</div>
+						</a>
+						{% endfor %}
 						</div>
-					</a>
 					{% endfor %}
-					</div>
-				{% endfor %}
+				{%endif%}
 			</div>
 		</div>
 		<div class="container">

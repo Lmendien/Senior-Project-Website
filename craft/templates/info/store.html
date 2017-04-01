@@ -7,14 +7,16 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container no-banner">
     <div class="row">
         <section class="col-xs-12">
             <h3 class="text-center">Store</h3>
             {% for storeSection in entry.storeMatrix %}
                 <div class="store">
                     <h4 class="header text-center">{{storeSection.sectionTitle}}</h4>
-                    {{storeSection.body}}
+                    <div class="store-body">
+                        {{storeSection.body}}
+                    </div>
                 </div>
             {% endfor %}
         </section>

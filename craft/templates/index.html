@@ -158,6 +158,21 @@
 		<div class="row row-home">
 			<div class="col-sm-6 col-md-8 home-column">
 				<h4>Media Highlights</h4>
+				{% for collection in craft.entries.section("gallery").level(1).limit(16) %}
+					<div class="col-lg-3 col-xs-6">
+						<a href="{{collection.url}}">
+							{% set entry = collection.descendants.first() %}
+							{% if (collection.image is not empty) %}
+								{% set image = collection.image.first() %}
+								<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
+							{% else %}
+								{% set image = entry.album.first() %}
+								<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
+							{% endif %}
+							<h6>{{ collection.title }}</h6>
+						</a>
+					</div>
+				{% endfor %}
 			</div>
 			<div class="col-sm-6 col-md-4 home-column">
 				<div class="container-fluid newsletter-form">
