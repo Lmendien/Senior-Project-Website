@@ -13,20 +13,40 @@
  # http://craftcms.com/docs/routing
  #}
 
+{% set title = entry.title %}
+
 {% extends "_layout" %}
 
 {% block content %}
 	<article>
 		<div class="container no-banner">
+			{% if entry.level > 1 %}
+			    <p class="crumbs">
+			    		<a href="{{siteUrl}}">{{siteName}}</a>
+			        {% for crumb in entry.getAncestors() %}
+			            / {{ crumb.getLink() }}
+			        {% endfor %}
+			    </p>
+			{% endif %}
 			<div class="row">
-			<div class="col-sm-3">
-				{% set image = entry.image.first() %}
-				<img src="{{image.url }}"/>
+				{% if entry.image.first() is not empty %}
+					<div class="col-sm-3">
+						{% set image = entry.image.first() %}
+						<img src="{{image.url }}"/>
+					</div>
+					<div class="col-sm-9">
+						<h3>{{ entry.title }}</h3>
+						{{ entry.body }}
+						<small>Posted on {{ entry.postDate.format('F d, Y') }}</small>
+					</div>
+				{% else %}
+					<div class="col-sm-12">
+						<h3>{{ entry.title }}</h3>
+						{{ entry.body }}
+						<small>Posted on {{ entry.postDate.format('F d, Y') }}</small>
+					</div>
+				{% endif %}
 			</div>
-			<div class="col-sm-9">
-				<h3>{{ entry.title }}</h1>
-				{{ entry.body }}
-				<small>Posted on {{ entry.postDate.format('F d, Y') }}</small>
-			</div>
+		</div>
 	</article>
 {% endblock %}

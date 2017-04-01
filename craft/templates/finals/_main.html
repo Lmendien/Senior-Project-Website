@@ -1,0 +1,165 @@
+{#
+ # Finals entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a News entry’s URL is
+ # requested. That’s because the News section’s Template setting is
+ # set to “news/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested News entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% set title = entry.title %}
+
+{% macro fileIcon(file) %}
+	{% switch file.extension %}
+		{% case "pdf" %}
+			<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+		{% case "doc" %}
+			<i class="fa fa-file-word-o" aria-hidden="true"></i>
+		{% case "docx" %}
+			<i class="fa fa-file-word-o" aria-hidden="true"></i>
+		{% case "jpg" %}
+			<i class="fa fa-file-image-o" aria-hidden="true"></i>
+		{% case "jpeg" %}
+			<i class="fa fa-file-image-o" aria-hidden="true"></i>	
+		{% case "png" %}
+			<i class="fa fa-file-image-o" aria-hidden="true"></i>
+		{% case "xlsx" %}
+			<i class="fa fa-file-excel-o" aria-hidden="true"></i>
+		{% case "xlsm" %}
+			<i class="fa fa-file-excel-o" aria-hidden="true"></i>
+		{% case "xltx" %}
+			<i class="fa fa-file-excel-o" aria-hidden="true"></i>
+		{% case "xltm" %}
+			<i class="fa fa-file-excel-o" aria-hidden="true"></i>
+		{% default %}
+			<i class="fa fa-file-o" aria-hidden="true"></i>
+	{% endswitch %}
+{% endmacro %}
+
+{% extends "_layout" %}
+
+{% block content %}
+	{% set image = entry.image.first() %}
+	<div class="container no-banner finals">
+		<div class="row">
+			<div class="col-md-8 col-sm-12">
+				{% set image = entry.image.first() %}
+				<img class="img-responsive" src="{{image.url}}"/>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<h1>{{entry.title}}</h1>
+				<h6>{{ entry.location }}</h6>
+				<h4>{{ entry.startDate.localeDate}} - {{ entry.endDate.localeDate}}</h4>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-8">
+	   			<h4 class="text-center">Announcements</h4>
+	   			{% for announcement in entry.announcementMatrix %}
+	   				<div class="_announcement">
+	   					<h6>{{ announcement.announcementTitle }}</h6>
+	   					<p>{{ announcement.body }}</p>
+	   				</div>
+	   			{% endfor %}
+			</div>
+			<div class="col-sm-4">
+   				<h4 class="text-center">Quick Links</h4>
+   				<ul class="nav nav-pills nav-stacked">
+   				{% for link in entry.quickLinks %}
+				    <li class="quick-link"><a href="{{ link.entryLink.first().url }}"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;{{ link.linkTitle }}</i></a></li>
+				{% endfor %}
+				 </ul>
+   			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-4">
+				<h4>Forms</h4>
+				<ul class="list-group">
+				{% for form in entry.forms %}
+	   				<li class="list-group-item">{{ form.formTitle }}:
+	   					<a href="{{form.formpdf.first().url}}"/>PDF <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+	   					<a href="{{form.formword.first().url}}"/>WORD<i class="fa fa-file-word-o" aria-hidden="true"></i></a>
+	   				</li>
+	   			{% endfor %}
+	   			</ul>
+			</div>
+				<div class="col-md-4">
+					<h4>Individuals</h4>
+					<ul class="list-group">
+					{% if entry.individuals is not empty %}
+						{% for item in entry.individuals %}
+							<li class="list-group-item">
+								<a href="{{item.itemFile.first().url}}">{{item.itemTitle}} {{ _self.fileIcon( item.itemFile.first() ) }}</a>
+							</li>
+						{% endfor %}
+					{% else %}
+						<li class="list-group-item">Check back later for more content</li>
+					{% endif %}
+					</ul>
+				</div>
+				<div class="col-md-4">
+			 		<h4>Team Quizzing</h4>
+			 		<ul class="list-group">
+			 		{% if entry.teams is not empty %}
+						{% for item in entry.teams %}
+							<li class="list-group-item">
+								<a href="{{item.itemFile.first().url}}">{{item.itemTitle}} {{ _self.fileIcon( item.itemFile.first() ) }}</a>
+							</li>
+						{% endfor %}
+					{% else %}
+						<li class="list-group-item">Check back later for more content</li>
+					{% endif %}
+					</ul>
+			 	</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-3 text-center">
+			 		<h4>Other Files</h4>
+			 		<ul class="list-group">
+			 		{% if entry.otherFiles is not empty %}
+						{% for item in entry.otherFiles %}
+							<li class="list-group-item">
+								<a href="{{item.itemFile.first().url}}">{{item.itemTitle}} {{ _self.fileIcon( item.itemFile.first() ) }}</a>
+							</li>
+						{% endfor %}
+					{% else %}
+						<li class="list-group-item">Check back later for more content</li>
+					{% endif %}
+					</ul>
+			 	</div>
+			<div class="col-sm-6">
+				<h4 class="text-center">FAQ</h4>
+				<div class="panel-group" id="FAQ">
+					{% for faqItem in entry.faq %}
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#FAQ" href="#{{faqItem.id}}">
+									{{faqItem.faqQuestion}}</a>
+								</h4>
+							</div>
+							<div id="{{faqItem.id}}" class="panel-collapse collapse">
+								<div class="panel-body">{{faqItem.faqAnswer}}</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-sm-3 text-center">
+				<h4>Previous Finals</h4>
+				<ul class="list-unstyled">
+				{% for entry in craft.entries.section('finals').level(1) %}
+					<li><a href="{{entry.url}}">{{entry.title}}</a></li>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+{% endblock %}
