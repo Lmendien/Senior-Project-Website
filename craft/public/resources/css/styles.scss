@@ -957,6 +957,45 @@ footer {
 	}
 }
 
+.contacts-page{
+  h6{
+    font-weight: bold;
+    font-size: 30pt;
+    text-align: center;
+  }
+  .container{
+    .first-section{
+      .image-container{
+
+      }
+      .title{
+        height:auto;
+        background-color: $primary;
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .row {
+        .director-info{
+            display: inline-block;
+            background: $gray-light;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+            margin-bottom: 15px;
+            .director-name{
+            font-size: 18pt;
+          }
+        }
+      }
+    }
+  }
+}
 ///////////////////////////////////////////////////////////////////////
 // International Styles
 .country {

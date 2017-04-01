@@ -1,0 +1,100 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../resources/css/styles.css">
+
+{% block content %}
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="../../public/resources/font-awesome/css/font-awesome.min.css">
+
+<div class="contacts-page">
+  <h6>Contacts</h6>
+  <div class="container">
+    <div class="first-section">
+      {% for contact in craft.entries.section("contacts") %}
+          <div class="row">
+            <div class="col-med-6 col-xs-12">
+              <div class="image-container">
+                <img src="{{image.url}}" class="img" >
+              </div>
+              <div class="denominational-director">
+                <div class="title">
+                  Denominational Director
+                </div>
+                <div class="director-info">
+                  <div class="director-name">
+                     {{contact.denominationalDirectorName}}
+                  </div>
+                  <div class="email">
+                    <a href="mailto:{{contact.denominationalDirectorEmail}}">
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                      {{contact.denominationalDirectorEmail}}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+          Regional Directors
+          </div>
+          <div class="row">
+            {% for block in contact.regionalDirectors %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+              <div class="director-info">
+                <div class="director-name">
+                  {{ block.directorName }}
+                </div>
+                <div class="region">
+                  {{ block.region }}
+                </div>
+                <div class="email">
+                  <a href="mailto:{{block.email}}">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    {{block.email}}
+                  </a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="title">
+          Conference Directors
+          </div>
+          <div class="row">
+            {% for block in contact.conferenceDirectors %}
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+              <div class="director-info">
+                <div class="director-name">
+                  {{ block.directorName }}
+                </div>
+                <div class="email">
+                  <a href="mailto:{{block.email}}">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    {{block.email}}
+                  </a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
