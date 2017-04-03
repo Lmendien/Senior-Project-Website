@@ -556,7 +556,8 @@ footer {
   margin-bottom: 20px;
   text-align: center; }
 .info-page .tournaments .container .image-container .img {
-  display: none; }
+  display: none;
+  height: 300px; }
 .info-page .tournaments .container .tournament-list {
   background-color: white;
   border: 1px solid #F5F5F5;
