@@ -52,7 +52,7 @@
              </h3>
           </div>
            <div class="row">
-             {% for event in craft.entries.section("tournaments") %}
+             {% for event in craft.entries.section("tournaments").order('expiryDate') %}
                	{% if event.image.first() is not empty %}
                		{% set imageurl = event.image.first().url %}
                	{% else %}
