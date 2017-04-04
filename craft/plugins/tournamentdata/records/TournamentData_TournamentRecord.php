@@ -48,5 +48,18 @@ class TournamentData_TournamentRecord extends BaseRecord
 		);
 	}
 
+	/**
+	 * Create a new instance of the current class. This allows us to 
+	 * properly unit test our service layer.
+	 *
+	 * @return BaseRecord
+	 */
+	public function create()
+	{
+		$class = get_class($this);
+		$record = new $class();
+
+		return $record;
+	}
 }
 ?>

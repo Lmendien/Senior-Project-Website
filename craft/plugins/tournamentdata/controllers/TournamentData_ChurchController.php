@@ -13,7 +13,7 @@ class TournamentData_ChurchController extends BaseController
 
         $church->name       = craft()->request->getPost("name");
         $church->address    = craft()->request->getPost("address");
-        $church->isActive   = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);;
+        $church->isActive   = filter_var(craft()->request->getPost("isActive"), FILTER_VALIDATE_BOOLEAN);
 
         if(craft()->tournamentData_church->saveChurch($church))
         {

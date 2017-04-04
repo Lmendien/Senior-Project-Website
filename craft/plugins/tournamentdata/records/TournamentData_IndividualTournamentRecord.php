@@ -59,5 +59,19 @@ class TournamentData_IndividualTournamentRecord extends BaseRecord
 			'isActive' 	=> array(AttributeType::Bool, 'required' => true),
 		);
 	}
+
+	/**
+	 * Create a new instance of the current class. This allows us to 
+	 * properly unit test our service layer.
+	 *
+	 * @return BaseRecord
+	 */
+	public function create()
+	{
+		$class = get_class($this);
+		$record = new $class();
+
+		return $record;
+	}
 }
 ?>

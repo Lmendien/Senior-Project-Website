@@ -6,6 +6,7 @@ class TournamentData_TeamModel extends BaseModel
     protected function defineAttributes()
 	{
 		return array(
+			'id'			=> AttributeType::Number,
 			'teamId' 		=> AttributeType::Number,
             'divisionId' 	=> AttributeType::Number,
             'wins' 			=> AttributeType::Number,

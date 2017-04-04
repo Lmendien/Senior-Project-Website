@@ -1,6 +1,14 @@
 <?php
 namespace Craft;
 
+/**
+ * TournamentTeam Record
+ *
+ * Provides a definition of the database tables required by our plugin,
+ * and methods for updating the database. This class should only be called
+ * by our service layer, to ensure a consistent API for the rest of the
+ * application to use.
+ */
 class TournamentData_TournamentTeamRecord extends BaseRecord
 {
 	// Public Methods
@@ -56,6 +64,20 @@ class TournamentData_TournamentTeamRecord extends BaseRecord
 			'teamnumber' => array(AttributeType::Number, 'required' => true),
 			'isActive' => array(AttributeType::Bool, 'required' => true),
 		);
+	}
+
+	/**
+	 * Create a new instance of the current class. This allows us to 
+	 * properly unit test our service layer.
+	 *
+	 * @return BaseRecord
+	 */
+	public function create()
+	{
+		$class = get_class($this);
+		$record = new $class();
+
+		return $record;
 	}
 }
 ?>
