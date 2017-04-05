@@ -1,13 +1,15 @@
 <?php
 namespace Craft;
+require_once __DIR__ . '/../models/TournamentData_IndividualRoundModel.php';
+require_once __DIR__ . '/../records/TournamentData_IndividualRoundRecord.php';
 /**
  * Individual Service
  * 
  * Provides a consistent API for the plugin to access the database
  */
-class TournamentData_IndividualService extends BaseApplicationComponent
+class TournamentData_IndividualRoundService extends BaseApplicationComponent
 {
-	protected $individualRecord;
+	protected $individualRoundRecord;
 	/**
 	 * Create a new instance of the Individual Round Service.
 	 * Constructor allows IndividualRecord dependency to be injected to assist with unit testing.

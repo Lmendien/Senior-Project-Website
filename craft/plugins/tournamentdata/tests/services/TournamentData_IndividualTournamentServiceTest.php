@@ -20,76 +20,76 @@ use PHPUnit_Framework_TestCase;
 //Non-functioning commands
 //php -c "C:\Program Files (x86)\Ampps\conf\php-5.6.ini" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\vendor\phpunit-5.7.17.phar" --bootstrap "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\bootstrap.php" --configuration "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\phpunit.xml" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\plugins\tournamentdata\tests"
 //php -c "C:\PHP\php.ini" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\vendor\phpunit-5.7.17.phar" --bootstrap "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\bootstrap.php" --configuration "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\phpunit.xml" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\plugins\tournamentdata\tests"
-class TournamentData_IndividualServiceTest extends PHPUnit_Framework_TestCase
+class TournamentData_IndividualTournamentServiceTest extends PHPUnit_Framework_TestCase
 {
 	public function setUp()
 	{
 		$this->loadServices();
-		$this->individualRecord = m::mock('Craft\TournamentData_IndividualRecord');
-		$this->service = new TournamentData_IndividualService($this->individualRecord);
+		$this->individualTournamentRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+		$this->service = new TournamentData_IndividualTournamentService($this->individualTournamentRecord);
 	}
 
 	protected function loadServices()
 	{
-		require_once __DIR__ . '/../services/TournamentData_IndividualService.php';
+		require_once __DIR__ . '/../../services/TournamentData_IndividualTournamentService.php';
 	}
 
-	public function testNewIndividual()
+	public function testNewIndividualTournament()
 	{
-		$result = $this->service->newIndividual();
+		$result = $this->service->newIndividualTournament();
 
-		$this->assertInstanceOf('Craft\TournamentData_IndividualModel', $result);
+		$this->assertInstanceOf('Craft\TournamentData_IndividualTournamentModel', $result);
 	}
 
-	public function testNewIndividualWithAttributes()
+	public function testNewIndividualTournamentWithAttributes()
 	{
-		$result = $this->service->newIndividual(array('id' => 5));
+		$result = $this->service->newIndividualTournament(array('id' => 5));
 
-		$this->assertInstanceOf('Craft\TournamentData_IndividualModel', $result);
+		$this->assertInstanceOf('Craft\TournamentData_IndividualTournamentModel', $result);
 		$this->assertEquals(5, $result->id);
 	}
 
-	public function testGetAllIndividuals()
+	public function testGetAllIndividualTournaments()
 	{
 		$fakeResults = array(array('id' => 3), array('id' => 5));
 
-		$this->individualRecord
-		     ->shouldReceive('findAll')->with(array('order' => 't.name'))
+		$this->individualTournamentRecord
+		     ->shouldReceive('findAll')->with(array('order' => 't.id'))
 			 ->andReturn($fakeResults);
 		
-		$results = $this->service->getAllIndividuals();
+		$results = $this->service->getAllIndividualTournaments();
 
 		$this->assertEquals(2, count($results));
-		$this->assertInstanceOf('Craft\TournamentData_IndividualModel', $results[5]);
+		$this->assertInstanceOf('Craft\TournamentData_IndividualTournamentModel', $results[5]);
 	}
 
-	public function testGetIndividualById()
+	public function testGetIndividualTournamentById()
     {
         $attributes = array('id' => 5);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualModel');
-        $this->individualRecord
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentModel');
+        $this->individualTournamentRecord
             ->shouldReceive('findByPk')->with(5)
             ->andReturn($mockRecord);
         $mockRecord->shouldReceive('getAttributes')->andReturn($attributes);
-        $result = $this->service->getIndividualById(5);
-        $this->assertInstanceOf('Craft\TournamentData_IndividualModel', $result);
+        $result = $this->service->getIndividualTournamentById(5);
+        $this->assertInstanceOf('Craft\TournamentData_IndividualTournamentModel', $result);
         $this->assertEquals(5, $result->id);
     }
 
-    public function testGetIndividualByMissingId()
+    public function testGetIndividualTournamentByMissingId()
     {
-        $this->individualRecord->shouldReceive('findByPk')->with(5)
+        $this->individualTournamentRecord->shouldReceive('findByPk')->with(5)
             ->andReturn(null);
-        $result = $this->service->getIndividualById(5);
+        $result = $this->service->getIndividualTournamentById(5);
         $this->assertNull($result);
     }
 
-    public function testSaveIndividual()
+    public function testSaveIndividualTournament()
     {
-        $mockModel = m::mock('Craft\TournamentData_IndividualModel');
+        $mockModel = m::mock('Craft\TournamentData_IndividualTournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualRecord');
-        $this->individualRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+        $this->individualTournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         $attributes = array('name' => 'example');
         $mockModel->shouldReceive('getAttributes')->once()->andReturn($attributes);
@@ -98,29 +98,29 @@ class TournamentData_IndividualServiceTest extends PHPUnit_Framework_TestCase
         $mockRecord->shouldReceive('getAttribute')->with('id')->once()
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
-        $result = $this->service->saveIndividual($mockModel);
+        $result = $this->service->saveIndividualTournament($mockModel);
         $this->assertTrue($result);
     }
 
     /**
      * @expectedException Craft\Exception
      */
-    public function testSaveIndividualNotFound()
+    public function testSaveIndividualTournamentNotFound()
     {
-        $mockModel = m::mock('Craft\TournamentData_IndividualModel');
+        $mockModel = m::mock('Craft\TournamentData_IndividualTournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualRecord');
-        $this->individualRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+        $this->individualTournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn(null);
-        $result = $this->service->saveIndividual($mockModel);
+        $result = $this->service->saveIndividualTournament($mockModel);
     }
 
-    public function testSaveIndividualInvalid()
+    public function testSaveIndividualTournamentInvalid()
     {
-        $mockModel = m::mock('Craft\TournamentData_IndividualModel');
+        $mockModel = m::mock('Craft\TournamentData_IndividualTournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualRecord');
-        $this->individualRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+        $this->individualTournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         $attributes = array('name' => 'example');
         $mockModel->shouldReceive('getAttributes')->once()->andReturn($attributes);
@@ -129,16 +129,16 @@ class TournamentData_IndividualServiceTest extends PHPUnit_Framework_TestCase
         $errors = array('name' => 'error message');
         $mockRecord->shouldReceive('getErrors')->once()->andReturn($errors);
         $mockModel->shouldReceive('addErrors')->with($errors)->once();
-        $result = $this->service->saveIndividual($mockModel);
+        $result = $this->service->saveIndividualTournament($mockModel);
         $this->assertFalse($result);
     }
 
-    public function testSaveIndividualNewRecord()
+    public function testSaveIndividualTournamentNewRecord()
     {
-        $mockModel = m::mock('Craft\TournamentData_IndividualModel');
+        $mockModel = m::mock('Craft\TournamentData_IndividualTournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(null);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualRecord');
-        $this->individualRecord->shouldReceive('create')->once()
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+        $this->individualTournamentRecord->shouldReceive('create')->once()
             ->andReturn($mockRecord);
         $attributes = array('name' => 'example');
         $mockModel->shouldReceive('getAttributes')->once()->andReturn($attributes);
@@ -147,16 +147,16 @@ class TournamentData_IndividualServiceTest extends PHPUnit_Framework_TestCase
         $mockRecord->shouldReceive('getAttribute')->with('id')->once()
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
-        $result = $this->service->saveIndividual($mockModel);
+        $result = $this->service->saveIndividualTournament($mockModel);
         $this->assertTrue($result);
     }
     
-	public function testDeleteIndividualById()
+	public function testDeleteIndividualTournamentById()
     {
-		$mockModel = m::mock('Craft\TournamentData_IndividualModel');
+		$mockModel = m::mock('Craft\TournamentData_IndividualTournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualRecord');
-        $this->individualRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+        $this->individualTournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         
         $mockRecord->shouldReceive('setAttribute')->with('isActive', false)->once();
@@ -165,16 +165,16 @@ class TournamentData_IndividualServiceTest extends PHPUnit_Framework_TestCase
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
 
-        $result = $this->service->deleteIndividualById(5);
+        $result = $this->service->deleteIndividualTournamentById(5);
         $this->assertTrue($result);
     }
 
-	public function testUndoDeleteIndividualById()
+	public function testUndoDeleteIndividualTournamentById()
 	{
-		$mockModel = m::mock('Craft\TournamentData_IndividualModel');
+		$mockModel = m::mock('Craft\TournamentData_IndividualTournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_IndividualRecord');
-        $this->individualRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_IndividualTournamentRecord');
+        $this->individualTournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         
         $mockRecord->shouldReceive('setAttribute')->with('isActive', true)->once();
@@ -183,7 +183,7 @@ class TournamentData_IndividualServiceTest extends PHPUnit_Framework_TestCase
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
 
-        $result = $this->service->undoDeleteIndividualById(5);
+        $result = $this->service->undoDeleteIndividualTournamentById(5);
         $this->assertTrue($result);
 	}
 }

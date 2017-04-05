@@ -20,76 +20,76 @@ use PHPUnit_Framework_TestCase;
 //Non-functioning commands
 //php -c "C:\Program Files (x86)\Ampps\conf\php-5.6.ini" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\vendor\phpunit-5.7.17.phar" --bootstrap "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\bootstrap.php" --configuration "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\phpunit.xml" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\plugins\tournamentdata\tests"
 //php -c "C:\PHP\php.ini" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\vendor\phpunit-5.7.17.phar" --bootstrap "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\bootstrap.php" --configuration "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\app\tests\phpunit.xml" "C:\Users\Chris Foss\Documents\GitHub\Senior-Project-Website\craft\plugins\tournamentdata\tests"
-class TournamentData_churchServiceTest extends PHPUnit_Framework_TestCase
+class TournamentData_TournamentServiceTest extends PHPUnit_Framework_TestCase
 {
 	public function setUp()
 	{
 		$this->loadServices();
-		$this->churchRecord = m::mock('Craft\TournamentData_ChurchRecord');
-		$this->service = new TournamentData_churchService($this->churchRecord);
+		$this->tournamentRecord = m::mock('Craft\TournamentData_TournamentRecord');
+		$this->service = new TournamentData_TournamentService($this->tournamentRecord);
 	}
 
 	protected function loadServices()
 	{
-		require_once __DIR__ . '/../services/TournamentData_ChurchService.php';
+		require_once __DIR__ . '/../../services/TournamentData_TournamentService.php';
 	}
 
-	public function testNewChurch()
+	public function testNewTournament()
 	{
-		$result = $this->service->newChurch();
+		$result = $this->service->newTournament();
 
-		$this->assertInstanceOf('Craft\TournamentData_ChurchModel', $result);
+		$this->assertInstanceOf('Craft\TournamentData_TournamentModel', $result);
 	}
 
-	public function testNewChurchWithAttributes()
+	public function testNewTournamentWithAttributes()
 	{
-		$result = $this->service->newChurch(array('id' => 5));
+		$result = $this->service->newTournament(array('id' => 5));
 
-		$this->assertInstanceOf('Craft\TournamentData_ChurchModel', $result);
+		$this->assertInstanceOf('Craft\TournamentData_TournamentModel', $result);
 		$this->assertEquals(5, $result->id);
 	}
 
-	public function testGetAllChurches()
+	public function testGetAllTournaments()
 	{
 		$fakeResults = array(array('id' => 3), array('id' => 5));
 
-		$this->churchRecord
-		     ->shouldReceive('findAll')->with(array('order' => 't.name'))
+		$this->tournamentRecord
+		     ->shouldReceive('findAll')->with(array('order' => 't.id'))
 			 ->andReturn($fakeResults);
 		
-		$results = $this->service->getAllChurches();
+		$results = $this->service->getAllTournaments();
 
 		$this->assertEquals(2, count($results));
-		$this->assertInstanceOf('Craft\TournamentData_ChurchModel', $results[5]);
+		$this->assertInstanceOf('Craft\TournamentData_TournamentModel', $results[5]);
 	}
 
-	public function testGetChurchById()
+	public function testGetTournamentById()
     {
         $attributes = array('id' => 5);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchModel');
-        $this->churchRecord
+        $mockRecord = m::mock('Craft\TournamentData_TournamentModel');
+        $this->tournamentRecord
             ->shouldReceive('findByPk')->with(5)
             ->andReturn($mockRecord);
         $mockRecord->shouldReceive('getAttributes')->andReturn($attributes);
-        $result = $this->service->getChurchById(5);
-        $this->assertInstanceOf('Craft\TournamentData_ChurchModel', $result);
+        $result = $this->service->getTournamentById(5);
+        $this->assertInstanceOf('Craft\TournamentData_TournamentModel', $result);
         $this->assertEquals(5, $result->id);
     }
 
-    public function testGetChurchByMissingId()
+    public function testGetTournamentByMissingId()
     {
-        $this->churchRecord->shouldReceive('findByPk')->with(5)
+        $this->tournamentRecord->shouldReceive('findByPk')->with(5)
             ->andReturn(null);
-        $result = $this->service->getChurchById(5);
+        $result = $this->service->getTournamentById(5);
         $this->assertNull($result);
     }
 
-    public function testSaveChurch()
+    public function testSaveTournament()
     {
-        $mockModel = m::mock('Craft\TournamentData_ChurchModel');
+        $mockModel = m::mock('Craft\TournamentData_TournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchRecord');
-        $this->churchRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_TournamentRecord');
+        $this->tournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         $attributes = array('name' => 'example');
         $mockModel->shouldReceive('getAttributes')->once()->andReturn($attributes);
@@ -98,29 +98,29 @@ class TournamentData_churchServiceTest extends PHPUnit_Framework_TestCase
         $mockRecord->shouldReceive('getAttribute')->with('id')->once()
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
-        $result = $this->service->saveChurch($mockModel);
+        $result = $this->service->saveTournament($mockModel);
         $this->assertTrue($result);
     }
 
     /**
      * @expectedException Craft\Exception
      */
-    public function testSaveChurchNotFound()
+    public function testSaveTournamentNotFound()
     {
-        $mockModel = m::mock('Craft\TournamentData_ChurchModel');
+        $mockModel = m::mock('Craft\TournamentData_TournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchRecord');
-        $this->churchRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_TournamentRecord');
+        $this->tournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn(null);
-        $result = $this->service->saveChurch($mockModel);
+        $result = $this->service->saveTournament($mockModel);
     }
 
-    public function testSaveChurchInvalid()
+    public function testSaveTournamentInvalid()
     {
-        $mockModel = m::mock('Craft\TournamentData_ChurchModel');
+        $mockModel = m::mock('Craft\TournamentData_TournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchRecord');
-        $this->churchRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_TournamentRecord');
+        $this->tournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         $attributes = array('name' => 'example');
         $mockModel->shouldReceive('getAttributes')->once()->andReturn($attributes);
@@ -129,16 +129,16 @@ class TournamentData_churchServiceTest extends PHPUnit_Framework_TestCase
         $errors = array('name' => 'error message');
         $mockRecord->shouldReceive('getErrors')->once()->andReturn($errors);
         $mockModel->shouldReceive('addErrors')->with($errors)->once();
-        $result = $this->service->saveChurch($mockModel);
+        $result = $this->service->saveTournament($mockModel);
         $this->assertFalse($result);
     }
 
-    public function testSaveChurchNewRecord()
+    public function testSaveTournamentNewRecord()
     {
-        $mockModel = m::mock('Craft\TournamentData_ChurchModel');
+        $mockModel = m::mock('Craft\TournamentData_TournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(null);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchRecord');
-        $this->churchRecord->shouldReceive('create')->once()
+        $mockRecord = m::mock('Craft\TournamentData_TournamentRecord');
+        $this->tournamentRecord->shouldReceive('create')->once()
             ->andReturn($mockRecord);
         $attributes = array('name' => 'example');
         $mockModel->shouldReceive('getAttributes')->once()->andReturn($attributes);
@@ -147,16 +147,16 @@ class TournamentData_churchServiceTest extends PHPUnit_Framework_TestCase
         $mockRecord->shouldReceive('getAttribute')->with('id')->once()
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
-        $result = $this->service->saveChurch($mockModel);
+        $result = $this->service->saveTournament($mockModel);
         $this->assertTrue($result);
     }
     
-	public function testDeleteChurchById()
+	public function testDeleteTournamentById()
     {
-		$mockModel = m::mock('Craft\TournamentData_ChurchModel');
+		$mockModel = m::mock('Craft\TournamentData_TournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchRecord');
-        $this->churchRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_TournamentRecord');
+        $this->tournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         
         $mockRecord->shouldReceive('setAttribute')->with('isActive', false)->once();
@@ -165,16 +165,16 @@ class TournamentData_churchServiceTest extends PHPUnit_Framework_TestCase
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
 
-        $result = $this->service->deleteChurchById(5);
+        $result = $this->service->deleteTournamentById(5);
         $this->assertTrue($result);
     }
 
-	public function testUndoDeleteChurchById()
+	public function testUndoDeleteTournamentById()
 	{
-		$mockModel = m::mock('Craft\TournamentData_ChurchModel');
+		$mockModel = m::mock('Craft\TournamentData_TournamentModel');
         $mockModel->shouldReceive('getAttribute')->with('id')->once()->andReturn(5);
-        $mockRecord = m::mock('Craft\TournamentData_ChurchRecord');
-        $this->churchRecord->shouldReceive('findByPk')->with(5)->once()
+        $mockRecord = m::mock('Craft\TournamentData_TournamentRecord');
+        $this->tournamentRecord->shouldReceive('findByPk')->with(5)->once()
             ->andReturn($mockRecord);
         
         $mockRecord->shouldReceive('setAttribute')->with('isActive', true)->once();
@@ -183,7 +183,7 @@ class TournamentData_churchServiceTest extends PHPUnit_Framework_TestCase
             ->andReturn(5);
         $mockModel->shouldReceive('setAttribute')->with('id', 5)->once();
 
-        $result = $this->service->undoDeleteChurchById(5);
+        $result = $this->service->undoDeleteTournamentById(5);
         $this->assertTrue($result);
 	}
 }

@@ -1,117 +1,135 @@
 <?php
 namespace Craft;
 
+require_once __DIR__ . '/../models/TournamentData_TeamModel.php';
+require_once __DIR__ . '/../records/TournamentData_TeamRecord.php';
+
+/**
+ * Team Member Service
+ * 
+ * Provides a consistent API for the plugin to access the database
+ */
 class TournamentData_TeamService extends BaseApplicationComponent
 {
-    public function saveTeam(TournamentData_TeamModel $team)
-    {
-        $teamRecord = new TournamentData_TeamRecord();
+	protected $teamRecord;
+	/**
+	 * Create a new instance of the Individual Tournament Service.
+	 * Constructor allows TeamRecord dependency to be injected to assist with unit testing.
+	 *
+	 * @param @individualRecord TeamRecord The individual tournament record to access the database
+	 */
+	public function __construct($teamRecord = null)
+	{
+	    $this->teamRecord = $teamRecord;
+		if(is_null($this->teamRecord)) {
+			$this->teamRecord = TournamentData_TeamRecord::model();
+		}
+	}
 
-		$teamRecord->churchId          = $team->churchId;
-        $teamRecord->tournamentteamId  = $team->tournamentteamId;
-		$teamRecord->isActive          = $team->isActive;
-		
-		if ( $teamRecord->save() )
-		{
-		    error_log('SUCCESS');
-		}
-		else
-		{
-			error_log($team->getAttributes());
-		}
+	/**
+     * Get a new blank individual tournament
+     *
+     * @param  array                           $attributes
+     * @return TournamentData_TeamModel
+     */
+    public function newTeam($attributes = array())
+    {
+        $model = new TournamentData_TeamModel();
+        $model->setAttributes($attributes);
+        return $model;
     }
 
+	/**
+     * Get all individual tournaments from the database.
+     *
+     * @return array
+     */
+    public function getAllTeams()
+    {
+        $records = $this->teamRecord->findAll(array('order'=>'t.id'));
+        return TournamentData_TeamModel::populateModels($records, 'id');
+    }
+
+	/**
+     * Get a specific individual tournament from the database based on ID. If no individual tournament exists, null is returned.
+     *
+     * @param  int   $id
+     * @return mixed
+     */
+    public function getTeamById($id)
+    {
+        if ($record = $this->teamRecord->findByPk($id)) {
+            return TournamentData_TeamModel::populateModel($record);
+        }
+    }
+
+	/**
+     * Save a new or existing individual tournament back to the database.
+     *
+     * @param  TournamentData_TeamModel $model
+     * @return bool
+     */
+    public function saveTeam(TournamentData_TeamModel &$model)
+    {
+        if ($id = $model->getAttribute('id')) {
+            if (null === ($record = $this->teamRecord->findByPk($id))) {
+                throw new Exception(Craft::t('Can\'t find individual tournament with ID "{id}"', array('id' => $id)));
+            }
+        } else {
+            $record = $this->teamRecord->create();
+        }
+        $record->setAttributes($model->getAttributes());
+        if ($record->save()) {
+            // update id on model (for new records)
+            $model->setAttribute('id', $record->getAttribute('id'));
+            return true;
+        } else {
+            $model->addErrors($record->getErrors());
+            return false;
+        }
+    }
+
+	/**
+     * Delete an individual tournament from the database.
+     *
+     * @param  int $id
+     * @return bool
+     */
     public function deleteTeamById($id)
     {
-        return craft()->db->createCommand()
-        	->update('tournamentdata_team', array(
-        			'isActive' => false,
-        		), 'id=:id', array(':id' => $id))
-        	->execute();
+        if(null === ($record = $this->teamRecord->findByPk($id))) {
+			throw new Exception(Craft::t('Can\'t find individual tournament with ID "{id}"', array('id' => $id)));
+		}
+		else {
+			$record->setAttribute('isActive', false);
+		}
+		if($record->save()) {
+			return true;
+		}
+		else {
+			return false;
+		}
     }
 
+	/**
+	 * Undo a delete on an individual tournament from the database.
+	 * 
+	 * @param int $id
+	 * @return bool
+	 */
     public function undoDeleteTeamById($id)
     {
-    	return craft()->db->createCommand()
-        	->update('tournamentdata_team', array(
-        			'isActive' => true,
-        		), 'id=:id', array(':id' => $id))
-        	->execute();
-    }
-
-
-    public function saveTeamMember(TournamentData_TeamMemberModel $teamMember)
-    {
-        $teamRecord = new TournamentData_TeamMemberRecord();
-
-		$teamMemberRecord->churchteamId = $teamMember->churchteamId;
-        $teamMemberRecord->individualId = $teamMember->individualId;
-		$teamMemberRecord->isActive     = $teamMember->isActive;
-		
-		if ( $teamRecord->save() )
-		{
-		    error_log('SUCCESS');
+    	if(null === ($record = $this->teamRecord->findByPk($id))) {
+			throw new Exception(Craft::t('Can\'t find individual tournament with ID "{id}"', array('id' => $id)));
 		}
-		else
-		{
-			error_log($team->getAttributes());
+		else {
+			$record->setAttribute('isActive', true);
 		}
-    }
-
-    public function deleteTeamMemberById($id)
-    {
-        return craft()->db->createCommand()
-        	->update('tournamentdata_teammember', array(
-        			'isActive' => false,
-        		), 'id=:id', array(':id' => $id))
-        	->execute();
-    }
-
-    public function undoDeleteTeamMemberById($id)
-    {
-    	return craft()->db->createCommand()
-        	->update('tournamentdata_teammember', array(
-        			'isActive' => true,
-        		), 'id=:id', array(':id' => $id))
-        	->execute();
-    }
-
-    public function saveTeamTournament(TournamentData_TeamTournamentModel $teamTournamentModel)
-    {
-        $teamTournamentRecord = new TournamentData_TeamTournamentRecord();
-
-		$teamTournamentRecord->teamId       = $teamTournamentModel->churchteamId;
-        $teamTournamentRecord->divisionId   = $teamTournamentModel->divisionId;
-        $teamTournamentRecord->wins         = $teamTournamentModel->wins;
-        $teamTournamentRecord->losses       = $teamTournamentModel->losses;
-        $teamTournamentRecord->points       = $teamTournamentModel->points;
-		$teamTournamentRecord->isActive     = $teamTournamentModel->isActive;
-
-		if ( $teamTournamentRecord->save() )
-		{
-		    error_log('SUCCESS');
+		if($record->save()) {
+			return true;
 		}
-		else
-		{
-			error_log($teamTournamentRecord->getAttributes());
+		else {
+			return false;
 		}
-    }
-
-    public function deleteTeamTournamentById($id)
-    {
-        return craft()->db->createCommand()
-        	->update('tournamentdata_teamtournament', array(
-        			'isActive' => false,
-        		), 'id=:id', array(':id' => $id))
-        	->execute();
-    }
-
-    public function undoDeleteTeamTournamentById($id)
-    {
-    	return craft()->db->createCommand()
-        	->update('tournamentdata_teamtournament', array(
-        			'isActive' => true,
-        		), 'id=:id', array(':id' => $id))
-        	->execute();
     }
 }

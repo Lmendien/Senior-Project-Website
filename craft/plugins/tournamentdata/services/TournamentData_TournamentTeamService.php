@@ -1,28 +1,28 @@
 <?php
 namespace Craft;
 
-require_once __DIR__ . '/../models/TournamentData_IndividualTournamentModel.php';
-require_once __DIR__ . '/../records/TournamentData_IndividualTournamentRecord.php';
+require_once __DIR__ . '/../models/TournamentData_TournamentTeamModel.php';
+require_once __DIR__ . '/../records/TournamentData_TournamentTeamRecord.php';
 
 /**
- * Individual Service
+ * TournamentTeam Member Service
  * 
  * Provides a consistent API for the plugin to access the database
  */
-class TournamentData_IndividualTournamentService extends BaseApplicationComponent
+class TournamentData_TournamentTeamService extends BaseApplicationComponent
 {
-	protected $individualTournamentRecord;
+	protected $tournamentTeamRecord;
 	/**
 	 * Create a new instance of the Individual Tournament Service.
-	 * Constructor allows IndividualTournamentRecord dependency to be injected to assist with unit testing.
+	 * Constructor allows TournamentTeamRecord dependency to be injected to assist with unit testing.
 	 *
-	 * @param @individualRecord IndividualTournamentRecord The individual tournament record to access the database
+	 * @param @individualRecord TournamentTeamRecord The individual tournament record to access the database
 	 */
-	public function __construct($individualTournamentRecord = null)
+	public function __construct($tournamentTeamRecord = null)
 	{
-	    $this->individualTournamentRecord = $individualTournamentRecord;
-		if(is_null($this->individualTournamentRecord)) {
-			$this->individualTournamentRecord = TournamentData_IndividualTournamentRecord::model();
+	    $this->tournamentTeamRecord = $tournamentTeamRecord;
+		if(is_null($this->tournamentTeamRecord)) {
+			$this->tournamentTeamRecord = TournamentData_TournamentTeamRecord::model();
 		}
 	}
 
@@ -30,11 +30,11 @@ class TournamentData_IndividualTournamentService extends BaseApplicationComponen
      * Get a new blank individual tournament
      *
      * @param  array                           $attributes
-     * @return TournamentData_IndividualTournamentModel
+     * @return TournamentData_TournamentTeamModel
      */
-    public function newIndividualTournament($attributes = array())
+    public function newTournamentTeam($attributes = array())
     {
-        $model = new TournamentData_IndividualTournamentModel();
+        $model = new TournamentData_TournamentTeamModel();
         $model->setAttributes($attributes);
         return $model;
     }
@@ -44,10 +44,10 @@ class TournamentData_IndividualTournamentService extends BaseApplicationComponen
      *
      * @return array
      */
-    public function getAllIndividualTournaments()
+    public function getAllTournamentTeams()
     {
-        $records = $this->individualTournamentRecord->findAll(array('order'=>'t.id'));
-        return TournamentData_IndividualTournamentModel::populateModels($records, 'id');
+        $records = $this->tournamentTeamRecord->findAll(array('order'=>'t.id'));
+        return TournamentData_TournamentTeamModel::populateModels($records, 'id');
     }
 
 	/**
@@ -56,27 +56,27 @@ class TournamentData_IndividualTournamentService extends BaseApplicationComponen
      * @param  int   $id
      * @return mixed
      */
-    public function getIndividualTournamentById($id)
+    public function getTournamentTeamById($id)
     {
-        if ($record = $this->individualTournamentRecord->findByPk($id)) {
-            return TournamentData_IndividualTournamentModel::populateModel($record);
+        if ($record = $this->tournamentTeamRecord->findByPk($id)) {
+            return TournamentData_TournamentTeamModel::populateModel($record);
         }
     }
 
 	/**
      * Save a new or existing individual tournament back to the database.
      *
-     * @param  TournamentData_IndividualTournamentModel $model
+     * @param  TournamentData_TournamentTeamModel $model
      * @return bool
      */
-    public function saveIndividualTournament(TournamentData_IndividualTournamentModel &$model)
+    public function saveTournamentTeam(TournamentData_TournamentTeamModel &$model)
     {
         if ($id = $model->getAttribute('id')) {
-            if (null === ($record = $this->individualTournamentRecord->findByPk($id))) {
+            if (null === ($record = $this->tournamentTeamRecord->findByPk($id))) {
                 throw new Exception(Craft::t('Can\'t find individual tournament with ID "{id}"', array('id' => $id)));
             }
         } else {
-            $record = $this->individualTournamentRecord->create();
+            $record = $this->tournamentTeamRecord->create();
         }
         $record->setAttributes($model->getAttributes());
         if ($record->save()) {
@@ -95,9 +95,9 @@ class TournamentData_IndividualTournamentService extends BaseApplicationComponen
      * @param  int $id
      * @return bool
      */
-    public function deleteIndividualTournamentById($id)
+    public function deleteTournamentTeamById($id)
     {
-        if(null === ($record = $this->individualTournamentRecord->findByPk($id))) {
+        if(null === ($record = $this->tournamentTeamRecord->findByPk($id))) {
 			throw new Exception(Craft::t('Can\'t find individual tournament with ID "{id}"', array('id' => $id)));
 		}
 		else {
@@ -117,9 +117,9 @@ class TournamentData_IndividualTournamentService extends BaseApplicationComponen
 	 * @param int $id
 	 * @return bool
 	 */
-    public function undoDeleteIndividualTournamentById($id)
+    public function undoDeleteTournamentTeamById($id)
     {
-    	if(null === ($record = $this->individualTournamentRecord->findByPk($id))) {
+    	if(null === ($record = $this->tournamentTeamRecord->findByPk($id))) {
 			throw new Exception(Craft::t('Can\'t find individual tournament with ID "{id}"', array('id' => $id)));
 		}
 		else {

@@ -1,7 +1,7 @@
 <?php
 namespace Craft;
 
-class TournamentData_TeamModel extends BaseModel
+class TournamentData_TeamTournamentModel extends BaseModel
 {
     protected function defineAttributes()
 	{
