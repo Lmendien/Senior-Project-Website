@@ -1,0 +1,18 @@
+{#
+ # Quotes template
+ # ---------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="banner-info" class="banner banner-small">
+        <h1>{{ entry.title }}</h1>
+</section>
+<div class="container text-center">
+	<h1 class="text-center">{{entry.title}}</h1>
+	<a class="btn btn-primary" href="{{entry.pdf.first().url}}">Download Quote List</a>
+	{{entry.body}}
+</div>
+{% endblock %}

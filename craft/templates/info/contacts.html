@@ -1,0 +1,69 @@
+{#
+ # Contacts Page Template
+ # ---------------
+ #}
+
+{% set title = entry.title %}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="banner-info" class="banner banner-small">
+        <h1>{{ entry.title }}</h1>
+</section>
+<div class="contacts-page">
+	<div class="container">
+		<h1 class="text-center">{{entry.title}}</h1>
+		<div class="row">
+		  	<div class="col-sm-6 col-xs-12">
+		  		{% set image = entry.image.first() %}
+				<img src="{{image.url}}" style="width: 100%" class="img-responsive"/>
+		  	</div>
+			<div class="col-sm-6 col-xs-12">
+				<div class="denominational-director text-center">
+				<h3 class="title">Denominational Director</h3>
+					<div class="director-info">
+						<h4 class="director-name">{{entry.denominationalDirectorName}}</h4>
+						<a class="email" href="mailto:{{contact.denominationalDirectorEmail}}">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							{{entry.denominationalDirectorEmail}}
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	  	<div class="row">
+			<h3 class="title">Regional Directors</h3>
+		    {% for block in entry.regionalDirectors %}
+		    <div class="col-xs-12 col-sm-6">
+		        <div class="director-info text-center">
+		            <h5 class="director-name">{{ block.directorName }}</h5>
+		            <h6 class="region">{{ block.region }}</h6>
+		            <a class="email" href="mailto:{{block.email}}">
+		                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+		                {{block.email}}
+		             </a>
+		        </div>
+		    </div>
+		    {% endfor %}
+	  	</div>
+		<div class="row">
+			<h3 class="title">Conference Directors</h3>
+			{% for block in entry.conferenceDirectors %}
+			<div class="col-xs-12 col-sm-6 col-lg-4">
+				<div class="director-info text-center">
+					<h5 class="director-name">{{ block.directorName }}</h5>
+					<h6 class="region">{{ block.conference }}</h6>
+					<a class="email" href="mailto:{{block.email}}">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						{{block.email}}
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}
