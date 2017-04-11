@@ -34,7 +34,7 @@ h6 {
   line-height: 1.6em;
   font-weight: 600; }
 
-ul, ol, li {
+ul, ol, li, small {
   font-family: "Helvetica", sans-serif;
   color: rgba(0, 0, 0, 0.54); }
 
@@ -55,18 +55,19 @@ hr {
   background-color: #0D47A1;
   font-size: 24px;
   padding: 20px;
-  border-radius: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
   border: none;
   color: white;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #1976D2; }
 
 .btn-centered {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 75px; }
-
-.btn-block {
-  width: 100%; }
 
 .navbar {
   background-color: #03A9FA;
@@ -162,15 +163,15 @@ footer {
   background-repeat: no-repeat; }
 
 #banner-index {
-  background: url("../images/banner-images/banner-index.jpg");
+  background: url("../assets/images/banner-images/banner-index.jpg");
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-index.jpg");
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-index.jpg");
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-index.jpg");
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-index.jpg");
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-index.jpg");
   /* Standard syntax */
   background-size: cover;
   background-attachment: fixed;
@@ -318,18 +319,17 @@ footer {
   border-color: #F5F5F5; }
 
 #banner-about {
-  background: url("../images/banner-images/banner-about.jpg");
+  background: url("../assets/images/banner-images/banner-about.jpg");
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-about.jpg");
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-about.jpg");
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-about.jpg");
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-about.jpg");
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-about.jpg");
   /* Standard syntax */
   background-size: cover;
-  background-attachment: fixed;
   background-position: center; }
 
 .well-rules {
@@ -378,18 +378,17 @@ footer {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
 
 #banner-history {
-  background: url("../images/banner-images/banner-history.jpg");
+  background: url("../assets/images/banner-images/banner-history.jpg");
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-history.jpg");
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-history.jpg");
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-history.jpg");
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-history.jpg");
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-history.jpg");
   /* Standard syntax */
   background-size: cover;
-  background-attachment: fixed;
   background-position: center; }
 
 .history .nav-tabs {
@@ -545,112 +544,60 @@ footer {
   padding: 20px;
   line-height: 3; }
 
-.info-page .tournaments .archive {
-  margin-bottom: 0px; }
-.info-page .tournaments .container h3 {
-  font-weight: bold;
-  display: inline;
-  font-size: 24pt; }
-.info-page .tournaments .container .month {
-  margin-top: 5px;
-  margin-bottom: 20px;
-  text-align: center; }
-.info-page .tournaments .container .image-container .img {
-  display: none; }
-.info-page .tournaments .container .tournament-list {
-  background-color: white;
+.tournaments .nav {
+  margin-bottom: 20px; }
+  .tournaments .nav li a {
+    padding: 15px; }
+.tournaments .event {
   border: 1px solid #F5F5F5;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  font-size: 18pt;
-  display: inline-block;
-  width: 100%; }
-  .info-page .tournaments .container .tournament-list .tournament-date {
-    display: inline-block;
-    background: #F5F5F5;
-    padding: 5px;
-    width: 75px;
-    text-align: center;
-    vertical-align: middle;
-    float: left; }
-    .info-page .tournaments .container .tournament-list .tournament-date .month {
-      display: block;
-      margin-bottom: -8px;
-      font-size: 18px;
-      text-align: center; }
-    .info-page .tournaments .container .tournament-list .tournament-date .date {
-      font-size: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  .tournaments .event .image-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden; }
+    .tournaments .event .image-container img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: auto;
+      width: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  .tournaments .event .tournament-list {
+    border-top: 1px solid #F5F5F5;
+    background-color: white;
+    width: 100%;
+    overflow: hidden; }
+    .tournaments .event .tournament-list .tournament-date {
+      background: #F5F5F5;
+      padding: 15px 0px;
       text-align: center;
       vertical-align: middle; }
-  .info-page .tournaments .container .tournament-list .tournament-info {
-    font-size: 16px;
-    margin-top: 20px;
-    display: inline-block;
-    vertical-align: middle; }
-    .info-page .tournaments .container .tournament-list .tournament-info .tournament-location {
-      line-height: 1.2;
-      margin: 0px; }
-    .info-page .tournaments .container .tournament-list .tournament-info .tournament-conference {
-      line-height: 1;
-      margin: 0px; }
-.info-page .tournaments .container .schedule-btn {
-  height: 65px;
-  border-radius: 3px;
-  margin-bottom: 35px;
-  margin-top: 20px; }
-.info-page .quotes {
-  background-color: #03A9FA;
-  background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#0288D1, #03A9FA, #0288D1);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#0288D1, #03A9FA, #0288D1);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#0288D1, #03A9FA, #0288D1);
-  /* Standard syntax */
-  background-size: cover;
-  padding-bottom: 25px; }
-  .info-page .quotes .container h3 {
-    font-size: 32pt;
-    margin-top: 25px;
-    color: white;
-    text-align: center; }
-  .info-page .quotes .container .quotes-btn {
-    text-align: center; }
-.info-page .group {
-  margin-top: 25px; }
-  .info-page .group .cycle {
-    text-align: center; }
-    .info-page .group .cycle h3 {
-      margin-bottom: -10px;
-      font-weight: bold;
-      font-size: 18pt; }
-    .info-page .group .cycle h4 {
-      margin-bottom: -12px;
-      font-weight: bold; }
-  .info-page .group .supplies {
-    width: 100%;
-    text-align: center; }
-    .info-page .group .supplies h3 {
-      font-weight: bold; }
-    .info-page .group .supplies .supplies-btn {
-      height: 65px;
-      padding-left: 75px;
-      padding-right: 75px;
-      border-radius: 3px;
-      margin-bottom: 50px; }
-  .info-page .group .contact {
-    text-align: center; }
-    .info-page .group .contact h3 {
-      font-weight: bold; }
-    .info-page .group .contact h4 {
-      margin-top: -5px; }
+      .tournaments .event .tournament-list .tournament-date .month {
+        display: block;
+        font-size: 18px;
+        text-align: center; }
+      .tournaments .event .tournament-list .tournament-date .date {
+        font-size: 32px;
+        text-align: center;
+        vertical-align: middle; }
+    .tournaments .event .tournament-list .tournament-info {
+      margin-top: 15px; }
+      .tournaments .event .tournament-list .tournament-info .tournament-location {
+        margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .tournaments .event .tournament-list .tournament-info .tournament-title {
+        margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
 
-.contacts-page h6 {
-  font-weight: bold;
-  font-size: 30pt;
-  text-align: center; }
-.contacts-page .container .first-section .title {
+.contacts-page .title {
   height: auto;
   background-color: #03A9FA;
   color: white;
@@ -659,7 +606,7 @@ footer {
   padding-bottom: 5px;
   width: 100%;
   margin-bottom: 15px; }
-.contacts-page .container .first-section .row .director-info {
+.contacts-page .row .director-info {
   display: inline-block;
   background: #F5F5F5;
   padding-top: 15px;
@@ -668,8 +615,14 @@ footer {
   text-align: center;
   vertical-align: middle;
   margin-bottom: 15px; }
-  .contacts-page .container .first-section .row .director-info .director-name {
-    font-size: 18pt; }
+  .contacts-page .row .director-info .director-name {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-weight: 200;
+    margin: 0px; }
+  .contacts-page .row .director-info .region {
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0px; }
 
 .country {
   margin: 100px auto; }
@@ -687,18 +640,32 @@ footer {
     line-height: 1em; }
 
 #banner-media {
-  background: url("../images/banner-images/banner-media.jpg");
+  background: url("../assets/images/banner-images/banner-media.jpg");
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-media.jpg");
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-media.jpg");
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-media.jpg");
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../images/banner-images/banner-media.jpg");
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-media.jpg");
   /* Standard syntax */
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
+  margin-bottom: 50px; }
+
+#banner-info {
+  background: url("../assets/images/banner-images/banner-info.jpg");
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-info.jpg");
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-info.jpg");
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-info.jpg");
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-info.jpg");
+  /* Standard syntax */
+  background-size: cover;
   background-position: center;
   margin-bottom: 50px; }
 
@@ -737,14 +704,7 @@ footer {
 
   .historical-data .panel {
     height: 425px;
-    overflow: scroll; }
-
-  .info-page .tournaments .container .month {
-    text-align: left; }
-  .info-page .tournaments .container .image-container .img {
-    display: block;
-    width: 100%;
-    height: 250px; } }
+    overflow: scroll; } }
 @media (min-width: 992px) {
   footer .row {
     display: inherit; }
@@ -765,19 +725,6 @@ footer {
     padding: 100px 0px; }
     #mission-statement p {
       color: white;
-      font-size: 18px; }
-
-  .info-page .group {
-    margin-top: 100px; }
-    .info-page .group .well-info {
-      height: 250px;
-      margin-bottom: 100px; }
-    .info-page .group .supplies {
-      background-color: #f5f5f5; }
-      .info-page .group .supplies h3 {
-        padding-top: 0px;
-        margin-top: 40px; }
-    .info-page .group .contact h3 {
-      margin-top: 45px; } }
+      font-size: 18px; } }
 
 /*# sourceMappingURL=styles.css.map */

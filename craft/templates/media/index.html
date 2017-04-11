@@ -21,7 +21,7 @@
     </section>
 	<div class="container text-center">
 		<div class="row">
-		{% for collection in craft.entries.section("gallery").level(1) %}
+		{% for collection in craft.entries.section("media").level(1) %}
 			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 				<a href="{{collection.url}}">
 					{% set entry = collection.descendants.first() %}

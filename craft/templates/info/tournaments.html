@@ -1,92 +1,89 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../../resources/css/styles.css">
+{#
+ # Tournament Page Template
+ # ---------------
+ #}
+
+{% set title = entry.title %}
+
+{% extends "_layout" %}
 
 {% block content %}
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 {% macro monthConvert(meetblock) %}
   {% switch meetblock.date.month %}
-    {% case 1 %}
-      <span class="month">JAN</span>
-    {% case 2 %}
-      <span class="month">FEB</span>
-    {% case 3 %}
-      <span class="month">MAR</span>
-    {% case 4 %}
-      <span class="month">APR</span>
-    {% case 5 %}
-      <span class="month">MAY</span>
-    {% case 6 %}
-      <span class="month">JUN</span>
-    {% case 7 %}
-      <span class="month">JUL</span>
-    {% case 8 %}
-      <span class="month">AUG</span>
-    {% case 9 %}
-      <span class="month">SEP</span>
-    {% case 10 %}
-      <span class="month">OCT</span>
-    {% case 11 %}
-      <span class="month">NOV</span>
-    {% case 12 %}
-      <span class="month">DEC</span>
+    {% case 1 %} JAN
+    {% case 2 %} FEB
+    {% case 3 %} MAR
+    {% case 4 %} APR
+    {% case 5 %} MAY
+    {% case 6 %} JUN
+    {% case 7 %} JUL
+    {% case 8 %} AUG
+    {% case 9 %} SEP
+    {% case 10 %} OCT
+    {% case 11 %} NOV
+    {% case 12 %} DEC
   {% endswitch %}
 {% endmacro %}
 
-<div class="info-page">
-  <div class="tournaments">
-    <div class="container">
-      <div id="myCarousel" class="carousel slide t" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-         <div class="item active">
-           <div class="month">
-             <h3>
-               Tournaments
-             </h3>
+<section id="banner-info" class="banner banner-small">
+    <h1>Tournaments</h1>
+</section>
+<div class="tournaments container">
+  {{entry.body}}
+    <ul class="nav nav-pills nav-justified">
+    {% set currentMonth = 0 %}
+    {% for event in craft.entries.section("events").order('expiryDate') %}
+      {% if event.date.month != currentMonth %}
+        {% set currentMonth = event.date.month %}
+        <li {% if loop.first %}class="active"{% endif %}><a data-toggle="pill" href="#month{{currentMonth}}">{{ _self.monthConvert(event) }}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  <div class="row">
+    <div class="tab-content">
+    {% set currentMonth = 0 %}
+    {% set check = false %}
+    {% for event in craft.entries.section("events").order('expiryDate') %}
+      {% if (event.date.month != currentMonth) and (check == true) %}
+        {% set check = false %}
+        </div>
+      {% endif %}
+      {% if event.date.month != currentMonth %}
+        {% set currentMonth = event.date.month %}
+        {% set check = true %}
+        <div id="month{{currentMonth}}" class="tab-pane fade in {% if loop.first %}active{% endif %}">
+      {% endif %}
+      {% if event.image.first() is not empty %}
+     		{% set imageurl = event.image.first().url %}
+     	{% else %}
+     		{% set imageurl = "/resources/assets/images/quiz-event.jpg" %}
+     	{% endif %}
+      <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
+        <div class="event">
+          <div class="image-container hidden-xs">
+            <img src="{{imageurl}}" class="img-responsive"/>
           </div>
-           <div class="row">
-             {% for event in craft.entries.section("tournaments").order('expiryDate') %}
-               	{% if event.image.first() is not empty %}
-               		{% set imageurl = event.image.first().url %}
-               	{% else %}
-               		{% set imageurl = "/resources/images/quiz-event.jpg" %}
-               	{% endif %}
-                 <div class="col-sm-6 col-lg-4 col-med-6 col-xs-12">
-                 <div class="image-container">
-                   <img src="{{imageurl}}" class="img" >
-                 </div>
-                   <div class="tournament-list">
-                     <span class="tournament-date">
-                       {{ _self.monthConvert(event) }}
-                        <span class="date">{{event.date.day}}</span>
-                     </span>
-                     <span class="tournament-info">
-                       <div class="tournament-location">
-                         {{event.tournamentLocation}}
-                       </div>
-                       <div class="tournamet-conference">
-                         {{ event.title }}
-                       </div>
-
-                     </span>
-                 </div>
-               </div>
-             {% endfor %}
-           </div>
-           <button class="btn btn-primary schedule-btn" type="button">Full Schedule</button>
-         </div>
-       </div>
+          <div class="tournament-list">
+            <div class="col-xs-3 tournament-date">
+              <span class="month">{{ _self.monthConvert(event) }}</span>
+              <span class="date">{{event.date.day}}</span>
+            </div>
+            <div class="col-xs-9 tournament-info">
+              <h6 class="tournament-title">{{ event.title }}</h6>
+              <small class="tournament-location">{{event.tournamentLocation}}</small>
+            </div>
+          </div>
+        </div>
       </div>
+    {% endfor %}
+        </div>
     </div>
   </div>
+<div class="row text-center">
+    <a href="{{entry.pdf.first.url}}" class="btn btn-primary">Downloadable Schedule</a>
 </div>
+</div>
+
 {% endblock %}
 
-<!-- <script src="../public/resources/js/custom.js"></script> -->

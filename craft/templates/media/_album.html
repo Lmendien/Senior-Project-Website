@@ -8,6 +8,12 @@
 {% block content %}
 	<!-- Provides a bootstrap container to wrap the album in -->
 	<div class="container no-banner text-center">
+		<p class="crumbs text-left">
+	    	<a href="{{siteUrl}}">{{siteName}}</a> / <a href="{{siteUrl}}media">Media</a>
+	        {% for crumb in entry.getAncestors() %}
+	            / {{ crumb.getLink() }}
+	        {% endfor %}
+	    </p>
 		<!-- Calls the title of the album from the CMS and inserts it into a heading tag -->
 		<h1>{{ entry.title }}</h1>
 		

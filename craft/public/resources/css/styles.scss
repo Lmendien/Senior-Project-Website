@@ -93,7 +93,7 @@ h6 {
 }
 
 // Inline text styles
-ul,ol,li {
+ul,ol,li,small {
   font-family: $paragraph-font;
   color: $black-54;
 }
@@ -119,20 +119,22 @@ hr {
 	background-color: $accent1-dark;
 	font-size: 24px;
 	padding: 20px;
-	border-radius: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 2px;
 	border: none;
 	color:white;
 	box-shadow: 0px 2px 2px $box-shadow-color;
+
+	&:hover, &:active, &:focus {
+		background-color: $accent1-light;
+	}
 }
 
 .btn-centered {
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 75px;
-}
-
-.btn-block {
-	width: 100%;
 }
 
 // Navbar
@@ -288,7 +290,7 @@ footer {
 ///////////////////////////////////////////////////////////////////////
 // Home Page Styles
 #banner-index {
-	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-index.jpg");
+	@include background($main-gradient1, $main-gradient2, "../assets/images/banner-images/banner-index.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -496,9 +498,8 @@ footer {
 ///////////////////////////////////////////////////////////////////////
 // About Page Styles
 #banner-about {
-	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-about.jpg");
+	@include background($main-gradient1, $main-gradient2, "../assets/images/banner-images/banner-about.jpg");
 	background-size: cover;
-	background-attachment: fixed;
 	background-position: center;
 }
 
@@ -561,9 +562,8 @@ footer {
 ///////////////////////////////////////////////////////////////////////
 // History Page Styles
 #banner-history {
-	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-history.jpg");
+	@include background($main-gradient1, $main-gradient2, "../assets/images/banner-images/banner-history.jpg");
 	background-size: cover;
-	background-attachment: fixed;
 	background-position: center;
 }
 
@@ -817,180 +817,120 @@ footer {
 
 ///////////////////////////////////////////////////////////////////////
 // Info Page Styles
-.info-page {
-	.tournaments {
-		.archive{
-			margin-bottom: 0px;
-		}
-		.container {
-			h3 {
-			font-weight: bold;
-			display: inline;
-			font-size: 24pt;
-			}
+.tournaments {
 
-			.month {
-			margin-top: 5px;
-			margin-bottom: 20px;
-			text-align:center;
-			}
-			.image-container{
-        		.img{
-        			display: none;
-        		}
-			}
-    		.tournament-list {
-				background-color: white;
-				border: 1px solid #F5F5F5;
-				margin-bottom: 10px;
-		        margin-right: 10px;
-		        font-size:  18pt;
-		        display:inline-block;
-		        width: 100%;
+	.nav {
+		margin-bottom: 20px;
 
-				.tournament-date {
-		            display: inline-block;
-		      	    background: $gray-light;
-		      	    padding: 5px;
-		      	    width: 75px;
-		      	    text-align: center;
-		      	    vertical-align: middle;
-		            float: left;
-	            .month {
-	              display: block;
-	              margin-bottom: -8px;
-	              font-size: 18px;
-	              text-align:center;
-	            }
-	            .date {
-	              font-size: 32px;
-	              text-align: center;
-	              vertical-align: middle;
-	          	}
-        }
-        .tournament-info {
-          font-size: 16px;
-          margin-top: 20px;
-          display: inline-block;
-          vertical-align: middle;
-        .tournament-location {
-          line-height: 1.2;
-          margin:0px;
-        }
-        .tournament-conference {
-          line-height: 1;
-          margin: 0px;
-        }
-      }
-			}
-			.schedule-btn {
-				height: 65px;
-				border-radius: 3px;
-				margin-bottom: 35px;
-				margin-top: 20px;
-			}
+		li a {
+			padding: 15px;
 		}
 	}
-	.quotes{
-		background-color: #03A9FA;
-		background: -webkit-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Safari 5.1 to 6.0 */
-	  background: -o-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Opera 11.1 to 12.0 */
-	  background: -moz-linear-gradient(#0288D1, #03A9FA, #0288D1); /* For Firefox 3.6 to 15 */
-	  background: linear-gradient(#0288D1, #03A9FA, #0288D1); /* Standard syntax */
-	  background-size: cover;
-		padding-bottom: 25px;
-		.container{
-			h3 {
-				font-size: 32pt;
-				margin-top: 25px;
-				// display: inline;
-				color: white;
-				text-align: center;
-			}
-			.quotes-btn{
-			 text-align: center;
-		}
-		}
-	}
-	.group {
-		margin-top: 25px;
-		.cycle {
-			text-align: center;
-			h3 {
-				margin-bottom: -10px;
-				font-weight: bold;
-				font-size: 18pt;
-			}
-			h4 {
-				margin-bottom: -12px;
-				font-weight: bold;
-			}
-		}
-		.supplies {
+
+	.event {
+		border: 1px solid $gray-light;
+		border-radius: 4px;
+		overflow: hidden;
+		margin-bottom: 20px;
+
+		.image-container {
+			position: relative;
+			height: 200px;
 			width: 100%;
-			text-align: center;
+			overflow: hidden;
 
-			h3 {
-				font-weight: bold;
-			}
-			.supplies-btn {
-				height: 65px;
-				padding-left: 75px;
-				padding-right: 75px;
-				border-radius: 3px;
-				margin-bottom: 50px;
+			img {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: auto;
+				width: 100%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
 			}
 		}
-		.contact {
-			text-align: center;
-			h3 {
-				font-weight: bold;
+	    
+	    .tournament-list {
+	    	border-top: 1px solid $gray-light;
+			background-color: white;
+	        width: 100%;
+	        overflow: hidden;
+
+			.tournament-date {
+		  	    background: $gray-light;
+		  	    padding: 15px 0px;
+		  	    text-align: center;
+		  	    vertical-align: middle;
+				
+				.month {
+					display: block;
+					font-size: 18px;
+					text-align:center;
+				}
+				.date {
+					font-size: 32px;
+					text-align: center;
+					vertical-align: middle;
+				}
 			}
-			h4 {
-				margin-top: -5px;
-			}
+		        
+			.tournament-info {
+				margin-top: 15px;
+				
+				.tournament-location {
+					margin:0px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+		        
+		        .tournament-title {
+					margin: 0px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+		        }
+		    }
 		}
 	}
 }
+	
 
 .contacts-page{
-  h6{
-    font-weight: bold;
-    font-size: 30pt;
-    text-align: center;
-  }
-  .container{
-    .first-section{
-      .image-container{
+	.title{
+		height: auto;
+		background-color: $primary;
+		color: white;
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.row {
+		.director-info {
+			display: inline-block;
+			background: $gray-light;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			width: 100%;
+			text-align: center;
+			vertical-align: middle;
+			margin-bottom: 15px;
 
-      }
-      .title{
-        height:auto;
-        background-color: $primary;
-        color: white;
-        text-align: center;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      .row {
-        .director-info{
-            display: inline-block;
-            background: $gray-light;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            width: 100%;
-            text-align: center;
-            vertical-align: middle;
-            margin-bottom: 15px;
-            .director-name{
-            font-size: 18pt;
-          }
-        }
-      }
-    }
-  }
+			.director-name {
+				font-size: 1.3em;
+			    line-height: 1.3em;
+			    font-weight: 200;
+			    margin: 0px;
+			}
+
+			.region {
+				color: $black-54;
+				margin: 0px;
+			}
+		}
+	}
 }
 ///////////////////////////////////////////////////////////////////////
 // International Styles
@@ -1020,9 +960,15 @@ footer {
 ///////////////////////////////////////////////////////////////////////
 // Media Styles
 #banner-media {
-	@include background($main-gradient1, $main-gradient2, "../images/banner-images/banner-media.jpg");
+	@include background($main-gradient1, $main-gradient2, "../assets/images/banner-images/banner-media.jpg");
 	background-size: cover;
-	background-attachment: fixed;
+	background-position: center;
+	margin-bottom: 50px;
+}
+
+#banner-info {
+	@include background($main-gradient1, $main-gradient2, "../assets/images/banner-images/banner-info.jpg");
+	background-size: cover;
 	background-position: center;
 	margin-bottom: 50px;
 }
@@ -1112,23 +1058,6 @@ footer {
 			overflow: scroll;
 		}
 	}
-
-  .info-page {
-    .tournaments {
-      .container {
-        .month{
-          text-align: left;
-        }
-        .image-container {
-          .img {
-            display: block;
-            width: 100%;
-            height: 250px;
-          }
-        }
-      }
-    }
-  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -1177,30 +1106,6 @@ footer {
 				color: white;
 				font-size: 18px;
 			}
-	}
-
-	/////////////////////////////////////////////////////////////////////////
-	// Info Page
-	.info-page {
-		.group {
-			margin-top: 100px;
-			.well-info {
-				height:250px;
-				margin-bottom: 100px;
-			}
-			.supplies {
-				background-color: #f5f5f5;
-						h3 {
-							padding-top: 0px;
-							margin-top: 40px;
-						}
-				}
-			.contact {
-				h3 {
-					margin-top: 45px;
-				}
-			}
-		}
 	}
 }
 
