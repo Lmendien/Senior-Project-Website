@@ -1,45 +1,58 @@
 {#
- # News entry template
+ # Blog Entry Template
  # -------------------
  #
- # This template gets loaded whenever a News entry’s URL is
- # requested. That’s because the News section’s Template setting is
- # set to “news/_entry”, the path to this template.
- #
  # When this template is loaded, it will already have an ‘entry’
- # variable, set to the requested News entry.
+ # variable, set to the requested blog entry.
  #
  # See this page for more details on how Craft routes requests:
  # http://craftcms.com/docs/routing
  #}
 
+{# Sets Title of the page to the title of the article #}
 {% set title = entry.title %}
 
+{# All content in the "block content" region will be used as an extention of the layout #}
 {% extends "_layout" %}
 
+{# The block content #}
 {% block content %}
 	<article>
 		<div class="container no-banner">
-			{% if entry.level > 1 %}
-			    <p class="crumbs">
-			    		<a href="{{siteUrl}}">{{siteName}}</a>
-			        {% for crumb in entry.getAncestors() %}
-			            / {{ crumb.getLink() }}
-			        {% endfor %}
+			
+			{# Set breadcrumbs for the entry  #}
+			<div class="crumbs">
+			    <p>
+	    			{# Sets the crumb as the site index page, blog page and entry #}
+			    	<a href="{{siteUrl}}">{{siteName}}</a> / 
+			    	<a href="{{siteUrl}}info/blog">Blog</a> / 
+			    	{{ entry.getLink() }}
 			    </p>
-			{% endif %}
+			</div>
+
+			{# Set the article page content #}
 			<div class="row">
+				
+				{# If there is an image given for the entry #}
 				{% if entry.image.first() is not empty %}
+					
+					{# Create a column for the image #}
 					<div class="col-sm-3">
 						{% set image = entry.image.first() %}
-						<img src="{{image.url }}"/>
+						<img class="img-responsive" src="{{image.url }}"/>
 					</div>
+
+					{# Create a column for the text content #}
 					<div class="col-sm-9">
 						<h3>{{ entry.title }}</h3>
 						{{ entry.body }}
 						<small>Posted on {{ entry.postDate.format('F d, Y') }}</small>
 					</div>
+
+				{# Else if there is no image given #}
 				{% else %}
+
+					{# Create one full width column for the text content #}
 					<div class="col-sm-12">
 						<h3>{{ entry.title }}</h3>
 						{{ entry.body }}

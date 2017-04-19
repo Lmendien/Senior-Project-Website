@@ -1,26 +1,32 @@
 {#
- # News index template
+ # Blog index template
  # -------------------
  #
- # This template is loaded whenever http://example.com/news is
- # requested, because it is located at news/index.html in your
- # craft/templates/ folder.
+ # This template is loaded whenever /info/blog is
+ # requested
  #
  # See this page for more details on how Craft routes requests:
  # http://craftcms.com/docs/routing
  #}
 
-{% extends "_layout" %}
+{# Sets Title of the page to Blog #}
 {% set title = "Blog" %}
 
+{# All content in the "block content" region will be used as an extention of the layout #}
+{% extends "_layout" %}
+
+{# The block content #}
 {% block content %}
 	<div class="container no-banner">
 	<h1>Blog</h1>
+	
+	{# For each entry in the section of "blog" sort by Date Posted #}
 	{% for entry in craft.entries.section('blog').find() %}
 		<article>
+			{# Create the brief info of the blog article  #}
 			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
 			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-			{{ entry.body.getPage(1) }}
+			{{ entry.body|striptags|slice(0,250) }}...
 			<p><a href="{{ entry.url }}">Continue reading</a></p>
 		</article>
 	{% endfor %}
