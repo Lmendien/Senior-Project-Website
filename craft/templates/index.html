@@ -21,35 +21,6 @@
 
 {% block content %}
 
-	{% macro monthConvert(meetblock) %}
-		{% switch meetblock.date.month %}
-			{% case 1 %}
-				<span class="month">JAN</span>
-			{% case 2 %}
-				<span class="month">FEB</span>
-			{% case 3 %}
-				<span class="month">MAR</span>
-			{% case 4 %}
-				<span class="month">APR</span>
-			{% case 5 %}
-				<span class="month">MAY</span>
-			{% case 6 %}
-				<span class="month">JUN</span>
-			{% case 7 %}
-				<span class="month">JUL</span>
-			{% case 8 %}
-				<span class="month">AUG</span>
-			{% case 9 %}
-				<span class="month">SEPT</span>
-			{% case 10 %}
-				<span class="month">OCT</span>
-			{% case 11 %}
-				<span class="month">NOV</span>
-			{% case 12 %}
-				<span class="month">DEC</span>
-		{% endswitch %}
-	{% endmacro %}
-
 	<!-- DO NOT REMOVE UNLESS CHANGING OR REMOVING FACEBOOK FEED -->
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -69,17 +40,20 @@
    		<div class="row row-home">
    			<div class="col-sm-5 col-md-4 home-column">
    				<h4 class="text-center">Upcoming Events</h4>
-   				{% for event in craft.entries.section("tournaments").order("date").limit(5) %}
-   					<div class="upcoming-event">
-   						<span class="date">
-   							{{ _self.monthConvert(event) }}
-   							<span class="day">{{ event.date.day }}</span>
-   						</span>
-   						<span class="info">
-   							<h6>{{ event.title }}</h6>
-   							<p>{{ event.tournamentLocation }}</p>
-   						</span>
-   					</div>
+   				{% for event in craft.entries.section("events").order("date").limit(5) %}
+				<div class="upcoming-event">
+					<div class="tournament-list">
+						<div class="col-xs-3 tournament-date">
+							{% import "info/tournaments.html" as tournaments %}
+							<span class="month">{{ tournaments.monthConvert(event) }}</span>
+							<span class="date">{{event.date.day}}</span>
+						</div>
+						<div class="col-xs-9 tournament-info">
+							<h6 class="tournament-title">{{ event.title }}</h6>
+							<small class="tournament-location">{{event.tournamentLocation}}</small>
+						</div>
+					</div>
+				</div>
    				{% endfor %}
    				<a href="#">Full Schedule</a>
    			</div>
@@ -158,18 +132,13 @@
 		<div class="row row-home">
 			<div class="col-sm-6 col-md-8 home-column">
 				<h4>Media Highlights</h4>
-				{% for collection in craft.entries.section("gallery").level(1).limit(16) %}
-					<div class="col-lg-3 col-xs-6">
-						<a href="{{collection.url}}">
-							{% set entry = collection.descendants.first() %}
-							{% if (collection.image is not empty) %}
-								{% set image = collection.image.first() %}
-								<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
-							{% else %}
-								{% set image = entry.album.first() %}
-								<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
-							{% endif %}
-							<h6>{{ collection.title }}</h6>
+				{% set singleAlbum = craft.entries.section("media").type("album").order("postDate").first() %}
+				{% for image in singleAlbum.album.limit(20) %}
+					<div class="col-md-3 col-xs-6">
+						<!-- data-fancybox'"gallery" makes all images part of one gallery -->
+						<a href="{{ image.url }}" data-fancybox="gallery">
+							<!-- squareThumbnail creates a thumbnai for the images -->
+							<img class="img-responsive thumbnail" src="{{ image.getUrl('squareThumbnail') }}"/>
 						</a>
 					</div>
 				{% endfor %}

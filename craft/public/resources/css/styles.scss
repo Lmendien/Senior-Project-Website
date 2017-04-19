@@ -348,9 +348,8 @@ footer {
 }
 
 #mission-statement {
-	@include background($main-gradient1, $main-gradient2, "../images/background-images/world-pic.jpg");
+	@include background($main-gradient1, $main-gradient2, "../assets/images/background-images/world-pic.jpg");
 	background-size: cover;
-	background-attachment: fixed;
 	background-position: bottom;
 	width: 100%;
 	color: white;
@@ -413,41 +412,51 @@ footer {
 .upcoming-event {
 	border: 1px solid $gray-light;
 	border-radius: 4px;
-	margin: 5px 0px;
+	overflow: hidden;
+	margin-bottom: 5px;
+    
+    .tournament-list {
+    	border-top: 1px solid $gray-light;
+		background-color: white;
+        width: 100%;
+        overflow: hidden;
 
-	.date {
-		display: inline-block;
-	    background: $accent2;
-	    padding: 5px;
-	    width: 75px;
-	    text-align: center;
-	    vertical-align: middle;
-	    color: white;
-	    margin-right: 10px;
-
-	    .month {
-	    	display: block;
-	    }
-
-	    .day {
-	    	font-size: 32px;
-		    text-align: center;
-		    vertical-align: middle;
-	    }
-	}
-	.info {
-		display: inline-block;
-		vertical-align: middle;
-
-		h6 {
-			line-height: 1.2;
-			margin: 0px;
+		.tournament-date {
+	  	    background: $gray-light;
+	  	    padding: 10px 0px;
+	  	    text-align: center;
+	  	    vertical-align: middle;
+			
+			.month {
+				display: block;
+				font-size: 12px;
+				text-align:center;
+			}
+			.date {
+				font-size: 24px;
+				text-align: center;
+				vertical-align: middle;
+			}
 		}
-
-		p {
-			line-height: 1;
-			margin: 0px;
-		}
+	        
+		.tournament-info {
+			margin-top: 10px;
+			
+			.tournament-location {
+				margin:0px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+	        
+	        .tournament-title {
+				margin: 0px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: 1.1em;
+	        }
+	    }
 	}
 }
 
@@ -964,6 +973,10 @@ footer {
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 50px;
+}
+
+.thumbnail {
+	width: 100%;
 }
 
 #banner-info {
