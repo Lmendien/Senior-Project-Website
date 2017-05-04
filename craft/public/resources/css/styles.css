@@ -174,13 +174,13 @@ footer {
   background: linear-gradient(rgba(2, 136, 209, 0.7), rgba(3, 169, 250, 0.85)), url("../assets/images/banner-images/banner-index.jpg");
   /* Standard syntax */
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   margin: 0px; }
   #banner-index #scroll-down {
     position: absolute;
     width: 100%;
-    bottom: 0px; }
+    bottom: 0px;
+    cursor: pointer; }
     #banner-index #scroll-down i {
       font-size: 50px;
       color: white; }
@@ -735,6 +735,9 @@ footer {
     padding: 100px 0px; }
     #mission-statement p {
       color: white;
-      font-size: 18px; } }
+      font-size: 18px; }
+
+  #banner-index, #mission-statement, #banner-info, #banner-media, #banner-history, #banner-about {
+    background-attachment: fixed; } }
 
 /*# sourceMappingURL=styles.css.map */

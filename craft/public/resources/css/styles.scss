@@ -292,7 +292,6 @@ footer {
 #banner-index {
 	@include background($main-gradient1, $main-gradient2, "../assets/images/banner-images/banner-index.jpg");
 	background-size: cover;
-	background-attachment: fixed;
 	background-position: center;
 	margin: 0px;
 
@@ -300,6 +299,7 @@ footer {
 		position: absolute;
 		width: 100%;
 	    bottom: 0px;
+	    cursor: pointer;
 
 	    i {
 	    	font-size: 50px;
@@ -1119,6 +1119,10 @@ footer {
 				color: white;
 				font-size: 18px;
 			}
+	}
+
+	#banner-index, #mission-statement, #banner-info, #banner-media, #banner-history, #banner-about {
+		background-attachment: fixed;
 	}
 }
 
