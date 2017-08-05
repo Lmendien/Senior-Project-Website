@@ -1,0 +1,63 @@
+{#
+ # History Index Tempalate
+ # ---------------
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+ {% set title = entry.title %}
+
+{% block content %}
+<!-- Banner Image is brought in via CSS background Image -->
+
+<div class="container no-banner inductee-profile">
+  <p class="crumbs text-left">
+    <a href="{{siteUrl}}history/hall-of-fame"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Back to Hall of Fame</a>
+    {% for crumb in entry.getAncestors() %}
+        / {{ crumb.getLink() }}
+    {% endfor %}
+  </p>
+  <h2 class="title">{{ entry.title }}</h2>
+  <div class="row">
+  	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+  	   {% set headshot = entry.headshot.first() %}
+  	    {# Displays the headshot, name, and city of the inductee #}
+        <div class="general-info">
+          <img class="headshot img-responsive" src="{{ headshot.getUrl('headshotThumbnail') }}">
+          <div class="title-info">
+            <h5 class="name">{{ entry.title }}</h5>
+            <p>{{ entry.churchName }}
+            <br>{{ entry.churchCity }}
+            <br>Quizzed {{ entry.yearsQuizzed }}
+            <br>Inducted {{ entry.yearInducted}}</p>
+          </div>
+        </div>
+  	</div>
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#bio">Bio</a></li>
+        <li><a data-toggle="tab" href="#QA">Q &amp; A</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="bio" class="tab-pane fade in active detailed-info">
+          <h5>Bio</h5>
+          <div>{{ entry.bio }}</div>
+        </div>
+        <div id="QA" class="tab-pane fade questions">
+      		<h5>Questions & Answers</h5>
+      		<div class="panel-group">
+      		{% for QandA in entry.questionsAndAnswers %}
+      				<div class="panel panel-default">
+      					<div class="panel-heading">{{ QandA.question }}</div>
+                <div class="panel-body">{{ QandA.answer }}</div>
+    					</div>
+      		{% endfor %}
+      		</div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

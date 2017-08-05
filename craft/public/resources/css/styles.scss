@@ -45,10 +45,24 @@ $base-font: 16px;
   background: linear-gradient($gradient1, $gradient2), url($image); /* Standard syntax */
 }
 
+// transition mixin
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 /////////////////////////////////////////////////////////////////////
 // GLOBAL STYLES
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default
+
+html, body {
+  height: 100%;
+  font-size: $base-font;
+}
 
 // Heading Styles
 h1,h2,h3,h4,h5,h6 {
@@ -107,7 +121,7 @@ p {
 
 a {
   font-family: $heading-font;
-  font-color: $accent1-dark;
+  color: $accent1-dark;
 }
 
 hr {
@@ -146,6 +160,7 @@ hr {
 	.navbar-brand {
 	  	padding: 0px;
 	  	display: inline-block;
+      color: $white;
 
 		#logo {
 			height: 70px;
@@ -414,7 +429,7 @@ footer {
 	border-radius: 4px;
 	overflow: hidden;
 	margin-bottom: 5px;
-    
+
     .tournament-list {
     	border-top: 1px solid $gray-light;
 		background-color: white;
@@ -426,7 +441,7 @@ footer {
 	  	    padding: 10px 0px;
 	  	    text-align: center;
 	  	    vertical-align: middle;
-			
+
 			.month {
 				display: block;
 				font-size: 12px;
@@ -438,17 +453,17 @@ footer {
 				vertical-align: middle;
 			}
 		}
-	        
+
 		.tournament-info {
 			margin-top: 10px;
-			
+
 			.tournament-location {
 				margin:0px;
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
-	        
+
 	        .tournament-title {
 				margin: 0px;
 				white-space: nowrap;
@@ -577,7 +592,7 @@ footer {
 }
 
 .history {
-	.nav-tabs {
+	.history-nav.nav-tabs {
 		width: 100%;
 		background-color: #03a9FA;
 		box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
@@ -594,12 +609,12 @@ footer {
 		}
 	}
 
-	.nav-tabs>li>a:hover, .nav-tabs>li>a:hover {
+	.history-nav.nav-tabs>li>a:hover, .nav-tabs>li>a:hover {
 		border: none;
 		color: #FFFFFF;
 	}
 
-	.nav-tabs>li.active>a, &hover, &focus {
+	.history-nav.nav-tabs>li.active>a, &hover, &focus {
 		background-color: #03a9FA;
 		color: white;
 		border: none;
@@ -661,32 +676,30 @@ footer {
 		margin: 50px auto;
 		text-align: center;
 
-		.year {
-			text-align: left;
-
 			.inductee {
-				height: 70px;
-				background-color: #F5F5F5;
+        height: 100px;
+				background-color: $gray-light;
 				margin: 10px auto;
-				box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 				text-align: left;
 				cursor: pointer;
+        overflow: hidden;
+        border-radius: 5px;
 
-				&:hover {
-					box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
-				}
+        a {
+          text-decoration: none;
+        }
 
 				.headshot {
-					display: inline-block;
-					vertical-align: top;
-					height: 70px;
+          display: inline-block;
+          height: 100px;
+          border-radius: 5px 0px 0px 5px;
 				}
 
-
 				.inductee-info {
-					display: inline-block;
-					height: 70px;
-					margin: 5px;
+          display: inline-block;
+          height: 100px;
+					padding: 10px;
+          vertical-align: middle;
 
 					.inductee-name {
 						font-size: 1em;
@@ -698,84 +711,34 @@ footer {
 						font-size: 0.8em;
 						line-height: 1em;
 					}
+
+          .inductee-year {
+            line-height: 1em;
+          }
 				}
 			}
+	 }
+}
 
-			.modal-dialog {
-				width: 100%;
-				margin: 0px;
-				border-radius: 0px;
+.inductee-profile {
+  .title {
+    margin-bottom: 0px;
+  }
+  .general-info {
+    margin-bottom: 1.5em;
 
-				.modal-content {
-					min-height: 100vh;
+    .headshot {
+      display: none;
+    }
 
-					.modal-header {
-						border: none;
-						padding: 0px 15px;
+    .title-info {
+      display: inline;
+    }
 
-						.close {
-							margin: 0px;
-							font-size: 54px;
-							font-weight: normal;
-							color: rgba(0,0,0,0.54);
-							opacity: 1;
-						}
-					}
-
-					.modal-body {
-						padding: 20px;
-
-						p {
-							line-height: 1.2em;
-						}
-
-						.general-info {
-							background-color: #F5F5F5;
-							border-radius: 4px;
-							width: 100%;
-
-							img {
-								width: 100%;
-								display: inline-block;
-								border-radius: 4px 4px 0px 0px;
-							}
-
-							.title-info {
-								display: inline-block;
-								vertical-align: middle;
-								margin-left: 10px;
-
-								.name {
-									margin-bottom: 0px;
-								}
-							}
-						}
-
-						.detailed-info {
-							margin: 20px 0px;
-						}
-
-						.questions {
-							.panel-group {
-								.panel {
-									.panel-heading {
-										background-color: #616161;
-										padding: 15px;
-
-										.panel-title {
-											a {
-												color: #FFFFFF;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+    .name {
+      display: none;
+    }
+  }
 }
 
 .carousel {
@@ -858,7 +821,7 @@ footer {
 				transform: translate(-50%, -50%);
 			}
 		}
-	    
+
 	    .tournament-list {
 	    	border-top: 1px solid $gray-light;
 			background-color: white;
@@ -870,7 +833,7 @@ footer {
 		  	    padding: 15px 0px;
 		  	    text-align: center;
 		  	    vertical-align: middle;
-				
+
 				.month {
 					display: block;
 					font-size: 18px;
@@ -882,17 +845,17 @@ footer {
 					vertical-align: middle;
 				}
 			}
-		        
+
 			.tournament-info {
 				margin-top: 15px;
-				
+
 				.tournament-location {
 					margin:0px;
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
 				}
-		        
+
 		        .tournament-title {
 					margin: 0px;
 					white-space: nowrap;
@@ -903,7 +866,7 @@ footer {
 		}
 	}
 }
-	
+
 
 .contacts-page{
 	.title{
@@ -1008,6 +971,7 @@ footer {
 			li {
 				a {
 					padding: 27px;
+          color: white;
 				}
 			}
 			.open {
@@ -1030,10 +994,55 @@ footer {
 		}
 	}
 
+  .hall-of-fame {
+  	.inductees {
+  		margin: 50px auto;
+  		text-align: center;
+
+  			.inductee {
+          height: auto;
+  				margin: 10px auto;
+  				text-align: left;
+  				cursor: pointer;
+          @include  transition(all 1s);
+
+  				&:hover {
+  					box-shadow: 0px 8px 8px rgba(0,0,0,0.15), 0px 4px 4px rgba(0,0,0,0.3);
+            @include transition(all 250ms);
+  				}
+
+  				.headshot {
+            padding: 2px;
+            display: block;
+            height: auto;
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+  				}
+
+  				.inductee-info {
+            display: block;
+  					height: 100px;
+
+  					.inductee-name {
+  						font-size: 1em;
+  						line-height: 1em;
+  						font-weight: bold;
+  					}
+
+  					.inductee-city {
+  						font-size: 0.8em;
+  						line-height: 1em;
+  					}
+  				}
+  			}
+  	 }
+  }
+
+
 	///////////////////////////////////////////////////////////////////////
 	// History Page Styles
 	.history {
-		.nav-tabs {
+		.history-nav.nav-tabs {
 			li {
 				width: 33.33%;
 
@@ -1043,25 +1052,8 @@ footer {
 				}
 			}
 		}
-		.nav-tabs>li.active>a, &hover, &focus {
+		.history-nav.nav-tabs>li.active>a, &hover, &focus {
 			border-bottom: 4px solid white;
-		}
-	}
-
-	.hall-of-fame {
-		.inductees {
-			.year {
-				.modal-dialog {
-					width: 96%;
-					margin: 2%;
-
-					.modal-content {
-						.modal-body {
-							padding: 20px 50px 50px 50px;
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -1105,6 +1097,26 @@ footer {
 	// 	height: 80vh;
 	// 	max-height: 80vh;
 	// }
+
+  .inductee-profile {
+    .general-info {
+
+      .headshot {
+        height: auto;
+        width: 100%;
+        display: block;
+      }
+
+      .title-info {
+        display: block;
+        padding: 10px;
+      }
+
+      .name {
+        display: inline;
+      }
+    }
+  }
 
 	///////////////////////////////////////////////////////////////////////
 	// Homepage Styles

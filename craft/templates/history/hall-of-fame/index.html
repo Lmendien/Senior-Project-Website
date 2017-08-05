@@ -1,0 +1,53 @@
+{#
+ # History Index Tempalate
+ # ---------------
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+ {# Sets Title of the page to Blog #}
+ {% set title = "Hall of Fame" %}
+
+ {# All content in the "block content" region will be used as an extention of the layout #}
+ {% extends "_layout" %}
+
+{% block content %}
+<!-- Banner Image is brought in via CSS background Image -->
+<section id="banner-about" class="banner banner-small">
+        <h1>{{ entry.title }}</h1>
+</section>
+
+<div class="hall-of-fame">
+	<div class="container">
+	<h3 class="text-center">{{ entry.mainHeading }}</h3>
+		{{ entry.body }}
+	</div>
+
+	<div class="container inductees">
+		<h3>Inductees</h3>
+		{# Iterates over every year in the section hall of fame #}
+		<div class="row">
+		{% set inductees = craft.entries.section('inductees').type('inductee').order('yearInducted desc, title') %}
+		{% for inductee in inductees %}
+
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<div class="inductee">
+					<a href="{{ inductee.url }}">
+							{% set headshot = inductee.headshot.first() %}
+							{# Displays the headshot, name, and city of the inductee #}
+							<img class="headshot" src="{{ headshot.getUrl('headshotThumbnail') }}">
+							<div class="inductee-info">
+								<h6 class="inductee-name">{{ inductee.title }}</h6>
+								<p class="inductee-city">{{ inductee.churchCity }}</p>
+								<p class="inductee-year">Inducted {{ inductee.yearInducted }}</p>
+							</div>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+{% endblock %}

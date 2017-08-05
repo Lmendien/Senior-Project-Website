@@ -25,7 +25,8 @@
 
 		<!-- CSS and Icon File links -->
 		{% includeCssFile "https://fonts.googleapis.com/icon?family=Material+Icons" %}
-		{% includeCssFile siteUrl~"resources/bootstrap/css/bootstrap.min.css" %}
+    <!-- Latest compiled and minified CSS -->
+    {% includeCssFile "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %}
 		{% includeCssFile siteUrl~"resources/fancybox-3.0/dist/jquery.fancybox.min.css" %}
 		{% includeCssFile siteUrl~"resources/css/styles.css" %}
 	</head>
@@ -33,7 +34,7 @@
 	<body>
 		<!-- Includes the navigation element -->
 	    {% include "_includes/_navigation_basic.html" %}
-			
+
 			<!-- Main Content DO NOT CHANGE!!! -->
 			<main id="content" role="main">
 				{% block content %}
@@ -47,7 +48,7 @@
 
 		<!-- Javascript Includes -->
 		{% includeJsFile "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" %}
-		{% includeJsFile siteUrl~"resources/bootstrap/js/bootstrap.min.js" %}
+    {% includeJsFile "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %}
 		{% includeJsFile siteUrl~"resources/fancybox-3.0/dist/jquery.fancybox.min.js" %}
 		{% includeJsFile siteUrl~"resources/js/custom.js" %}
 	</body>
