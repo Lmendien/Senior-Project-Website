@@ -81,7 +81,7 @@
    				<h4 class="text-center">Blog Feed</h4>
    				{% for entry in craft.entries.section('blog').order('postDate desc').limit(3) %}
 					{% if loop.first %}
-					<div class="blog-post">	
+					<div class="blog-post">
 						{% set image = entry.image.first() %}
 						<img src="{{ image.getUrl('homepageBlogPhoto') }}"/>
 						<span class="content">
@@ -90,7 +90,7 @@
 						</span>
 					</div>
 					{% else %}
-					<div class="blog-post">	
+					<div class="blog-post">
 						<span class="content">
 							<h6><a href="{{ entry.url }}">{{ entry.title }}</a></h6>
 							<p>{{ entry.body|striptags|slice(0,25)|default('Read more') }}...<a href="{{ entry.url }}">Read More</a></p>
@@ -103,21 +103,12 @@
    			<div class="col-sm-12 col-md-4 home-column">
    				<h4 class="text-center">Quiz Cycle</h4>
    				<div class="quiz-cycle text-center">
-   				{% for year in entry.quizCycle.order("state") %}
-					{% switch year.state %}
-						{% case "currentYear" %}
-							<p><b>Current Year</b></p>
-							<h5>{{ year.material }}</h5>
-							<hr>
-						{% case "nextYear" %}
-							<p><b>Next Year</b></p>
-							<h5>{{ year.material }}</h5>
-							<hr>
-							<p><b>Other Years</b></p>
-						{% default %}
-							{{ year.material }},
-					{% endswitch %}
-   				{% endfor %}
+              <hr>
+              <p><b>Current Year</b></p>
+              <h3>{{ entry.quizCycle }}</h3>
+              <hr>
+              <p><b>Current Month</b></p>
+			        <h3>{{ entry.quizMonth }}</h3>
    				</div>
    			</div>
    		</div>

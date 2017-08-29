@@ -4,27 +4,35 @@
 	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
-		<span class="icon-bar"></span> 
+		<span class="icon-bar"></span>
 	  </button>
 	  <a class="navbar-brand" href="{{ siteUrl }}"><img id="logo" src="/resources/logos/FMCLogo_color_2011.png" alt="FMQuizzing">FM Quizzing</a>
 	</div>
 	<div class="collapse navbar-collapse" id="myNavbar">
 	  <ul class="nav navbar-nav navbar-right">
 		<li><a href="{{ siteUrl }}">Home</a></li>
-		<li><a href="{{ siteUrl }}about">About</a></li> 
+		<li><a href="{{ siteUrl }}about">About</a></li>
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Info
 			<span class="caret"></span></a>
 			<ul class="dropdown-menu">
 			  <li><a href="{{ siteUrl }}info/tournaments">Tournaments</a></li>
 			  <li><a href="{{ siteUrl }}info/quotes">Quotes</a></li>
-			  <li><a href="{{ siteUrl }}info/contacts">Contacts</a></li> 
+			  <li><a href="{{ siteUrl }}info/contacts">Contacts</a></li>
 			  <li><a href="{{ siteUrl }}info/store">Store</a></li>
 			</ul>
-		  </li>
-		<li><a href="{{ siteUrl }}history">History</a></li> 
+	  </li>
+    <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">History
+			<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			  <li><a href="{{ siteUrl }}history/historical-data">Historical Data</a></li>
+			  <li><a href="{{ siteUrl }}history/hall-of-fame">Hall of Fame</a></li>
+			  <li><a href="{{ siteUrl }}history/archive">Archive</a></li> 
+			</ul>
+	  </li>
 		<li><a href="{{ siteUrl }}media">Media</a></li>
-		<li><a href="{{ siteUrl }}finals">Finals</a></li> 
+		<li><a href="{{ siteUrl }}finals">Finals</a></li>
 	  </ul>
 	</div>
   </div>

@@ -1,3 +1,22 @@
+{#
+# History Index Tempalate
+# ---------------
+#
+# See this page for more details on how Craft routes requests:
+# http://craftcms.com/docs/routing
+#}
+
+{# Sets Title of the page #}
+{% set title = "Archive" %}
+
+{# All content in the "block content" region will be used as an extention of the layout #}
+{% extends "_layout" %}
+
+{% block content %}
+<section id="banner-about" class="banner banner-small">
+      <h1>{{ entry.title }}</h1>
+</section>
+
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="archive"> <a class="left" href="#myCarousel" role="button" data-slide="prev">
@@ -87,3 +106,4 @@
    <!-- Left and right controls -->
  </div>
 </div>
+{% endblock %}

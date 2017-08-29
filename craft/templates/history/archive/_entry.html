@@ -1,0 +1,19 @@
+{#
+ # Archive Entry Tempalate
+ # ---------------
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+{% set title = entry.title %}
+
+{% block content %}
+<!-- Banner Image is brought in via CSS background Image -->
+
+<h1>{{ entry.title }}</h1>
+<div class="container">
+ <pre>{{ entry.body }}</pre>
+</div>
+{% endblock %}

@@ -1,3 +1,22 @@
+{#
+# History Data Tempalate
+# ---------------
+#
+# See this page for more details on how Craft routes requests:
+# http://craftcms.com/docs/routing
+#}
+
+{# Sets Title of the page #}
+{% set title = "Historical" %}
+
+{# All content in the "block content" region will be used as an extention of the layout #}
+{% extends "_layout" %}
+
+{% block content %}
+<section id="banner-about" class="banner banner-small">
+      <h1>{{ entry.title }}</h1>
+</section>
+
 <div class="container historical-data">
 	<h3 class="text-center">Historical Data</h3>
 	<div class="dropdown keep-open">
@@ -27,11 +46,8 @@
     </div>
     <div class="row tab-pane" id="multipleChampions">
       {% for dataColumn in entry.multipleChampions %}
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-          <div id="multipleChampions" class="panel panel-default">
-            <div class="panel-heading">{{dataColumn.decade}}s</div>
-            <div class="panel-body">{{dataColumn.body}}</div>
-          </div>
+        <div class="col-xs-12 col-sm-4">
+              <h4>{{dataColumn.numberOfChampionships}} - {{dataColumn.church}}</h4>
         </div>
       {% endfor %}
     </div>
@@ -77,3 +93,5 @@
     </div>
   </div>
 </div>
+
+{% endblock %}
